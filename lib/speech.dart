@@ -5,6 +5,9 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
 import 'store.dart';
+import 'tts_web_stub.dart'
+    if (dart.library.js_interop) 'tts_web.dart'
+    as webtts;
 
 /// Metin okuma (dinleme çalışmaları ve model telaffuz). Platform yoksa sessizce hiçbir şey yapmaz.
 class Tts {
@@ -86,6 +89,7 @@ class Tts {
 
   /// Metni okur ve bitince döner. [konusmaci] 0 ya da 1: farklı ses/ton.
   Future<void> speak(String text, {int konusmaci = 0, bool? yavas}) async {
+    if (kIsWeb) return _webKonus(text, konusmaci, yavas ?? Store.i.slowSpeech);
     await init();
     if (!_hazir) return;
     final benim = ++_belirtec;
@@ -119,11 +123,30 @@ class Tts {
     }
   }
 
+  Future<void> _webKonus(String text, int konusmaci, bool yavas) async {
+    final benim = ++_belirtec;
+    konusuyor.value = true;
+    try {
+      await webtts
+          .konus(text, konusmaci: konusmaci, yavas: yavas)
+          .timeout(Duration(seconds: 6 + text.length ~/ 5), onTimeout: () {});
+    } catch (e) {
+      debugPrint('Web TTS hata: $e');
+    } finally {
+      if (benim == _belirtec) konusuyor.value = false;
+    }
+  }
+
   /// Bir [speak] çağrısı sonrası hâlâ aynı oynatma sırasındaysak true (diyalog döngüsü için).
   int get belirtec => _belirtec;
 
   Future<void> stop() async {
     _belirtec++;
+    if (kIsWeb) {
+      await webtts.sesDurdur();
+      konusuyor.value = false;
+      return;
+    }
     try {
       await _t.stop();
     } catch (_) {}
