@@ -6,12 +6,14 @@ import 'screens/listening.dart';
 import 'screens/reading.dart';
 import 'screens/speaking.dart';
 import 'screens/words.dart';
+import 'speech.dart';
 import 'store.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Store.i.load();
   await Content.load();
+  await Klip.yukle();
   runApp(const DevEnglishApp());
 }
 

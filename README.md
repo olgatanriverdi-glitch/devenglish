@@ -18,7 +18,7 @@ flutter test
 flutter run -d chrome        # web
 flutter run                  # bağlı telefon
 ```
-Konuşma tanıma: iPhone'da Mikrofon + Konuşma Tanıma izni, web'de Chrome/Safari ve mikrofon izni gerekir. Seslendirme (TTS) cihazın İngilizce sesini kullanır.
+Konuşma tanıma: iPhone'da Mikrofon + Konuşma Tanıma izni, web'de Chrome/Safari ve mikrofon izni gerekir. Sesler önceden kaydedilmiştir (Samantha ve Daniel), böylece Türkçe telefonlarda bile doğru İngilizce telaffuz duyulur; kaydı olmayan metinlerde cihazın sesi kullanılır.
 
 ## İçeriği düzenleme
 Kaynaklar `tools/` altında: `vocab.txt` (kelimeler), `content_listening.py`, `content_speaking.py`, `content_articles.py`.
@@ -26,6 +26,7 @@ Kaynaklar `tools/` altında: `vocab.txt` (kelimeler), `content_listening.py`, `c
 python3 tools/build_vocab.py      # assets/data/vocab.json
 python3 tools/build_content.py    # listening / speaking / articles .json (+ doğrulama)
 python3 tools/make_icons.py       # uygulama simgeleri
+python3 tools/make_audio.py       # tüm İngilizce metinlerin ses kayıtları (macOS `say`: Samantha + Daniel) -> assets/audio
 ```
 
 ## Web olarak yayınlama (GitHub Pages)

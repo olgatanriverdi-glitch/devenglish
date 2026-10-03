@@ -1,6 +1,11 @@
+import 'dart:async';
+import 'dart:convert';
 import 'dart:io' show Platform;
 
+import 'package:audioplayers/audioplayers.dart';
+import 'package:crypto/crypto.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart' show AssetManifest, rootBundle;
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
@@ -8,6 +13,82 @@ import 'store.dart';
 import 'tts_web_stub.dart'
     if (dart.library.js_interop) 'tts_web.dart'
     as webtts;
+
+/// Önceden kaydedilmiş ses dosyaları (assets/audio, tools/make_audio.py ile üretilir).
+/// Cihazın kendi sesi (özellikle Türkçe telefonlarda) İngilizceyi yanlış okuyabildiği için önce bunlar çalınır.
+/// Ses 0 = Samantha (ABD, kadın), ses 1 = Daniel (İngiltere, erkek).
+class Klip {
+  static Set<String> _var = {};
+  static AudioPlayer? _oynatici;
+  static Completer<void>? _bekleyen;
+
+  static Future<void> yukle() async {
+    try {
+      final m = await AssetManifest.loadFromAssetBundle(rootBundle);
+      _var = m.listAssets().where((a) => a.startsWith('assets/audio/')).toSet();
+    } catch (e) {
+      debugPrint('Ses dosyaları listelenemedi: $e');
+    }
+  }
+
+  static int get adet => _var.length;
+
+  static String anahtar(String metin, int konusmaci) {
+    final ses = konusmaci == 1 ? 'b' : 'a';
+    return sha1.convert(utf8.encode('$ses|$metin')).toString().substring(0, 16);
+  }
+
+  /// Bu metnin kayıtlı sesi var mı? (varlık yolu ya da null)
+  static String? yol(String metin, int konusmaci) {
+    final k = 'assets/audio/${anahtar(metin, konusmaci)}.m4a';
+    return _var.contains(k) ? 'audio/${anahtar(metin, konusmaci)}.m4a' : null;
+  }
+
+  /// Kaydı çalar; bitince döner. Durdurulursa ya da zaman aşımında da döner.
+  static Future<void> cal(
+    String yol, {
+    required bool yavas,
+    required int karakter,
+  }) async {
+    final p = _oynatici ??= AudioPlayer();
+    await durdur();
+    final bitti = Completer<void>();
+    _bekleyen = bitti;
+    final abone = p.onPlayerComplete.listen((_) {
+      if (!bitti.isCompleted) bitti.complete();
+    });
+    try {
+      if (!kIsWeb && Platform.isIOS) {
+        await p.setAudioContext(
+          AudioContext(
+            iOS: AudioContextIOS(
+              category: AVAudioSessionCategory.playback,
+              options: {AVAudioSessionOptions.mixWithOthers},
+            ),
+          ),
+        );
+      }
+      await p.setPlaybackRate(yavas ? 0.75 : 1.0);
+      await p.play(AssetSource(yol));
+      await bitti.future.timeout(
+        Duration(seconds: 8 + karakter ~/ 4),
+        onTimeout: () {},
+      );
+    } finally {
+      await abone.cancel();
+      if (identical(_bekleyen, bitti)) _bekleyen = null;
+    }
+  }
+
+  static Future<void> durdur() async {
+    final b = _bekleyen;
+    if (b != null && !b.isCompleted) b.complete();
+    _bekleyen = null;
+    try {
+      await _oynatici?.stop();
+    } catch (_) {}
+  }
+}
 
 /// Metin okuma (dinleme çalışmaları ve model telaffuz). Platform yoksa sessizce hiçbir şey yapmaz.
 class Tts {
@@ -89,6 +170,23 @@ class Tts {
 
   /// Metni okur ve bitince döner. [konusmaci] 0 ya da 1: farklı ses/ton.
   Future<void> speak(String text, {int konusmaci = 0, bool? yavas}) async {
+    final kayit = Klip.yol(text, konusmaci);
+    if (kayit != null) {
+      final benim = ++_belirtec;
+      konusuyor.value = true;
+      try {
+        await Klip.cal(
+          kayit,
+          yavas: yavas ?? Store.i.slowSpeech,
+          karakter: text.length,
+        );
+        return;
+      } catch (e) {
+        debugPrint('Kayıt çalınamadı, cihaz sesine dönülüyor: $e');
+      } finally {
+        if (benim == _belirtec) konusuyor.value = false;
+      }
+    }
     if (kIsWeb) return _webKonus(text, konusmaci, yavas ?? Store.i.slowSpeech);
     await init();
     if (!_hazir) return;
@@ -142,6 +240,7 @@ class Tts {
 
   Future<void> stop() async {
     _belirtec++;
+    await Klip.durdur();
     if (kIsWeb) {
       await webtts.sesDurdur();
       konusuyor.value = false;

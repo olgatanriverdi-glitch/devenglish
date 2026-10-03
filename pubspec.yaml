@@ -39,6 +39,8 @@ dependencies:
   shared_preferences: ^2.5.5
   url_launcher: ^6.3.3
   web: ^1.1.1
+  audioplayers: ^6.8.1
+  crypto: ^3.0.7
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +60,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/data/
+    - assets/audio/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
