@@ -549,6 +549,189 @@
 ],
 "minutes": 2,
 "words": 210
+},
+{
+"id": "state-management",
+"title": "State Management in Plain English",
+"level": "B2",
+"summary": "Uygulamanın verisini (state) ekranla senkron tutmak neden zordur ve bunu çözmenin basit yolları.",
+"paragraphs": [
+"Every app has state: the current data that decides what the user sees. Is the user logged in? How many items are in the cart? Is the menu dark or light? When the state changes, the screen must change with it, and this is exactly where many beginners get into trouble.",
+"Imagine that the cart count is shown in three places: the top bar, the cart page, and the checkout button. If each place keeps its own copy of the number, they will soon disagree. The solution is a single source of truth: the state lives in one place, and every part of the screen reads it from there.",
+"Modern frameworks follow a simple rule: the interface is a function of the state. You do not tell the screen how to change, step by step. You change the state, and the framework rebuilds the interface to match it. This makes programs shorter and easier to understand.",
+"For small apps, local state inside one widget or component is enough. When many screens need the same data, you move the state higher up and share it, for example with a store or a provider. Large teams often add rules about how the state may change, so that every change can be traced and tested.",
+"A good habit is to keep the state small and simple. Store only what you cannot calculate. For example, save the list of items, but calculate the total price when you need it. Fewer variables mean fewer chances for the data to become inconsistent."
+],
+"glossary": {
+"state": "durum (verinin o anki hali)",
+"source of truth": "tek doğru kaynak",
+"rebuilds": "yeniden oluşturur",
+"interface": "arayüz",
+"framework": "çatı yapı",
+"inconsistent": "tutarsız",
+"traced": "izlenebilir",
+"calculate": "hesaplamak",
+"beginners": "yeni başlayanlar"
+},
+"questions": [
+{
+"q": "What is a 'single source of truth'?",
+"options": [
+"Three copies of the data",
+"The state lives in one place and everyone reads it from there",
+"A very fast database",
+"A type of button"
+],
+"answer": 1,
+"why": "Veri tek yerde durur, herkes oradan okur."
+},
+{
+"q": "What does 'the interface is a function of the state' mean?",
+"options": [
+"You change the state and the framework rebuilds the screen",
+"You must draw every pixel yourself",
+"State is not needed",
+"The interface never changes"
+],
+"answer": 0,
+"why": "State'i değiştirirsin, arayüz ona göre yeniden oluşur."
+},
+{
+"q": "What should you store in the state?",
+"options": [
+"Everything",
+"Only what you cannot calculate",
+"Only colors",
+"Nothing"
+],
+"answer": 1,
+"why": "Hesaplayamadığın şeyleri."
+}
+],
+"minutes": 2,
+"words": 256
+},
+{
+"id": "game-loop-explained",
+"title": "How a Game Loop Works",
+"level": "B1",
+"summary": "Oyunların kalbi olan oyun döngüsü: girdi okuma, güncelleme ve çizme adımları.",
+"paragraphs": [
+"A video game looks like a moving picture, but inside it is just a loop that runs again and again, many times every second. This loop is called the game loop, and it is the heart of every game.",
+"In each pass of the loop, the game does three main jobs. First, it reads the input: did the player touch the screen or press a button? Second, it updates the world: the character moves, the enemies follow their paths, and the physics engine checks collisions. Third, it draws everything on the screen.",
+"Each pass is called a frame. If the game runs at sixty frames per second, the whole loop must finish in about sixteen milliseconds. When the work takes longer, the game becomes slow and the movement looks jumpy. That is why game developers care so much about performance.",
+"A common mistake is to move objects by a fixed amount in every frame. On a fast phone the character would run faster than on a slow phone. The solution is to multiply the speed by the time since the last frame, so the movement is the same on every device.",
+"Once you understand the game loop, many things become clear: why animations are smooth, why physics needs a stable frame rate, and why a heavy effect can ruin the whole game. It is a simple idea, but it explains how every game works."
+],
+"glossary": {
+"loop": "döngü",
+"input": "girdi",
+"frame": "kare",
+"frames per second": "saniyedeki kare sayısı",
+"collisions": "çarpışmalar",
+"physics engine": "fizik motoru",
+"performance": "performans",
+"jumpy": "sıçrayan, takılan",
+"fixed": "sabit"
+},
+"questions": [
+{
+"q": "What are the three main jobs in a pass of the game loop?",
+"options": [
+"Read input, update the world, draw the screen",
+"Save, load, quit",
+"Buy, sell, trade",
+"Compile, test, deploy"
+],
+"answer": 0,
+"why": "Girdi oku, dünyayı güncelle, ekrana çiz."
+},
+{
+"q": "How long does one frame take at sixty frames per second?",
+"options": [
+"About 16 milliseconds",
+"About one second",
+"About one minute",
+"It does not matter"
+],
+"answer": 0,
+"why": "Yaklaşık 16 milisaniye."
+},
+{
+"q": "Why should you multiply the speed by the time since the last frame?",
+"options": [
+"To make the game slower",
+"So the movement is the same on every device",
+"To save memory",
+"To remove the physics engine"
+],
+"answer": 1,
+"why": "Hareket her cihazda aynı olsun diye."
+}
+],
+"minutes": 2,
+"words": 234
+},
+{
+"id": "ai-for-students",
+"title": "Using AI Tools Wisely as a Student Developer",
+"level": "B2",
+"summary": "Yapay zeka araçlarından öğrenmek için nasıl faydalanılır, hangi hatalardan kaçınılmalı.",
+"paragraphs": [
+"AI assistants can write code, explain errors, and even suggest designs. For a student developer this is a powerful tool, but only if you use it to learn and not to avoid learning.",
+"The first rule is to understand what you submit. If an assistant gives you thirty lines of code, read them one by one. Ask yourself what each line does and why it is there. If you cannot explain the code to a friend, you are not ready to use it.",
+"The second rule is to verify. AI tools sometimes produce a hallucination: a confident answer that is simply false, for example a function that does not exist. Always run the code, write a test, and compare the answer with the official documentation.",
+"The third rule is to protect your data. Never paste passwords, private keys, or personal information into a prompt. You do not know where that text is stored or who can read it.",
+"Finally, use the assistant as a teacher. Instead of asking for the full solution, ask for a hint, an explanation, or a review of your own code. You will be slower at the beginning, but you will become a much stronger engineer, and in an interview you will be able to show real skills."
+],
+"glossary": {
+"assistant": "asistan",
+"hallucination": "halüsinasyon",
+"verify": "doğrulamak",
+"documentation": "dokümantasyon",
+"private keys": "özel anahtarlar",
+"prompt": "istem",
+"hint": "ipucu",
+"powerful": "güçlü",
+"submit": "teslim etmek"
+},
+"questions": [
+{
+"q": "What is the first rule in the text?",
+"options": [
+"Copy the code quickly",
+"Understand what you submit",
+"Avoid all AI tools",
+"Ask for the full solution"
+],
+"answer": 1,
+"why": "Teslim ettiğin şeyi anla."
+},
+{
+"q": "What is a hallucination?",
+"options": [
+"A confident answer that is false",
+"A type of test",
+"A fast computer",
+"A password"
+],
+"answer": 0,
+"why": "Kendinden emin ama yanlış cevap."
+},
+{
+"q": "How should you use the assistant, according to the writer?",
+"options": [
+"As a teacher: ask for hints and explanations",
+"As a replacement for learning",
+"Only for games",
+"Only at night"
+],
+"answer": 0,
+"why": "Öğretmen gibi: ipucu ve açıklama iste."
+}
+],
+"minutes": 2,
+"words": 212
 }
 ],
 "links": [

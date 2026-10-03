@@ -341,3 +341,84 @@ crash | v. | çökmek | To suddenly stop working. | The app crashes when I open 
 freeze | v. | donmak | To stop responding. | The screen freezes for a few seconds after each click.
 leak | v. | sızıntı yapmak | To use more and more memory because it is not released. | The app leaks memory and becomes slower over time.
 overwrite | v. | üzerine yazmak | To replace existing data with new data. | Be careful not to overwrite the original file.
+## mobile | Mobil Uygulama Geliştirme
+widget | n. | bileşen (Flutter) | A building block of a user interface in Flutter. | Every button on the screen is a widget.
+hot reload | n. | sıcak yenileme | A feature that shows code changes in the running app instantly. | Hot reload saves a lot of time while designing the screen.
+emulator | n. | emülatör | A program that imitates a phone on your computer. | I tested the app on an emulator before using a real device.
+simulator | n. | simülatör | A tool that imitates the behavior of a device on a computer. | The iOS simulator is part of Xcode.
+cross-platform | adj. | çok platformlu | Working on more than one operating system with the same code. | Flutter is a cross-platform framework.
+native | adj. | yerel (platforma özgü) | Built specifically for one platform with its own tools. | A native app can use every feature of the phone.
+layout | n. | yerleşim düzeni | The way elements are arranged on a screen. | The layout changes when the user rotates the phone.
+navigation | n. | gezinme | Moving between the screens of an app. | The navigation bar at the bottom has five tabs.
+gesture | n. | jest (dokunma hareketi) | A touch movement such as a tap or a swipe. | The app reacts to a swipe gesture on the list.
+notification | n. | bildirim | A message that an app shows outside of its own screen. | We send a notification when the order is ready.
+sandbox | n. | korumalı alan | A restricted area where an app can run safely. | Each iOS app runs in its own sandbox.
+bundle | n. | uygulama paketi | The package that contains an app and its resources. | The app bundle includes the code, images, and fonts.
+provisioning profile | n. | sağlama profili | A file that allows an app to run on specific Apple devices. | Without a provisioning profile, the app cannot be installed on the iPhone.
+certificate | n. | sertifika | A digital file that proves who created the app. | The developer certificate expires after one year.
+build number | n. | derleme numarası | A number that identifies one build of the app. | Increase the build number before every upload.
+crash report | n. | çökme raporu | A log with details about why an app stopped working. | The crash report shows the exact line that failed.
+offline | adj. | çevrimdışı | Not connected to the internet. | The app also works offline.
+local storage | n. | yerel depolama | Data saved on the user's device. | We keep the settings in local storage.
+orientation | n. | ekran yönü | Whether the screen is held vertically or horizontally. | The game only supports landscape orientation.
+accessibility | n. | erişilebilirlik | Making an app usable for people with disabilities. | Good accessibility includes large text and screen readers.
+animation | n. | animasyon | Smooth movement or change of elements on the screen. | The animation makes the button feel alive.
+refresh rate | n. | yenileme hızı | How many times per second the screen updates. | A higher refresh rate makes scrolling smoother.
+splash screen | n. | açılış ekranı | The first screen that appears while an app loads. | The splash screen shows the logo for two seconds.
+deep link | n. | derin bağlantı | A link that opens a specific screen inside an app. | The email contains a deep link to your order.
+app store | n. | uygulama mağazası | An online shop where people download apps. | The app was approved and appeared in the App Store.
+## game | Oyun Geliştirme
+sprite | n. | sprite (2B görsel) | A 2D image or animation used in a game. | Each character is drawn as a sprite.
+collider | n. | çarpışma alanı | An invisible shape that detects when objects touch. | The player's collider touches the wall.
+collision | n. | çarpışma | When two objects in a game hit each other. | A collision with the enemy reduces your health.
+physics engine | n. | fizik motoru | Software that simulates gravity and movement in a game. | The physics engine calculates how the ball falls.
+rigidbody | n. | katı cisim bileşeni | A component that lets the physics engine move an object. | Add a rigidbody to make the box fall.
+prefab | n. | hazır nesne şablonu | A saved template of a game object that you can reuse. | We spawn a prefab of the enemy every few seconds.
+scene | n. | sahne | A level or screen of a game that contains objects. | The main menu is a separate scene.
+spawn | v. | oluşturmak (oyunda) | To create a new object or enemy in a game. | Enemies spawn at the right side of the screen.
+frame rate | n. | kare hızı | The number of images shown per second in a game. | The game runs at a stable frame rate of sixty.
+game loop | n. | oyun döngüsü | The main cycle that updates and draws the game again and again. | Each pass of the game loop moves the player a little.
+camera | n. | kamera | The view that shows the game world to the player. | The camera follows the player through the level.
+parallax | n. | paralaks (derinlik etkisi) | An effect where background layers move at different speeds. | The parallax effect makes the forest look deep.
+shader | n. | gölgelendirici | A small program that controls how things are drawn on the screen. | We wrote a shader for the water effect.
+texture | n. | doku | An image that covers the surface of an object. | The wall uses a stone texture.
+particle | n. | parçacık | A tiny object used for effects like smoke or fire. | A particle system creates the sparks.
+asset | n. | oyun kaynağı (varlık) | Any file used in a game, such as an image or a sound. | The artist delivered all the assets this week.
+level design | n. | seviye tasarımı | Planning the layout and challenges of a game level. | Good level design teaches the player slowly.
+difficulty curve | n. | zorluk eğrisi | How the challenge of a game grows over time. | A smooth difficulty curve keeps players motivated.
+power-up | n. | güçlendirici | An item that gives the player a temporary ability. | The magnet power-up pulls coins toward the player.
+leaderboard | n. | liderlik tablosu | A ranking list of the best player scores. | The leaderboard shows the top ten distances.
+cooldown | n. | bekleme süresi | The time you must wait before using an ability again. | The skill has a five-second cooldown.
+hitbox | n. | vuruş alanı | The area where an attack can hurt a character. | The sword has a large hitbox.
+gameplay | n. | oynanış | The way a game is played and what it feels like. | The gameplay is simple, but it is hard to master.
+playtest | v. | oyun testi yapmak | To let people play a game to find problems. | We playtest every new level with friends.
+indie | adj. | bağımsız (küçük stüdyo) | Made by a small team without a big publisher. | She released her first indie game last month.
+save system | n. | kayıt sistemi | The part of a game that stores the player's progress. | The save system stores your coins and upgrades.
+## ai | Yapay Zeka ve Veri
+machine learning | n. | makine öğrenmesi | Teaching computers to learn patterns from data. | Machine learning is used to recommend videos.
+model | n. | model | A program trained on data to make predictions. | The model predicts the price of a house.
+dataset | n. | veri kümesi | A collection of data used to train or test a model. | We cleaned the dataset before training.
+training | n. | eğitim (modelin) | The process of teaching a model with data. | Training took six hours on a GPU.
+prediction | n. | tahmin (modelin) | The result that a model gives for new data. | The prediction was correct in ninety percent of the cases.
+neural network | n. | yapay sinir ağı | A model made of connected layers inspired by the brain. | A neural network can recognize handwritten digits.
+feature | n. | özellik (veri sütunu) | An input variable that describes one aspect of the data. | Age is an important feature in this dataset.
+label | n. | etiket | The correct answer attached to a training example. | Each photo has a label such as cat or dog.
+overfitting | n. | aşırı öğrenme | When a model learns the training data too well and fails on new data. | Overfitting happens when the model memorizes the examples.
+bias | n. | yanlılık | An unfair tendency in data or in the results of a model. | Bias in the data can lead to unfair decisions.
+prompt | n. | istem (yönerge) | The text you give to an AI model to get an answer. | A clear prompt gives a better result.
+inference | n. | çıkarım (tahmin aşaması) | Using a trained model to make predictions. | Inference is fast, but training is expensive.
+GPU | n. | GPU (grafik işlemci) | A processor that is very good at doing many calculations at once. | Training on a GPU is much faster than on a CPU.
+CPU | n. | CPU (işlemci) | The main processor of a computer. | The CPU usage reached one hundred percent.
+big data | n. | büyük veri | Very large sets of data that need special tools. | Big data tools process billions of records.
+data pipeline | n. | veri hattı | A series of steps that move and clean data automatically. | Our data pipeline downloads the menus every day.
+scraper | n. | veri kazıyıcı | A program that collects information from websites. | I wrote a scraper to read the cafeteria menu.
+data cleaning | n. | veri temizleme | Fixing or removing wrong, missing, or duplicate data. | Data cleaning took more time than the training.
+visualization | n. | görselleştirme | Showing data in charts and graphs. | A good visualization makes trends easy to see.
+outlier | n. | aykırı değer | A value that is very different from the others. | One outlier changed the average a lot.
+correlation | n. | korelasyon | A relationship between two sets of data. | There is a strong correlation between study time and grades.
+supervised learning | n. | denetimli öğrenme | Learning from examples that have correct answers. | Spam detection is an example of supervised learning.
+natural language processing | n. | doğal dil işleme | Teaching computers to understand human language. | Natural language processing powers chatbots.
+chatbot | n. | sohbet botu | A program that talks with people in text or voice. | The chatbot answers common questions of customers.
+hallucination | n. | halüsinasyon (uydurma çıktı) | When an AI gives a confident answer that is false. | The assistant made a hallucination and invented a function.
+fine-tune | v. | ince ayar yapmak | To train an existing model a little more for a specific task. | We fine-tune the model on our own data.
+embedding | n. | gömme (vektör temsili) | A list of numbers that represents the meaning of text or images. | An embedding helps find similar sentences.

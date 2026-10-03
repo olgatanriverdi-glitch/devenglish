@@ -47,6 +47,18 @@
 {
 "id": "verbs",
 "name": "Mühendis Fiilleri ve Kalıplar"
+},
+{
+"id": "mobile",
+"name": "Mobil Uygulama Geliştirme"
+},
+{
+"id": "game",
+"name": "Oyun Geliştirme"
+},
+{
+"id": "ai",
+"name": "Yapay Zeka ve Veri"
 }
 ],
 "words": [
@@ -3019,6 +3031,708 @@
 "def": "To replace existing data with new data.",
 "ex": "Be careful not to overwrite the original file.",
 "cat": "verbs"
+},
+{
+"id": "widget",
+"term": "widget",
+"pos": "n.",
+"tr": "bileşen (Flutter)",
+"def": "A building block of a user interface in Flutter.",
+"ex": "Every button on the screen is a widget.",
+"cat": "mobile"
+},
+{
+"id": "hot-reload",
+"term": "hot reload",
+"pos": "n.",
+"tr": "sıcak yenileme",
+"def": "A feature that shows code changes in the running app instantly.",
+"ex": "Hot reload saves a lot of time while designing the screen.",
+"cat": "mobile"
+},
+{
+"id": "emulator",
+"term": "emulator",
+"pos": "n.",
+"tr": "emülatör",
+"def": "A program that imitates a phone on your computer.",
+"ex": "I tested the app on an emulator before using a real device.",
+"cat": "mobile"
+},
+{
+"id": "simulator",
+"term": "simulator",
+"pos": "n.",
+"tr": "simülatör",
+"def": "A tool that imitates the behavior of a device on a computer.",
+"ex": "The iOS simulator is part of Xcode.",
+"cat": "mobile"
+},
+{
+"id": "cross-platform",
+"term": "cross-platform",
+"pos": "adj.",
+"tr": "çok platformlu",
+"def": "Working on more than one operating system with the same code.",
+"ex": "Flutter is a cross-platform framework.",
+"cat": "mobile"
+},
+{
+"id": "native",
+"term": "native",
+"pos": "adj.",
+"tr": "yerel (platforma özgü)",
+"def": "Built specifically for one platform with its own tools.",
+"ex": "A native app can use every feature of the phone.",
+"cat": "mobile"
+},
+{
+"id": "layout",
+"term": "layout",
+"pos": "n.",
+"tr": "yerleşim düzeni",
+"def": "The way elements are arranged on a screen.",
+"ex": "The layout changes when the user rotates the phone.",
+"cat": "mobile"
+},
+{
+"id": "navigation",
+"term": "navigation",
+"pos": "n.",
+"tr": "gezinme",
+"def": "Moving between the screens of an app.",
+"ex": "The navigation bar at the bottom has five tabs.",
+"cat": "mobile"
+},
+{
+"id": "gesture",
+"term": "gesture",
+"pos": "n.",
+"tr": "jest (dokunma hareketi)",
+"def": "A touch movement such as a tap or a swipe.",
+"ex": "The app reacts to a swipe gesture on the list.",
+"cat": "mobile"
+},
+{
+"id": "notification",
+"term": "notification",
+"pos": "n.",
+"tr": "bildirim",
+"def": "A message that an app shows outside of its own screen.",
+"ex": "We send a notification when the order is ready.",
+"cat": "mobile"
+},
+{
+"id": "sandbox",
+"term": "sandbox",
+"pos": "n.",
+"tr": "korumalı alan",
+"def": "A restricted area where an app can run safely.",
+"ex": "Each iOS app runs in its own sandbox.",
+"cat": "mobile"
+},
+{
+"id": "bundle",
+"term": "bundle",
+"pos": "n.",
+"tr": "uygulama paketi",
+"def": "The package that contains an app and its resources.",
+"ex": "The app bundle includes the code, images, and fonts.",
+"cat": "mobile"
+},
+{
+"id": "provisioning-profile",
+"term": "provisioning profile",
+"pos": "n.",
+"tr": "sağlama profili",
+"def": "A file that allows an app to run on specific Apple devices.",
+"ex": "Without a provisioning profile, the app cannot be installed on the iPhone.",
+"cat": "mobile"
+},
+{
+"id": "certificate",
+"term": "certificate",
+"pos": "n.",
+"tr": "sertifika",
+"def": "A digital file that proves who created the app.",
+"ex": "The developer certificate expires after one year.",
+"cat": "mobile"
+},
+{
+"id": "build-number",
+"term": "build number",
+"pos": "n.",
+"tr": "derleme numarası",
+"def": "A number that identifies one build of the app.",
+"ex": "Increase the build number before every upload.",
+"cat": "mobile"
+},
+{
+"id": "crash-report",
+"term": "crash report",
+"pos": "n.",
+"tr": "çökme raporu",
+"def": "A log with details about why an app stopped working.",
+"ex": "The crash report shows the exact line that failed.",
+"cat": "mobile"
+},
+{
+"id": "offline",
+"term": "offline",
+"pos": "adj.",
+"tr": "çevrimdışı",
+"def": "Not connected to the internet.",
+"ex": "The app also works offline.",
+"cat": "mobile"
+},
+{
+"id": "local-storage",
+"term": "local storage",
+"pos": "n.",
+"tr": "yerel depolama",
+"def": "Data saved on the user's device.",
+"ex": "We keep the settings in local storage.",
+"cat": "mobile"
+},
+{
+"id": "orientation",
+"term": "orientation",
+"pos": "n.",
+"tr": "ekran yönü",
+"def": "Whether the screen is held vertically or horizontally.",
+"ex": "The game only supports landscape orientation.",
+"cat": "mobile"
+},
+{
+"id": "accessibility",
+"term": "accessibility",
+"pos": "n.",
+"tr": "erişilebilirlik",
+"def": "Making an app usable for people with disabilities.",
+"ex": "Good accessibility includes large text and screen readers.",
+"cat": "mobile"
+},
+{
+"id": "animation",
+"term": "animation",
+"pos": "n.",
+"tr": "animasyon",
+"def": "Smooth movement or change of elements on the screen.",
+"ex": "The animation makes the button feel alive.",
+"cat": "mobile"
+},
+{
+"id": "refresh-rate",
+"term": "refresh rate",
+"pos": "n.",
+"tr": "yenileme hızı",
+"def": "How many times per second the screen updates.",
+"ex": "A higher refresh rate makes scrolling smoother.",
+"cat": "mobile"
+},
+{
+"id": "splash-screen",
+"term": "splash screen",
+"pos": "n.",
+"tr": "açılış ekranı",
+"def": "The first screen that appears while an app loads.",
+"ex": "The splash screen shows the logo for two seconds.",
+"cat": "mobile"
+},
+{
+"id": "deep-link",
+"term": "deep link",
+"pos": "n.",
+"tr": "derin bağlantı",
+"def": "A link that opens a specific screen inside an app.",
+"ex": "The email contains a deep link to your order.",
+"cat": "mobile"
+},
+{
+"id": "app-store",
+"term": "app store",
+"pos": "n.",
+"tr": "uygulama mağazası",
+"def": "An online shop where people download apps.",
+"ex": "The app was approved and appeared in the App Store.",
+"cat": "mobile"
+},
+{
+"id": "sprite",
+"term": "sprite",
+"pos": "n.",
+"tr": "sprite (2B görsel)",
+"def": "A 2D image or animation used in a game.",
+"ex": "Each character is drawn as a sprite.",
+"cat": "game"
+},
+{
+"id": "collider",
+"term": "collider",
+"pos": "n.",
+"tr": "çarpışma alanı",
+"def": "An invisible shape that detects when objects touch.",
+"ex": "The player's collider touches the wall.",
+"cat": "game"
+},
+{
+"id": "collision",
+"term": "collision",
+"pos": "n.",
+"tr": "çarpışma",
+"def": "When two objects in a game hit each other.",
+"ex": "A collision with the enemy reduces your health.",
+"cat": "game"
+},
+{
+"id": "physics-engine",
+"term": "physics engine",
+"pos": "n.",
+"tr": "fizik motoru",
+"def": "Software that simulates gravity and movement in a game.",
+"ex": "The physics engine calculates how the ball falls.",
+"cat": "game"
+},
+{
+"id": "rigidbody",
+"term": "rigidbody",
+"pos": "n.",
+"tr": "katı cisim bileşeni",
+"def": "A component that lets the physics engine move an object.",
+"ex": "Add a rigidbody to make the box fall.",
+"cat": "game"
+},
+{
+"id": "prefab",
+"term": "prefab",
+"pos": "n.",
+"tr": "hazır nesne şablonu",
+"def": "A saved template of a game object that you can reuse.",
+"ex": "We spawn a prefab of the enemy every few seconds.",
+"cat": "game"
+},
+{
+"id": "scene",
+"term": "scene",
+"pos": "n.",
+"tr": "sahne",
+"def": "A level or screen of a game that contains objects.",
+"ex": "The main menu is a separate scene.",
+"cat": "game"
+},
+{
+"id": "spawn",
+"term": "spawn",
+"pos": "v.",
+"tr": "oluşturmak (oyunda)",
+"def": "To create a new object or enemy in a game.",
+"ex": "Enemies spawn at the right side of the screen.",
+"cat": "game"
+},
+{
+"id": "frame-rate",
+"term": "frame rate",
+"pos": "n.",
+"tr": "kare hızı",
+"def": "The number of images shown per second in a game.",
+"ex": "The game runs at a stable frame rate of sixty.",
+"cat": "game"
+},
+{
+"id": "game-loop",
+"term": "game loop",
+"pos": "n.",
+"tr": "oyun döngüsü",
+"def": "The main cycle that updates and draws the game again and again.",
+"ex": "Each pass of the game loop moves the player a little.",
+"cat": "game"
+},
+{
+"id": "camera",
+"term": "camera",
+"pos": "n.",
+"tr": "kamera",
+"def": "The view that shows the game world to the player.",
+"ex": "The camera follows the player through the level.",
+"cat": "game"
+},
+{
+"id": "parallax",
+"term": "parallax",
+"pos": "n.",
+"tr": "paralaks (derinlik etkisi)",
+"def": "An effect where background layers move at different speeds.",
+"ex": "The parallax effect makes the forest look deep.",
+"cat": "game"
+},
+{
+"id": "shader",
+"term": "shader",
+"pos": "n.",
+"tr": "gölgelendirici",
+"def": "A small program that controls how things are drawn on the screen.",
+"ex": "We wrote a shader for the water effect.",
+"cat": "game"
+},
+{
+"id": "texture",
+"term": "texture",
+"pos": "n.",
+"tr": "doku",
+"def": "An image that covers the surface of an object.",
+"ex": "The wall uses a stone texture.",
+"cat": "game"
+},
+{
+"id": "particle",
+"term": "particle",
+"pos": "n.",
+"tr": "parçacık",
+"def": "A tiny object used for effects like smoke or fire.",
+"ex": "A particle system creates the sparks.",
+"cat": "game"
+},
+{
+"id": "asset",
+"term": "asset",
+"pos": "n.",
+"tr": "oyun kaynağı (varlık)",
+"def": "Any file used in a game, such as an image or a sound.",
+"ex": "The artist delivered all the assets this week.",
+"cat": "game"
+},
+{
+"id": "level-design",
+"term": "level design",
+"pos": "n.",
+"tr": "seviye tasarımı",
+"def": "Planning the layout and challenges of a game level.",
+"ex": "Good level design teaches the player slowly.",
+"cat": "game"
+},
+{
+"id": "difficulty-curve",
+"term": "difficulty curve",
+"pos": "n.",
+"tr": "zorluk eğrisi",
+"def": "How the challenge of a game grows over time.",
+"ex": "A smooth difficulty curve keeps players motivated.",
+"cat": "game"
+},
+{
+"id": "power-up",
+"term": "power-up",
+"pos": "n.",
+"tr": "güçlendirici",
+"def": "An item that gives the player a temporary ability.",
+"ex": "The magnet power-up pulls coins toward the player.",
+"cat": "game"
+},
+{
+"id": "leaderboard",
+"term": "leaderboard",
+"pos": "n.",
+"tr": "liderlik tablosu",
+"def": "A ranking list of the best player scores.",
+"ex": "The leaderboard shows the top ten distances.",
+"cat": "game"
+},
+{
+"id": "cooldown",
+"term": "cooldown",
+"pos": "n.",
+"tr": "bekleme süresi",
+"def": "The time you must wait before using an ability again.",
+"ex": "The skill has a five-second cooldown.",
+"cat": "game"
+},
+{
+"id": "hitbox",
+"term": "hitbox",
+"pos": "n.",
+"tr": "vuruş alanı",
+"def": "The area where an attack can hurt a character.",
+"ex": "The sword has a large hitbox.",
+"cat": "game"
+},
+{
+"id": "gameplay",
+"term": "gameplay",
+"pos": "n.",
+"tr": "oynanış",
+"def": "The way a game is played and what it feels like.",
+"ex": "The gameplay is simple, but it is hard to master.",
+"cat": "game"
+},
+{
+"id": "playtest",
+"term": "playtest",
+"pos": "v.",
+"tr": "oyun testi yapmak",
+"def": "To let people play a game to find problems.",
+"ex": "We playtest every new level with friends.",
+"cat": "game"
+},
+{
+"id": "indie",
+"term": "indie",
+"pos": "adj.",
+"tr": "bağımsız (küçük stüdyo)",
+"def": "Made by a small team without a big publisher.",
+"ex": "She released her first indie game last month.",
+"cat": "game"
+},
+{
+"id": "save-system",
+"term": "save system",
+"pos": "n.",
+"tr": "kayıt sistemi",
+"def": "The part of a game that stores the player's progress.",
+"ex": "The save system stores your coins and upgrades.",
+"cat": "game"
+},
+{
+"id": "machine-learning",
+"term": "machine learning",
+"pos": "n.",
+"tr": "makine öğrenmesi",
+"def": "Teaching computers to learn patterns from data.",
+"ex": "Machine learning is used to recommend videos.",
+"cat": "ai"
+},
+{
+"id": "model",
+"term": "model",
+"pos": "n.",
+"tr": "model",
+"def": "A program trained on data to make predictions.",
+"ex": "The model predicts the price of a house.",
+"cat": "ai"
+},
+{
+"id": "dataset",
+"term": "dataset",
+"pos": "n.",
+"tr": "veri kümesi",
+"def": "A collection of data used to train or test a model.",
+"ex": "We cleaned the dataset before training.",
+"cat": "ai"
+},
+{
+"id": "training",
+"term": "training",
+"pos": "n.",
+"tr": "eğitim (modelin)",
+"def": "The process of teaching a model with data.",
+"ex": "Training took six hours on a GPU.",
+"cat": "ai"
+},
+{
+"id": "prediction",
+"term": "prediction",
+"pos": "n.",
+"tr": "tahmin (modelin)",
+"def": "The result that a model gives for new data.",
+"ex": "The prediction was correct in ninety percent of the cases.",
+"cat": "ai"
+},
+{
+"id": "neural-network",
+"term": "neural network",
+"pos": "n.",
+"tr": "yapay sinir ağı",
+"def": "A model made of connected layers inspired by the brain.",
+"ex": "A neural network can recognize handwritten digits.",
+"cat": "ai"
+},
+{
+"id": "feature",
+"term": "feature",
+"pos": "n.",
+"tr": "özellik (veri sütunu)",
+"def": "An input variable that describes one aspect of the data.",
+"ex": "Age is an important feature in this dataset.",
+"cat": "ai"
+},
+{
+"id": "label",
+"term": "label",
+"pos": "n.",
+"tr": "etiket",
+"def": "The correct answer attached to a training example.",
+"ex": "Each photo has a label such as cat or dog.",
+"cat": "ai"
+},
+{
+"id": "overfitting",
+"term": "overfitting",
+"pos": "n.",
+"tr": "aşırı öğrenme",
+"def": "When a model learns the training data too well and fails on new data.",
+"ex": "Overfitting happens when the model memorizes the examples.",
+"cat": "ai"
+},
+{
+"id": "bias",
+"term": "bias",
+"pos": "n.",
+"tr": "yanlılık",
+"def": "An unfair tendency in data or in the results of a model.",
+"ex": "Bias in the data can lead to unfair decisions.",
+"cat": "ai"
+},
+{
+"id": "prompt",
+"term": "prompt",
+"pos": "n.",
+"tr": "istem (yönerge)",
+"def": "The text you give to an AI model to get an answer.",
+"ex": "A clear prompt gives a better result.",
+"cat": "ai"
+},
+{
+"id": "inference",
+"term": "inference",
+"pos": "n.",
+"tr": "çıkarım (tahmin aşaması)",
+"def": "Using a trained model to make predictions.",
+"ex": "Inference is fast, but training is expensive.",
+"cat": "ai"
+},
+{
+"id": "gpu",
+"term": "GPU",
+"pos": "n.",
+"tr": "GPU (grafik işlemci)",
+"def": "A processor that is very good at doing many calculations at once.",
+"ex": "Training on a GPU is much faster than on a CPU.",
+"cat": "ai"
+},
+{
+"id": "cpu",
+"term": "CPU",
+"pos": "n.",
+"tr": "CPU (işlemci)",
+"def": "The main processor of a computer.",
+"ex": "The CPU usage reached one hundred percent.",
+"cat": "ai"
+},
+{
+"id": "big-data",
+"term": "big data",
+"pos": "n.",
+"tr": "büyük veri",
+"def": "Very large sets of data that need special tools.",
+"ex": "Big data tools process billions of records.",
+"cat": "ai"
+},
+{
+"id": "data-pipeline",
+"term": "data pipeline",
+"pos": "n.",
+"tr": "veri hattı",
+"def": "A series of steps that move and clean data automatically.",
+"ex": "Our data pipeline downloads the menus every day.",
+"cat": "ai"
+},
+{
+"id": "scraper",
+"term": "scraper",
+"pos": "n.",
+"tr": "veri kazıyıcı",
+"def": "A program that collects information from websites.",
+"ex": "I wrote a scraper to read the cafeteria menu.",
+"cat": "ai"
+},
+{
+"id": "data-cleaning",
+"term": "data cleaning",
+"pos": "n.",
+"tr": "veri temizleme",
+"def": "Fixing or removing wrong, missing, or duplicate data.",
+"ex": "Data cleaning took more time than the training.",
+"cat": "ai"
+},
+{
+"id": "visualization",
+"term": "visualization",
+"pos": "n.",
+"tr": "görselleştirme",
+"def": "Showing data in charts and graphs.",
+"ex": "A good visualization makes trends easy to see.",
+"cat": "ai"
+},
+{
+"id": "outlier",
+"term": "outlier",
+"pos": "n.",
+"tr": "aykırı değer",
+"def": "A value that is very different from the others.",
+"ex": "One outlier changed the average a lot.",
+"cat": "ai"
+},
+{
+"id": "correlation",
+"term": "correlation",
+"pos": "n.",
+"tr": "korelasyon",
+"def": "A relationship between two sets of data.",
+"ex": "There is a strong correlation between study time and grades.",
+"cat": "ai"
+},
+{
+"id": "supervised-learning",
+"term": "supervised learning",
+"pos": "n.",
+"tr": "denetimli öğrenme",
+"def": "Learning from examples that have correct answers.",
+"ex": "Spam detection is an example of supervised learning.",
+"cat": "ai"
+},
+{
+"id": "natural-language-processing",
+"term": "natural language processing",
+"pos": "n.",
+"tr": "doğal dil işleme",
+"def": "Teaching computers to understand human language.",
+"ex": "Natural language processing powers chatbots.",
+"cat": "ai"
+},
+{
+"id": "chatbot",
+"term": "chatbot",
+"pos": "n.",
+"tr": "sohbet botu",
+"def": "A program that talks with people in text or voice.",
+"ex": "The chatbot answers common questions of customers.",
+"cat": "ai"
+},
+{
+"id": "hallucination",
+"term": "hallucination",
+"pos": "n.",
+"tr": "halüsinasyon (uydurma çıktı)",
+"def": "When an AI gives a confident answer that is false.",
+"ex": "The assistant made a hallucination and invented a function.",
+"cat": "ai"
+},
+{
+"id": "fine-tune",
+"term": "fine-tune",
+"pos": "v.",
+"tr": "ince ayar yapmak",
+"def": "To train an existing model a little more for a specific task.",
+"ex": "We fine-tune the model on our own data.",
+"cat": "ai"
+},
+{
+"id": "embedding",
+"term": "embedding",
+"pos": "n.",
+"tr": "gömme (vektör temsili)",
+"def": "A list of numbers that represents the meaning of text or images.",
+"ex": "An embedding helps find similar sentences.",
+"cat": "ai"
 }
 ]
 }

@@ -293,6 +293,71 @@
 ],
 "model": "Object-oriented programming organizes code into objects that combine data and methods. The main ideas are encapsulation, which hides the details, inheritance, which lets a class reuse another class, and polymorphism, which lets different objects respond to the same call in different ways.",
 "tip": "Dört kavram: abstraction, encapsulation, inheritance, polymorphism."
+},
+{
+"id": "flutter",
+"level": "B1",
+"q": "What is Flutter and why would a developer choose it?",
+"keywords": [
+"framework",
+"cross-platform",
+"widgets",
+"ios",
+"android",
+"code",
+"hot",
+"reload"
+],
+"model": "Flutter is a framework for building apps for iOS, Android, and the web with one code base. Everything on the screen is a widget, and hot reload shows changes instantly. Developers choose it because it saves time and works on many platforms.",
+"tip": "Üç neden söyle: tek kod, widget yapısı, hot reload."
+},
+{
+"id": "game-loop",
+"level": "B2",
+"q": "Explain what a game loop is and why it is important.",
+"keywords": [
+"loop",
+"update",
+"draw",
+"frame",
+"input",
+"player",
+"second"
+],
+"model": "A game loop is the main cycle of a game. In every frame it reads the input of the player, updates the objects, and draws the screen. This repeats many times per second, so the game feels smooth and alive.",
+"tip": "Üç adımı sırala: input → update → draw."
+},
+{
+"id": "ai-tools",
+"level": "B2",
+"q": "How do you use AI tools when you write code, and what are the risks?",
+"keywords": [
+"ai",
+"code",
+"check",
+"test",
+"risk",
+"understand",
+"wrong",
+"learn"
+],
+"model": "I use AI tools to get ideas and to explain errors, but I never copy the code without checking it. The tool can give a wrong answer, so I run the tests and read the documentation. My goal is to understand the code and to learn from it.",
+"tip": "Fayda + risk + kendi kontrolün: üç parça söyle."
+},
+{
+"id": "game-project",
+"level": "B1",
+"q": "Describe a game or app idea that you would like to build.",
+"keywords": [
+"game",
+"player",
+"build",
+"story",
+"fun",
+"plan"
+],
+"model": "I would like to build a runner game with a simple story. The player runs through different worlds, collects coins, and buys upgrades. I want the game to be fun and easy to learn, and I plan to add a leaderboard for friends.",
+"tip": "I would like to build... / The player... / I plan to... kalıplarını kullan."
 }
 ],
 "words": [

@@ -86,7 +86,13 @@ class Tts {
       if (benim != _belirtec) return;
       _calisiyor = true;
       konusuyor.value = true;
-      await _t.speak(text);
+      // Bazı cihazlarda "bitti" sinyali hiç gelmeyebilir; metin uzunluğuna göre makul bir üst süre koy.
+      await _t
+          .speak(text)
+          .timeout(
+            Duration(seconds: 6 + text.length ~/ 6),
+            onTimeout: () => null,
+          );
     } catch (e) {
       debugPrint('TTS hata: $e');
     } finally {

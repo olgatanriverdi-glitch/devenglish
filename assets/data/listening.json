@@ -1058,6 +1058,283 @@
 "why": "Staging ortamında bir kez daha test."
 }
 ]
+},
+{
+"id": "flutter-team-chat",
+"title": "Building a Flutter App",
+"level": "B1",
+"minutes": 1,
+"about": "İki geliştirici Flutter uygulamasının ekranını hot reload ile tasarlıyor ve yayına hazırlanıyor.",
+"lines": [
+{
+"s": 0,
+"t": "How is the new screen coming along?"
+},
+{
+"s": 1,
+"t": "Pretty well. I built the layout with a few widgets, and hot reload makes the work really fast."
+},
+{
+"s": 0,
+"t": "Nice. Did you test it on a real phone or only on the emulator?"
+},
+{
+"s": 1,
+"t": "Only on the emulator so far. Tomorrow I will install it on my phone and check the animation."
+},
+{
+"s": 0,
+"t": "Good. Remember that the app has to work offline too."
+},
+{
+"s": 1,
+"t": "Yes, I save the last data in local storage, so the menu still appears without internet."
+},
+{
+"s": 0,
+"t": "Perfect. When do you want to send it to the App Store?"
+},
+{
+"s": 1,
+"t": "After I fix the crash report from yesterday. I will also increase the build number."
+},
+{
+"s": 0,
+"t": "OK. Let me know when it is ready, and I will review the code."
+}
+],
+"questions": [
+{
+"q": "Why does the developer like hot reload?",
+"options": [
+"It makes the app smaller",
+"It makes the work very fast",
+"It fixes crashes",
+"It works offline"
+],
+"answer": 1,
+"why": "Hot reload çalışmayı çok hızlandırıyor."
+},
+{
+"q": "Where has the screen been tested so far?",
+"options": [
+"On a real phone",
+"Only on the emulator",
+"On a tablet",
+"On the web only"
+],
+"answer": 1,
+"why": "Şimdilik sadece emülatörde."
+},
+{
+"q": "How does the app work without internet?",
+"options": [
+"It saves the last data in local storage",
+"It downloads a video",
+"It cannot work offline",
+"It uses a printed menu"
+],
+"answer": 0,
+"why": "Son veriyi yerel depolamada saklıyor."
+},
+{
+"q": "What must be done before sending the app to the App Store?",
+"options": [
+"Delete the layout",
+"Fix the crash and increase the build number",
+"Buy a new phone",
+"Change the language"
+],
+"answer": 1,
+"why": "Çökmeyi düzeltmek ve derleme numarasını artırmak."
+}
+]
+},
+{
+"id": "game-design-review",
+"title": "A Game Design Review",
+"level": "B1",
+"minutes": 1,
+"about": "Bir oyun tasarımcısı ve bir programcı, koşu oyununun zorluk eğrisini ve oyun testinden gelen geri bildirimi konuşuyor.",
+"lines": [
+{
+"s": 0,
+"t": "I watched three friends playtest the runner game yesterday. Most of them lost in the first minute."
+},
+{
+"s": 1,
+"t": "That means the difficulty curve is too steep. The first obstacles come too fast."
+},
+{
+"s": 0,
+"t": "Exactly. I suggest we spawn fewer enemies at the beginning and add them slowly."
+},
+{
+"s": 1,
+"t": "I can do that. I will also make the collider of the spikes a little smaller, because the players say it feels unfair."
+},
+{
+"s": 0,
+"t": "Good idea. What about the power-ups?"
+},
+{
+"s": 1,
+"t": "The magnet power-up is popular. People love it when the coins fly to the character."
+},
+{
+"s": 0,
+"t": "Let's add a short cooldown to the skill, so it does not become too strong."
+},
+{
+"s": 1,
+"t": "Agreed. After that, I will check the frame rate on an old phone."
+},
+{
+"s": 0,
+"t": "Great. Let's playtest again on Friday."
+}
+],
+"questions": [
+{
+"q": "What was the problem in the playtest?",
+"options": [
+"The game was too easy",
+"Most players lost in the first minute",
+"The game had no sound",
+"The camera was broken"
+],
+"answer": 1,
+"why": "Çoğu oyuncu ilk dakikada kaybetti."
+},
+{
+"q": "How will they fix the difficulty curve?",
+"options": [
+"Spawn fewer enemies at the beginning",
+"Remove all power-ups",
+"Make the game longer",
+"Change the music"
+],
+"answer": 0,
+"why": "Başta daha az düşman çıkaracaklar."
+},
+{
+"q": "Why will the programmer make the spike collider smaller?",
+"options": [
+"It feels unfair to players",
+"It uses too much memory",
+"The artist asked",
+"It is a bug in the engine"
+],
+"answer": 0,
+"why": "Oyuncular haksızlık gibi hissediyor."
+},
+{
+"q": "What will they check on an old phone?",
+"options": [
+"The frame rate",
+"The sound",
+"The price",
+"The screen color"
+],
+"answer": 0,
+"why": "Kare hızı (frame rate)."
+}
+]
+},
+{
+"id": "ai-tools-at-work",
+"title": "Using AI Tools Wisely",
+"level": "B2",
+"minutes": 2,
+"about": "Bir mentor ve bir stajyer, yapay zeka araçlarını kod yazarken nasıl güvenle kullanacaklarını konuşuyor.",
+"lines": [
+{
+"s": 0,
+"t": "I noticed you used an AI assistant to write the function. How did it go?"
+},
+{
+"s": 1,
+"t": "It was fast, but the first answer had a hallucination. It used a method that does not exist."
+},
+{
+"s": 0,
+"t": "That happens often. The important part is that you checked the result instead of trusting it."
+},
+{
+"s": 1,
+"t": "I ran the tests, and they failed. Then I read the documentation and fixed the code myself."
+},
+{
+"s": 0,
+"t": "Exactly. Treat the assistant like a fast but sometimes careless colleague."
+},
+{
+"s": 1,
+"t": "Should I tell the team when I use it?"
+},
+{
+"s": 0,
+"t": "Yes. Be open about it, and never paste private data or passwords into a prompt."
+},
+{
+"s": 1,
+"t": "That makes sense. I also want to understand every line I submit, not just copy it."
+},
+{
+"s": 0,
+"t": "That is the right attitude. If you cannot explain the code, you do not own it yet."
+},
+{
+"s": 1,
+"t": "I will remember that. Thank you for the advice."
+}
+],
+"questions": [
+{
+"q": "What was wrong with the first answer of the assistant?",
+"options": [
+"It was too slow",
+"It used a method that does not exist",
+"It had no code",
+"It was in another language"
+],
+"answer": 1,
+"why": "Var olmayan bir metot kullanmıştı (halüsinasyon)."
+},
+{
+"q": "How did the intern find the problem?",
+"options": [
+"By running the tests",
+"By asking a friend",
+"By guessing",
+"By restarting the computer"
+],
+"answer": 0,
+"why": "Testleri çalıştırınca başarısız oldular."
+},
+{
+"q": "What should you never paste into a prompt?",
+"options": [
+"Questions",
+"Private data or passwords",
+"Error messages without secrets",
+"Short examples"
+],
+"answer": 1,
+"why": "Özel veri ve parolalar."
+},
+{
+"q": "What does the mentor say about code you cannot explain?",
+"options": [
+"It is fine",
+"You do not own it yet",
+"Delete the repository",
+"Send it to the client"
+],
+"answer": 1,
+"why": "Açıklayamıyorsan henüz sana ait değil."
+}
+]
 }
 ],
 "sentences": [
@@ -1310,6 +1587,56 @@
 "t": "Do you have any questions about the task?",
 "level": "A2",
 "tr": "Görevle ilgili sorun var mı?"
+},
+{
+"t": "Hot reload lets me see my changes in the app instantly.",
+"level": "B1",
+"tr": "Hot reload değişikliklerimi uygulamada anında görmemi sağlıyor."
+},
+{
+"t": "The app needs permission to use the microphone.",
+"level": "A2",
+"tr": "Uygulamanın mikrofonu kullanmak için izne ihtiyacı var."
+},
+{
+"t": "I have to renew the certificate every seven days.",
+"level": "B1",
+"tr": "Sertifikayı yedi günde bir yenilemek zorundayım."
+},
+{
+"t": "The player's collider touches the wall and the character stops.",
+"level": "B1",
+"tr": "Oyuncunun çarpışma alanı duvara değiyor ve karakter duruyor."
+},
+{
+"t": "A smooth difficulty curve keeps the players interested.",
+"level": "B2",
+"tr": "Yumuşak bir zorluk eğrisi oyuncuların ilgisini canlı tutar."
+},
+{
+"t": "We spawn a new enemy every three seconds.",
+"level": "A2",
+"tr": "Her üç saniyede bir yeni düşman oluşturuyoruz."
+},
+{
+"t": "The model learned the training data too well and failed on new examples.",
+"level": "B2",
+"tr": "Model eğitim verisini fazla iyi öğrendi ve yeni örneklerde başarısız oldu."
+},
+{
+"t": "Always check the answer of an AI assistant before you use it.",
+"level": "B1",
+"tr": "Bir yapay zeka asistanının cevabını kullanmadan önce mutlaka kontrol et."
+},
+{
+"t": "Data cleaning is often the longest part of a project.",
+"level": "B2",
+"tr": "Veri temizleme çoğu zaman bir projenin en uzun kısmıdır."
+},
+{
+"t": "The game runs at sixty frames per second on my phone.",
+"level": "A2",
+"tr": "Oyun telefonumda saniyede altmış kare hızla çalışıyor."
 }
 ]
 }

@@ -313,3 +313,84 @@ SENTENCES = [
     ("The project failed because the requirements kept changing.", "B2", "Gereksinimler sürekli değiştiği için proje başarısız oldu."),
     ("Do you have any questions about the task?", "A2", "Görevle ilgili sorun var mı?"),
 ]
+
+
+DIALOGUES += [
+    {
+        "id": "flutter-team-chat", "title": "Building a Flutter App", "level": "B1", "minutes": 1,
+        "about": "İki geliştirici Flutter uygulamasının ekranını hot reload ile tasarlıyor ve yayına hazırlanıyor.",
+        "lines": [
+            (0, "How is the new screen coming along?"),
+            (1, "Pretty well. I built the layout with a few widgets, and hot reload makes the work really fast."),
+            (0, "Nice. Did you test it on a real phone or only on the emulator?"),
+            (1, "Only on the emulator so far. Tomorrow I will install it on my phone and check the animation."),
+            (0, "Good. Remember that the app has to work offline too."),
+            (1, "Yes, I save the last data in local storage, so the menu still appears without internet."),
+            (0, "Perfect. When do you want to send it to the App Store?"),
+            (1, "After I fix the crash report from yesterday. I will also increase the build number."),
+            (0, "OK. Let me know when it is ready, and I will review the code."),
+        ],
+        "questions": [
+            {"q": "Why does the developer like hot reload?", "options": ["It makes the app smaller", "It makes the work very fast", "It fixes crashes", "It works offline"], "answer": 1, "why": "Hot reload çalışmayı çok hızlandırıyor."},
+            {"q": "Where has the screen been tested so far?", "options": ["On a real phone", "Only on the emulator", "On a tablet", "On the web only"], "answer": 1, "why": "Şimdilik sadece emülatörde."},
+            {"q": "How does the app work without internet?", "options": ["It saves the last data in local storage", "It downloads a video", "It cannot work offline", "It uses a printed menu"], "answer": 0, "why": "Son veriyi yerel depolamada saklıyor."},
+            {"q": "What must be done before sending the app to the App Store?", "options": ["Delete the layout", "Fix the crash and increase the build number", "Buy a new phone", "Change the language"], "answer": 1, "why": "Çökmeyi düzeltmek ve derleme numarasını artırmak."},
+        ],
+    },
+    {
+        "id": "game-design-review", "title": "A Game Design Review", "level": "B1", "minutes": 1,
+        "about": "Bir oyun tasarımcısı ve bir programcı, koşu oyununun zorluk eğrisini ve oyun testinden gelen geri bildirimi konuşuyor.",
+        "lines": [
+            (0, "I watched three friends playtest the runner game yesterday. Most of them lost in the first minute."),
+            (1, "That means the difficulty curve is too steep. The first obstacles come too fast."),
+            (0, "Exactly. I suggest we spawn fewer enemies at the beginning and add them slowly."),
+            (1, "I can do that. I will also make the collider of the spikes a little smaller, because the players say it feels unfair."),
+            (0, "Good idea. What about the power-ups?"),
+            (1, "The magnet power-up is popular. People love it when the coins fly to the character."),
+            (0, "Let's add a short cooldown to the skill, so it does not become too strong."),
+            (1, "Agreed. After that, I will check the frame rate on an old phone."),
+            (0, "Great. Let's playtest again on Friday."),
+        ],
+        "questions": [
+            {"q": "What was the problem in the playtest?", "options": ["The game was too easy", "Most players lost in the first minute", "The game had no sound", "The camera was broken"], "answer": 1, "why": "Çoğu oyuncu ilk dakikada kaybetti."},
+            {"q": "How will they fix the difficulty curve?", "options": ["Spawn fewer enemies at the beginning", "Remove all power-ups", "Make the game longer", "Change the music"], "answer": 0, "why": "Başta daha az düşman çıkaracaklar."},
+            {"q": "Why will the programmer make the spike collider smaller?", "options": ["It feels unfair to players", "It uses too much memory", "The artist asked", "It is a bug in the engine"], "answer": 0, "why": "Oyuncular haksızlık gibi hissediyor."},
+            {"q": "What will they check on an old phone?", "options": ["The frame rate", "The sound", "The price", "The screen color"], "answer": 0, "why": "Kare hızı (frame rate)."},
+        ],
+    },
+    {
+        "id": "ai-tools-at-work", "title": "Using AI Tools Wisely", "level": "B2", "minutes": 2,
+        "about": "Bir mentor ve bir stajyer, yapay zeka araçlarını kod yazarken nasıl güvenle kullanacaklarını konuşuyor.",
+        "lines": [
+            (0, "I noticed you used an AI assistant to write the function. How did it go?"),
+            (1, "It was fast, but the first answer had a hallucination. It used a method that does not exist."),
+            (0, "That happens often. The important part is that you checked the result instead of trusting it."),
+            (1, "I ran the tests, and they failed. Then I read the documentation and fixed the code myself."),
+            (0, "Exactly. Treat the assistant like a fast but sometimes careless colleague."),
+            (1, "Should I tell the team when I use it?"),
+            (0, "Yes. Be open about it, and never paste private data or passwords into a prompt."),
+            (1, "That makes sense. I also want to understand every line I submit, not just copy it."),
+            (0, "That is the right attitude. If you cannot explain the code, you do not own it yet."),
+            (1, "I will remember that. Thank you for the advice."),
+        ],
+        "questions": [
+            {"q": "What was wrong with the first answer of the assistant?", "options": ["It was too slow", "It used a method that does not exist", "It had no code", "It was in another language"], "answer": 1, "why": "Var olmayan bir metot kullanmıştı (halüsinasyon)."},
+            {"q": "How did the intern find the problem?", "options": ["By running the tests", "By asking a friend", "By guessing", "By restarting the computer"], "answer": 0, "why": "Testleri çalıştırınca başarısız oldular."},
+            {"q": "What should you never paste into a prompt?", "options": ["Questions", "Private data or passwords", "Error messages without secrets", "Short examples"], "answer": 1, "why": "Özel veri ve parolalar."},
+            {"q": "What does the mentor say about code you cannot explain?", "options": ["It is fine", "You do not own it yet", "Delete the repository", "Send it to the client"], "answer": 1, "why": "Açıklayamıyorsan henüz sana ait değil."},
+        ],
+    },
+]
+
+SENTENCES += [
+    ("Hot reload lets me see my changes in the app instantly.", "B1", "Hot reload değişikliklerimi uygulamada anında görmemi sağlıyor."),
+    ("The app needs permission to use the microphone.", "A2", "Uygulamanın mikrofonu kullanmak için izne ihtiyacı var."),
+    ("I have to renew the certificate every seven days.", "B1", "Sertifikayı yedi günde bir yenilemek zorundayım."),
+    ("The player's collider touches the wall and the character stops.", "B1", "Oyuncunun çarpışma alanı duvara değiyor ve karakter duruyor."),
+    ("A smooth difficulty curve keeps the players interested.", "B2", "Yumuşak bir zorluk eğrisi oyuncuların ilgisini canlı tutar."),
+    ("We spawn a new enemy every three seconds.", "A2", "Her üç saniyede bir yeni düşman oluşturuyoruz."),
+    ("The model learned the training data too well and failed on new examples.", "B2", "Model eğitim verisini fazla iyi öğrendi ve yeni örneklerde başarısız oldu."),
+    ("Always check the answer of an AI assistant before you use it.", "B1", "Bir yapay zeka asistanının cevabını kullanmadan önce mutlaka kontrol et."),
+    ("Data cleaning is often the longest part of a project.", "B2", "Veri temizleme çoğu zaman bir projenin en uzun kısmıdır."),
+    ("The game runs at sixty frames per second on my phone.", "A2", "Oyun telefonumda saniyede altmış kare hızla çalışıyor."),
+]
