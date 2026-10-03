@@ -35,15 +35,30 @@ class Klip {
 
   static int get adet => _var.length;
 
-  static String anahtar(String metin, int konusmaci) {
-    final ses = konusmaci == 1 ? 'b' : 'a';
+  /// Dosya adı anahtarı: ses a/b (normal), as/bs (yavaş kayıt). tools/make_audio.py ile aynı biçim.
+  static String anahtar(String metin, int konusmaci, {bool yavas = false}) {
+    final ses = (konusmaci == 1 ? 'b' : 'a') + (yavas ? 's' : '');
     return sha1.convert(utf8.encode('$ses|$metin')).toString().substring(0, 16);
   }
 
-  /// Bu metnin kayıtlı sesi var mı? (varlık yolu ya da null)
-  static String? yol(String metin, int konusmaci) {
-    final k = 'assets/audio/${anahtar(metin, konusmaci)}.m4a';
-    return _var.contains(k) ? 'audio/${anahtar(metin, konusmaci)}.m4a' : null;
+  static String? _varsa(String metin, int konusmaci, bool yavas) {
+    final k = anahtar(metin, konusmaci, yavas: yavas);
+    return _var.contains('assets/audio/$k.m4a') ? 'audio/$k.m4a' : null;
+  }
+
+  /// Metin için kayıt: yavaş isteniyorsa önce ayrı yavaş kayıt aranır (çalarken yavaşlatmak sesi titretir).
+  /// [yavaslat] true ise yavaş kayıt yoktur ve çalarken yavaşlatılmalıdır.
+  static ({String yol, bool yavaslat})? bul(
+    String metin,
+    int konusmaci,
+    bool yavas,
+  ) {
+    if (yavas) {
+      final y = _varsa(metin, konusmaci, true);
+      if (y != null) return (yol: y, yavaslat: false);
+    }
+    final n = _varsa(metin, konusmaci, false);
+    return n == null ? null : (yol: n, yavaslat: yavas);
   }
 
   /// Kaydı çalar; bitince döner. Durdurulursa ya da zaman aşımında da döner.
@@ -201,16 +216,13 @@ class Tts {
 
   /// Metni okur ve bitince döner. [konusmaci] 0 ya da 1: farklı ses/ton.
   Future<void> speak(String text, {int konusmaci = 0, bool? yavas}) async {
-    final kayit = Klip.yol(text, konusmaci);
+    final slow = yavas ?? Store.i.slowSpeech;
+    final kayit = Klip.bul(text, konusmaci, slow);
     if (kayit != null) {
       final benim = ++_belirtec;
       konusuyor.value = true;
       try {
-        await Klip.cal(
-          kayit,
-          yavas: yavas ?? Store.i.slowSpeech,
-          karakter: text.length,
-        );
+        await Klip.cal(kayit.yol, yavas: kayit.yavaslat, karakter: text.length);
         return;
       } catch (e) {
         _hataBildir('Ses çalınamadı: $e');

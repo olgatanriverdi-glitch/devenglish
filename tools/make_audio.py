@@ -1,6 +1,6 @@
 """Tüm İngilizce metinler için önceden kaydedilmiş ses dosyaları üretir (macOS `say` + afconvert).
 Neden: tarayıcı/telefon sesleri (özellikle Türkçe iPhone'da) İngilizceyi Türkçe okuyabiliyor. Bu dosyalar her cihazda aynı doğru sesi verir.
-Ses A = Samantha (ABD, kadın), ses B = Daniel (İngiltere, erkek). Dosya adı: sha1("<ses>|<metin>")[:16].m4a
+Ses A = Samantha (ABD, kadın), ses B = Daniel (İngiltere, erkek). Dosya adı: sha1("<ses>|<metin>")[:16].m4a  (ses: a, b = normal; as, bs = yavaş)
 Kullanım: python3 tools/make_audio.py   (var olanları atlar; metin değişince yeni dosya üretir, eskiler `--temizle` ile silinir)
 """
 import hashlib
@@ -15,6 +15,8 @@ KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VERI = os.path.join(KOK, "assets", "data")
 CIKTI = os.path.join(KOK, "assets", "audio")
 SESLER = {"a": ("Samantha", 165), "b": ("Daniel", 170)}
+YAVAS_HIZ = {"a": 120, "b": 125}      # yavaş kayıtlar ayrıca konuşturulur (çalarken yavaşlatmak sesi titretiyor)
+BITRATE = "64000"                     # 32 kbps konuşmada dalgalı/titrek ses yapıyordu
 
 
 def anahtar(ses: str, metin: str) -> str:
@@ -27,37 +29,47 @@ def metinleri_topla():
             return json.load(f)
 
     s = set()
+    yavas = set()
     for w in oku("vocab.json")["words"]:
         s.add(("a", w["term"]))
         s.add(("a", w["ex"]))
+        yavas.add(("as", w["term"]))
     l = oku("listening.json")
     for d in l["dialogues"]:
         for satir in d["lines"]:
-            s.add(("b" if satir["s"] == 1 else "a", satir["t"]))
+            ses = "b" if satir["s"] == 1 else "a"
+            s.add((ses, satir["t"]))
+            yavas.add((ses + "s", satir["t"]))
     for c in l["sentences"]:
         s.add(("a", c["t"]))
+        yavas.add(("as", c["t"]))
     k = oku("speaking.json")
     for p in k["prompts"]:
         s.add(("a", p["q"]))
         s.add(("a", p["model"]))
+        yavas.add(("as", p["q"]))
+        yavas.add(("as", p["model"]))
     for w in k["words"]:
         s.add(("a", w["w"]))
+        yavas.add(("as", w["w"]))
     for a in oku("articles.json")["articles"]:
         for p in a["paragraphs"]:
             s.add(("a", p))
-    return s
+    return s | yavas
 
 
 def uret(oge):
     ses, metin = oge
     yol = os.path.join(CIKTI, anahtar(ses, metin) + ".m4a")
-    if os.path.exists(yol):
+    if os.path.exists(yol) and "--yeniden" not in sys.argv:
         return 0
-    ad, hiz = SESLER[ses]
+    ad, hiz = SESLER[ses[0]]
+    if ses.endswith("s"):
+        hiz = YAVAS_HIZ[ses[0]]
     with tempfile.TemporaryDirectory() as d:
         aiff = os.path.join(d, "x.aiff")
         subprocess.run(["say", "-v", ad, "-r", str(hiz), "-o", aiff, "--", metin], check=True)
-        subprocess.run(["afconvert", "-f", "m4af", "-d", "aac", "-b", "32000", "-c", "1", aiff, yol], check=True)
+        subprocess.run(["afconvert", "-f", "m4af", "-d", "aac", "-b", BITRATE, "-c", "1", aiff, yol], check=True)
     return 1
 
 
