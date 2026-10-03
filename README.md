@@ -4,10 +4,10 @@ Yazılım mühendisliği öğrencileri için kişisel İngilizce çalışma uygu
 
 | Bölüm | Ne yapar |
 |---|---|
-| **Kelime** | 408 yazılım/mühendislik kelimesi (15 alan: programlama, web, veritabanı, DevOps, test, mimari, güvenlik, mobil, oyun, yapay zeka, iş hayatı, genel mühendislik…). Yeni kelime tanıtma + aralıklı tekrar (Leitner: 1-3-7-16-35 gün). Çoktan seçmeli, boşluk doldurma, dinleyip yazma, kart çevirme. |
+| **Kelime** | 1000+ yazılım/mühendislik kelimesi (18 alan: programlama, veri yapıları, web, veritabanı, DevOps, test, süreç, mimari, güvenlik, Git, ağ/işletim sistemi, arayüz/UX, mobil, oyun, yapay zeka, iş hayatı, genel mühendislik…). Yeni kelime tanıtma + aralıklı tekrar (Leitner: 1-3-7-16-35 gün). Çoktan seçmeli, boşluk doldurma, dinleyip yazma, kart çevirme. |
 | **Dinle** | 15 diyalog/konuşma (A2–B2) + anlama soruları; yavaş mod; metin gizli dinleme. Dikte (60 cümle). |
 | **Konuş** | Cümle okuma (sözcük sözcük puan), 22 mülakat/iş sorusuna sesli cevap (anahtar kelime puanı + örnek cevap), 40 zor kelimede telaffuz (IPA + Türkçe ipucu). |
-| **Oku** | 12 özgün kısa makale (kelimelere dokununca Türkçesi, sesli dinleme, anlama soruları) + 10 güvenilir site bağlantısı. |
+| **Oku** | 26 özgün kısa makale (kelimelere dokununca Türkçesi, sesli dinleme, anlama soruları) + 18 güvenilir site bağlantısı. |
 
 İlerleme (seri, XP, tekrar planı) cihazda saklanır; sunucu yok.
 

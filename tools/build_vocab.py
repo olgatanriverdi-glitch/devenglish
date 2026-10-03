@@ -22,7 +22,8 @@ def main():
                 continue
             if satir.startswith("## "):
                 cid, ad = [p.strip() for p in satir[3:].split("|")]
-                kategoriler.append({"id": cid, "name": ad})
+                if cid not in {k["id"] for k in kategoriler}:
+                    kategoriler.append({"id": cid, "name": ad})
                 cat = cid
                 continue
             parcalar = [p.strip() for p in satir.split("|")]

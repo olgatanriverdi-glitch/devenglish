@@ -226,3 +226,258 @@ ARTICLES += [
         ],
     },
 ]
+
+
+ARTICLES += [
+    {
+        "id": "operating-system", "title": "What Does an Operating System Do?", "level": "B1",
+        "summary": "İşletim sistemi bilgisayarın arka planda neleri yönettiğini anlatır: işlemler, bellek, dosyalar ve cihazlar.",
+        "paragraphs": [
+            "When you open an app, send a message, and listen to music at the same time, something invisible keeps everything under control. This something is the operating system, for example Windows, macOS, Android, or iOS.",
+            "An operating system has four main jobs. First, it manages processes. Each running program is a process, and the system decides which process uses the processor at each moment. It switches between them so quickly that everything seems to run at the same time.",
+            "Second, it manages memory. Every program receives its own space in the RAM, and the system makes sure that one program cannot read or damage the memory of another. If the RAM becomes full, the system can move less important data to the disk, which is called virtual memory.",
+            "Third, it manages files. The file system organizes data in folders and keeps track of where each file is stored on the drive. It also controls permissions, so only the right users can read or change a file.",
+            "Fourth, it talks to the hardware. A driver is a small piece of software that teaches the system how to use a device, such as a printer or a camera. Thanks to drivers, your app only says 'print this', and the system handles the details.",
+            "The center of the system is the kernel. Developers rarely touch it directly, but knowing what it does helps to understand why programs crash, why they become slow, and why a computer sometimes needs a reboot.",
+        ],
+        "glossary": {"operating system": "işletim sistemi", "process": "işlem", "memory": "bellek", "file system": "dosya sistemi", "permissions": "izinler", "driver": "sürücü", "kernel": "çekirdek", "virtual memory": "sanal bellek", "reboot": "yeniden başlatma"},
+        "questions": [
+            {"q": "What is a process?", "options": ["A running program", "A type of file", "A cable", "A password"], "answer": 0, "why": "Çalışan her program bir process'tir."},
+            {"q": "What is virtual memory?", "options": ["Using disk space when the RAM is full", "A new processor", "A kind of driver", "A backup tool"], "answer": 0, "why": "RAM dolunca disk alanını kullanmak."},
+            {"q": "What does a driver do?", "options": ["Teaches the system how to use a device", "Deletes files", "Makes the screen brighter", "Connects to Wi-Fi only"], "answer": 0, "why": "Sisteme cihazı nasıl kullanacağını öğretir."},
+        ],
+    },
+    {
+        "id": "internet-basics", "title": "How Data Travels Across the Internet", "level": "B1",
+        "summary": "Verinin paketlere bölünerek protokollerle internette nasıl yol aldığı.",
+        "paragraphs": [
+            "When you send a photo to a friend, the file does not travel as one piece. The internet splits it into thousands of small packets. Each packet carries a part of the data, the address of the sender, and the address of the receiver.",
+            "The packets travel through many routers. A router is a device that looks at the address of a packet and decides which direction is best. Different packets of the same photo may even take different routes, and they are put together again at the end.",
+            "To make this work, computers follow protocols, which are shared rules for communication. TCP is a protocol that checks that every packet arrives. If one packet is missing, it asks the sender to send it again. UDP is faster because it does not check, so it is used for live video and online games, where speed matters more than perfection.",
+            "Every device has an IP address, like a house number. A port is like a door of the house: the same computer can run a web server on one port and a mail server on another. HTTPS, the secure version of the web protocol, uses port 443.",
+            "Speed depends on two things: bandwidth and latency. Bandwidth is how much data can pass per second, and latency is the delay before the data starts to arrive. A video call needs both, while a download mainly needs bandwidth.",
+        ],
+        "glossary": {"packets": "paketler", "router": "yönlendirici", "protocols": "protokoller", "IP address": "IP adresi", "port": "port", "bandwidth": "bant genişliği", "latency": "gecikme", "perfection": "kusursuzluk", "route": "güzergah"},
+        "questions": [
+            {"q": "Why is UDP used for online games?", "options": ["It is faster because it does not check every packet", "It is more secure", "It uses less electricity", "It is older"], "answer": 0, "why": "Hız önemli olduğu için; paketleri kontrol etmez."},
+            {"q": "What is a port compared to?", "options": ["A door of a house", "A house number", "A road", "A key"], "answer": 0, "why": "Evin kapısına benzetiliyor."},
+            {"q": "What is latency?", "options": ["The delay before data starts to arrive", "The amount of data per second", "A type of router", "An error code"], "answer": 0, "why": "Verinin gelmeye başlamasından önceki gecikme."},
+        ],
+    },
+    {
+        "id": "sql-vs-nosql", "title": "SQL or NoSQL? How to Choose", "level": "B2",
+        "summary": "İlişkisel ve ilişkisel olmayan veritabanları arasında seçim yaparken nelere bakılmalı.",
+        "paragraphs": [
+            "Choosing a database is one of the first big decisions in a project, and many beginners think there is a single best answer. In reality, the right choice depends on the shape of your data and on what you do with it.",
+            "A relational database, which you use with SQL, stores data in tables with a fixed schema. It is excellent when your data has clear relationships, for example customers, orders, and products. It also offers transactions, so a group of operations either completely succeeds or completely fails. Banks and online shops depend on this property.",
+            "A NoSQL database gives up some of these rules to gain flexibility and scale. A document database stores each record as a flexible document, so different records can have different fields. A key-value store is extremely fast for simple lookups, and it is often used as a cache.",
+            "Scaling is another difference. Relational databases traditionally grow by moving to a bigger machine, while many NoSQL systems were designed to spread data across many servers with sharding. This makes them attractive for huge amounts of data, but it also means that the data may be consistent only eventually.",
+            "A practical rule for students is simple: if you are not sure, start with a relational database. It teaches you good habits, it is well supported, and it is flexible enough for most projects. Switch to a specialized system only when you can clearly explain the problem you want to solve.",
+        ],
+        "glossary": {"relational database": "ilişkisel veritabanı", "schema": "şema", "transactions": "işlemler", "document database": "doküman veritabanı", "key-value store": "anahtar-değer deposu", "cache": "önbellek", "sharding": "parçalama", "eventually": "sonunda, nihai olarak", "specialized": "özelleşmiş"},
+        "questions": [
+            {"q": "When is a relational database a very good choice?", "options": ["When data has clear relationships", "When you have no data", "Only for images", "Only for games"], "answer": 0, "why": "Veri açık ilişkiler içerdiğinde."},
+            {"q": "What is a key-value store often used for?", "options": ["Fast lookups and caching", "Drawing diagrams", "Sending emails", "Writing tests"], "answer": 0, "why": "Hızlı arama ve önbellek için."},
+            {"q": "What does the writer advise when you are not sure?", "options": ["Start with a relational database", "Use five databases", "Avoid databases", "Always use NoSQL"], "answer": 0, "why": "Emin değilsen ilişkisel veritabanıyla başla."},
+        ],
+    },
+    {
+        "id": "ci-cd-explained", "title": "CI/CD: Shipping Code Safely", "level": "B2",
+        "summary": "Sürekli entegrasyon ve teslimat: her değişiklik otomatik olarak derlenir, test edilir ve yayına hazırlanır.",
+        "paragraphs": [
+            "In the past, teams released software a few times a year. Before each release, everybody worked for days to combine their changes, and many problems appeared at the last minute. CI/CD was created to remove this pain.",
+            "Continuous integration means that every time a developer pushes code, a server automatically builds the project and runs the tests. If something fails, the developer knows within minutes, while the change is still fresh in their mind. Small, frequent changes are much easier to fix than a huge pile of changes.",
+            "Continuous delivery goes one step further. After the tests pass, the pipeline prepares a release that is ready to go to users. In continuous deployment, the last step is automatic too, so every successful change reaches production without manual work.",
+            "A typical pipeline has several stages: install the dependencies, run the linter, run the unit tests, build the app, and deploy it to a staging environment. Many teams add a manual approval before production, and they use feature flags to hide unfinished features.",
+            "Good pipelines are fast and reliable. If the tests take an hour or fail randomly, people stop trusting them. The goal is a pipeline that you can trust so much that releasing becomes boring, and boring is exactly what we want on release day.",
+        ],
+        "glossary": {"continuous integration": "sürekli entegrasyon", "pipeline": "iş hattı", "continuous delivery": "sürekli teslimat", "staging": "hazırlık ortamı", "production": "canlı ortam", "feature flags": "özellik bayrakları", "dependencies": "bağımlılıklar", "linter": "lint aracı", "release": "sürüm"},
+        "questions": [
+            {"q": "What happens in continuous integration?", "options": ["Code is built and tested automatically after each push", "Code is deleted", "Servers are turned off", "Users write tests"], "answer": 0, "why": "Her push sonrası otomatik derleme ve test."},
+            {"q": "Why are small, frequent changes better?", "options": ["They are easier to fix", "They need no tests", "They are secret", "They cost money"], "answer": 0, "why": "Düzeltmesi daha kolay."},
+            {"q": "What destroys trust in a pipeline?", "options": ["Slow and randomly failing tests", "Using a linter", "Having stages", "Using staging"], "answer": 0, "why": "Yavaş ve rastgele başarısız olan testler."},
+        ],
+    },
+    {
+        "id": "good-commits", "title": "Writing Commit Messages People Can Understand", "level": "B1",
+        "summary": "İyi commit mesajı ve pull request açıklaması yazmanın basit kuralları.",
+        "paragraphs": [
+            "A commit message is a letter to your future self and to your teammates. Six months from now, nobody will remember why you changed a line, but a good message will answer that question in seconds.",
+            "Start with a short summary of about fifty characters. Use the imperative mood, like a command: 'Fix login error' is better than 'Fixed login error' or 'Fixes'. A good test is to complete the sentence: 'If applied, this commit will...'.",
+            "If the change is not obvious, add a blank line and a longer description. Explain why you made the change, not only what you changed, because the code already shows the what. Mention the issue number if there is one, so people can find the full discussion.",
+            "Keep each commit small and focused. A commit that fixes a bug, renames ten files, and changes the colors is hard to review and impossible to undo cleanly. If you can describe the change only with the word 'and', it may be two commits.",
+            "The same ideas apply to a pull request. Write a clear title, describe the problem and your solution, add screenshots for visual changes, and tell the reviewers what to look at first. A reviewer who understands your goal gives better feedback, and your code gets merged faster.",
+        ],
+        "glossary": {"commit message": "commit mesajı", "summary": "özet", "imperative mood": "emir kipi", "description": "açıklama", "issue": "konu/kayıt", "focused": "odaklı", "reviewers": "inceleyenler", "pull request": "çekme isteği", "undo": "geri almak"},
+        "questions": [
+            {"q": "Which summary style does the text recommend?", "options": ["Fix login error", "Fixed login error", "Fixes", "Many changes"], "answer": 0, "why": "Emir kipi: 'Fix login error'."},
+            {"q": "What should the long description explain?", "options": ["Why you made the change", "Your lunch", "Only the file names", "Nothing"], "answer": 0, "why": "Neden değiştirdiğini."},
+            {"q": "Why should commits be small?", "options": ["They are easier to review and undo", "They use less disk", "Git requires it", "They look nicer"], "answer": 0, "why": "İncelemesi ve geri alması kolay."},
+        ],
+    },
+    {
+        "id": "unit-testing-basics", "title": "Unit Testing for Beginners", "level": "B1",
+        "summary": "Birim testi nedir, nasıl yazılır ve neden güven verir.",
+        "paragraphs": [
+            "Many students think that testing is extra work that comes after the 'real' work. Professional developers see it differently: tests are what allow them to change code without fear.",
+            "A unit test checks one small piece of code, usually a single function. It gives the function some input and compares the result with the expected output. If the result is different, the test fails and shows you exactly where the problem is.",
+            "A good test has three parts. In the arrange step, you prepare the data. In the act step, you call the function. In the assert step, you check the result. Keeping these steps clear makes the test easy to read.",
+            "Good tests are fast, independent, and repeatable. They do not depend on the internet, the current time, or the order in which they run. When a function needs an outside service, developers replace it with a fake object, which is called a mock, so that the test stays under control.",
+            "Do not forget the edge cases: an empty list, a negative number, a very long text. Many bugs hide there. Finally, when you find a bug, write a test that fails because of it, then fix the code. That bug can never come back without a red test telling you.",
+        ],
+        "glossary": {"unit test": "birim testi", "expected output": "beklenen çıktı", "arrange": "hazırlamak", "assert": "doğrulamak", "independent": "bağımsız", "repeatable": "tekrarlanabilir", "mock": "taklit nesne", "edge cases": "uç durumlar", "fails": "başarısız olur"},
+        "questions": [
+            {"q": "What does a unit test check?", "options": ["One small piece of code", "The whole company", "Only the design", "The internet speed"], "answer": 0, "why": "Tek küçük kod parçasını."},
+            {"q": "What is a mock?", "options": ["A fake object that replaces an outside service in a test", "A bug", "A server", "A kind of loop"], "answer": 0, "why": "Dış servisin yerine geçen sahte nesne."},
+            {"q": "What should you do when you find a bug?", "options": ["Write a failing test first, then fix the code", "Ignore it", "Delete the test", "Restart the computer"], "answer": 0, "why": "Önce başarısız olan test yaz, sonra düzelt."},
+        ],
+    },
+    {
+        "id": "password-security", "title": "How Websites Store Your Password", "level": "B2",
+        "summary": "Parolaların neden düz metin olarak değil, tuzlanmış özetler (hash) olarak saklandığı.",
+        "paragraphs": [
+            "When you sign up for a website, you choose a password. A careless website saves that password exactly as you typed it. If an attacker steals the database, they can read every password and try them on other sites, because many people reuse the same one.",
+            "A responsible website never stores the password itself. It stores a hash: the result of a one-way function that turns the password into a long string of characters. You cannot calculate the password back from the hash. When you log in, the site hashes what you typed and compares it with the stored value.",
+            "But simple hashing is not enough. Attackers keep huge tables of common passwords and their hashes, so they can find matches instantly. To defend against this, websites add a salt, which is random data that is unique for each user, before hashing. Now two users with the same password have completely different hashes.",
+            "Modern systems also use deliberately slow algorithms, such as bcrypt or Argon2. A normal user logs in once and does not notice a delay of a tenth of a second, but an attacker who wants to try billions of passwords is slowed down enormously.",
+            "As a user, you can help too. Use a long, unique password for every site, and store them in a password manager. Turn on two-factor authentication where possible, so a stolen password alone is not enough to enter your account.",
+        ],
+        "glossary": {"hash": "özet (karma değer)", "salt": "tuz", "one-way function": "tek yönlü fonksiyon", "attacker": "saldırgan", "algorithms": "algoritmalar", "deliberately": "bilerek", "password manager": "parola yöneticisi", "two-factor authentication": "iki aşamalı doğrulama", "careless": "özensiz"},
+        "questions": [
+            {"q": "What does a responsible website store?", "options": ["A hash of the password", "The password itself", "Your email only", "A photo"], "answer": 0, "why": "Parolanın hash'ini saklar."},
+            {"q": "What is a salt?", "options": ["Random data added before hashing, unique for each user", "A type of password manager", "A slow server", "A virus"], "answer": 0, "why": "Hash'ten önce eklenen, kullanıcıya özel rastgele veri."},
+            {"q": "Why are slow algorithms like bcrypt useful?", "options": ["They slow down attackers who try billions of passwords", "They make the site faster", "They remove salts", "They store passwords as text"], "answer": 0, "why": "Milyarlarca deneme yapan saldırganı yavaşlatır."},
+        ],
+    },
+    {
+        "id": "what-is-ml", "title": "What Is Machine Learning?", "level": "B1",
+        "summary": "Makine öğrenmesinin temel fikri: kurallar yazmak yerine örneklerden öğrenen programlar.",
+        "paragraphs": [
+            "Imagine that you want to write a program that recognizes cats in photos. You could try to write rules: 'a cat has pointed ears, whiskers, and a tail'. But the rules quickly become impossible, because cats sit, jump, and hide in thousands of ways. Machine learning offers a different approach.",
+            "Instead of writing rules, you give the computer many examples. You show it ten thousand photos, and each photo has a label: cat or not cat. The computer looks for patterns in the data and builds a model that can make predictions about new photos.",
+            "This process is called training. During training, the model makes a prediction, compares it with the correct label, and adjusts its internal numbers to reduce the error. After many rounds, the errors become small. Then we test the model on data it has never seen, to check that it really learned and did not just memorize the examples.",
+            "When a model memorizes the training data and fails on new data, we call it overfitting. To avoid it, we keep a separate test set and use enough varied data. The quality of the data is just as important as the algorithm: wrong or unfair data creates a wrong or unfair model.",
+            "Machine learning is already around you: spam filters, music recommendations, voice assistants, and maps that predict traffic. You do not need to be a mathematician to start. A little Python, a clean dataset, and curiosity are enough for your first experiments.",
+        ],
+        "glossary": {"machine learning": "makine öğrenmesi", "label": "etiket", "model": "model", "prediction": "tahmin", "training": "eğitim", "overfitting": "aşırı öğrenme", "test set": "test kümesi", "dataset": "veri kümesi", "pattern": "örüntü"},
+        "questions": [
+            {"q": "How does machine learning differ from writing rules?", "options": ["The computer learns patterns from examples", "The programmer writes every rule", "It needs no data", "It only works for cats"], "answer": 0, "why": "Bilgisayar örneklerden örüntü öğrenir."},
+            {"q": "What is overfitting?", "options": ["The model memorizes the training data and fails on new data", "The model is too small", "The data is too clean", "The training is too fast"], "answer": 0, "why": "Eğitim verisini ezberleyip yeni veride başarısız olması."},
+            {"q": "Why is data quality important?", "options": ["Wrong or unfair data creates a wrong or unfair model", "It is not important", "Only the algorithm matters", "Data must be secret"], "answer": 0, "why": "Yanlış veri yanlış model üretir."},
+        ],
+    },
+    {
+        "id": "how-llms-work", "title": "How Large Language Models Work, Simply", "level": "B2",
+        "summary": "Büyük dil modellerinin metni nasıl ürettiği ve neden bazen yanıldığı.",
+        "paragraphs": [
+            "Tools like chatbots seem to understand questions and write long answers, so it is natural to imagine something magical inside. The basic idea, however, is surprisingly simple: a large language model predicts the next piece of text.",
+            "First, the text is split into small pieces called tokens, which can be a word or a part of a word. The model reads the tokens you gave, which is the prompt, and calculates a probability for every possible next token. It picks one, adds it to the text, and repeats the process until the answer is complete.",
+            "To make good predictions, the model was trained on an enormous amount of text. During training, it saw billions of examples and slowly adjusted its weights, the numbers inside the network, so that its predictions got better. It does not store a database of facts; it stores patterns about how language works.",
+            "This explains an important weakness. Because the model creates text that sounds likely, it can produce a confident answer that is simply false. This is called a hallucination. It may invent a source, a function, or a date, and the sentence will still look perfectly natural.",
+            "So the golden rule is to verify. Use the model for ideas, drafts, and explanations, but check important facts in reliable sources and test every piece of code. Clear prompts also help: describe the context, the goal, and the format you want, and you will usually get a much better result.",
+        ],
+        "glossary": {"language model": "dil modeli", "tokens": "token'lar", "prompt": "istem", "probability": "olasılık", "weights": "ağırlıklar", "hallucination": "halüsinasyon", "enormous": "devasa", "verify": "doğrulamak", "context": "bağlam"},
+        "questions": [
+            {"q": "What does a language model basically do?", "options": ["Predicts the next piece of text", "Searches the internet live", "Stores a database of facts", "Draws pictures only"], "answer": 0, "why": "Metnin bir sonraki parçasını tahmin eder."},
+            {"q": "Why can a model produce a hallucination?", "options": ["It creates text that sounds likely, not text that is checked", "It has no weights", "It is always offline", "It is too slow"], "answer": 0, "why": "Kulağa olası gelen metin üretir, doğrulamaz."},
+            {"q": "What helps to get a better result?", "options": ["A clear prompt with context, goal, and format", "A very short prompt", "Using capital letters", "Asking twice"], "answer": 0, "why": "Bağlam, hedef ve biçim içeren net istem."},
+        ],
+    },
+    {
+        "id": "mobile-performance", "title": "Why Mobile Apps Feel Slow (and How to Fix It)", "level": "B2",
+        "summary": "Mobil uygulamaların yavaş hissettirmesinin yaygın nedenleri ve basit çözümleri.",
+        "paragraphs": [
+            "Users judge a mobile app in seconds. If it opens slowly, freezes while scrolling, or drains the battery, many of them delete it and never come back. Performance is therefore a feature, not a luxury.",
+            "The first common problem is doing heavy work on the main thread. The main thread draws the screen sixty times per second, so if it is busy with a big calculation or a network call, the interface freezes. The solution is to move slow work to the background and show a loading indicator.",
+            "The second problem is large images. A photo from a modern camera can be several megabytes, and decoding it takes time and memory. Resize images to the size you really display, and load them lazily, so only the pictures near the screen are fetched.",
+            "The third problem is the network. A phone often has a weak connection, so the app should cache data, work offline when possible, and handle errors gracefully. A clear message and a retry button are much better than a screen that stays empty forever.",
+            "Finally, measure before you optimize. Profiling tools show which functions use the most time and memory, and they often surprise you. Test on an old, cheap phone, not only on the newest model, because that is what many of your users hold in their hands.",
+        ],
+        "glossary": {"performance": "performans", "main thread": "ana iş parçacığı", "loading indicator": "yükleniyor göstergesi", "lazily": "tembel şekilde (gerektiğinde)", "cache": "önbellekte saklamak", "gracefully": "zarif şekilde", "profiling": "profil çıkarma", "optimize": "optimize etmek", "drains": "tüketir"},
+        "questions": [
+            {"q": "Why does the interface freeze when the main thread is busy?", "options": ["The main thread draws the screen", "The battery is full", "The phone is new", "The internet is fast"], "answer": 0, "why": "Ekranı ana iş parçacığı çizer."},
+            {"q": "What should you do with big images?", "options": ["Resize them and load them lazily", "Make them bigger", "Delete the screen", "Send them by email"], "answer": 0, "why": "Boyutunu küçült ve gerektiğinde yükle."},
+            {"q": "What does the writer say about optimizing?", "options": ["Measure before you optimize", "Optimize everything first", "Never test", "Use only new phones"], "answer": 0, "why": "Optimize etmeden önce ölç."},
+        ],
+    },
+    {
+        "id": "ux-basics", "title": "UX Basics: Designing for Humans", "level": "B1",
+        "summary": "Kullanıcı deneyimi tasarımının temel ilkeleri: basitlik, tutarlılık, geri bildirim ve kullanıcıyı gözlemlemek.",
+        "paragraphs": [
+            "A developer can build a feature that works perfectly and still fail, because users cannot find it or do not understand it. User experience, or UX, is the discipline of making products easy and pleasant for real people.",
+            "The first principle is simplicity. Every extra button, color, and word asks the user to think. Show the most important action clearly and hide the rest. A good screen has one main call to action, and the user knows immediately what to do.",
+            "The second principle is consistency. Buttons that look the same should behave the same. When your app follows familiar patterns, such as a back arrow at the top left, people feel comfortable, because they do not have to learn anything new.",
+            "The third principle is feedback. When a user taps a button, something must happen: a color change, an animation, a loading indicator, or a message. If the system stays silent, people tap again and again and assume that the app is broken. Error messages should say what went wrong and how to fix it.",
+            "Most importantly, watch real people use your product. Give a friend your prototype, say nothing, and observe where they hesitate. Five short sessions will teach you more than hours of discussion. Remember also accessibility: large text, good contrast, and screen reader support help everyone.",
+        ],
+        "glossary": {"user experience": "kullanıcı deneyimi", "simplicity": "sadelik", "call to action": "harekete geçirici öğe", "consistency": "tutarlılık", "feedback": "geri bildirim", "prototype": "prototip", "hesitate": "tereddüt etmek", "accessibility": "erişilebilirlik", "discipline": "disiplin, alan"},
+        "questions": [
+            {"q": "What is the first principle of the text?", "options": ["Simplicity", "Decoration", "Speed only", "Color"], "answer": 0, "why": "Sadelik."},
+            {"q": "Why is feedback important?", "options": ["Without it, people think the app is broken", "It makes the app bigger", "It replaces tests", "It saves memory"], "answer": 0, "why": "Geri bildirim yoksa kullanıcı uygulamanın bozuk olduğunu sanar."},
+            {"q": "How can you learn the most about your design?", "options": ["Watch real people use it", "Read about colors", "Ask no one", "Add more buttons"], "answer": 0, "why": "Gerçek insanların kullanımını izlemek."},
+        ],
+    },
+    {
+        "id": "oop-simple", "title": "Object-Oriented Programming in Simple Words", "level": "B1",
+        "summary": "Sınıflar, nesneler, kalıtım ve kapsülleme: nesne yönelimli programlamanın temel fikirleri.",
+        "paragraphs": [
+            "Object-oriented programming, or OOP, is a way of organizing code around objects instead of long lists of instructions. An object combines data, called properties, and actions, called methods, in one place.",
+            "A class is the blueprint of an object. Think of a class called Car: it describes that every car has a color and a speed, and that it can accelerate and brake. A single car, for example a red car with a speed of fifty, is an instance of that class. You can create as many instances as you need.",
+            "Encapsulation means hiding the internal details. The balance of a bank account should not be changed directly by anyone. Instead, the class offers methods like deposit and withdraw, which check the rules first. Other parts of the program use these methods and do not care how they work inside.",
+            "Inheritance lets a class reuse another class. A Truck can inherit everything from Car and add a new property, the cargo weight. This avoids repeating code. Polymorphism goes further: you can call the same method, such as drive, on different objects, and each one responds in its own way.",
+            "OOP is not magic, and too much inheritance can make code hard to follow. Many modern developers prefer small classes, clear responsibilities, and composition, which means building objects from other objects. Start simple, and add structure only when it makes the code easier to understand.",
+        ],
+        "glossary": {"object-oriented programming": "nesne yönelimli programlama", "properties": "özellikler", "methods": "metotlar", "blueprint": "plan, şablon", "instance": "örnek (nesne)", "encapsulation": "kapsülleme", "inheritance": "kalıtım", "polymorphism": "çok biçimlilik", "composition": "bileşim"},
+        "questions": [
+            {"q": "What is a class?", "options": ["The blueprint of an object", "A single object", "A type of loop", "A file format"], "answer": 0, "why": "Nesnenin planıdır."},
+            {"q": "What does encapsulation do?", "options": ["Hides internal details and offers safe methods", "Deletes objects", "Makes code longer", "Connects to the internet"], "answer": 0, "why": "İç ayrıntıları gizler, güvenli metotlar sunar."},
+            {"q": "What is composition?", "options": ["Building objects from other objects", "Writing music", "Copying a class", "Deleting inheritance"], "answer": 0, "why": "Nesneleri başka nesnelerden kurmak."},
+        ],
+    },
+    {
+        "id": "technical-interview-prep", "title": "How to Prepare for a Technical Interview", "level": "B1",
+        "summary": "Teknik mülakata hazırlanma: temeller, düşünme sürecini anlatmak ve iletişim.",
+        "paragraphs": [
+            "A technical interview feels scary, but it is a skill you can practice. Interviewers do not only want the correct answer; they want to see how you think, how you communicate, and how you react when a problem is difficult.",
+            "Start with the fundamentals: arrays, strings, hash tables, sorting, and basic complexity. Solve a few problems every day on a coding platform, but do not memorize solutions. Instead, learn the patterns, such as two pointers or a sliding window, so you can recognize them in new problems.",
+            "During the interview, think aloud. Repeat the problem in your own words, ask questions about the input, and explain your plan before you write code. If you get stuck, say what you have tried. Interviewers often give hints, and a calm candidate who uses them well makes a strong impression.",
+            "After you write the solution, test it with a simple example and an edge case, such as an empty input. Then discuss the time complexity and whether you could improve it. This shows that you care about quality, not only about finishing.",
+            "Prepare short stories about your own projects, too. Be ready to explain what you built, which problem was the hardest, and what you learned. Finally, prepare questions for the interviewer. Asking about the team, the code review process, and how new people learn shows real interest.",
+        ],
+        "glossary": {"interviewer": "mülakatı yapan kişi", "fundamentals": "temeller", "complexity": "karmaşıklık", "memorize": "ezberlemek", "think aloud": "sesli düşünmek", "candidate": "aday", "hints": "ipuçları", "edge case": "uç durum", "stuck": "takılıp kalmış"},
+        "questions": [
+            {"q": "What do interviewers want to see?", "options": ["How you think and communicate", "Only the final answer", "Your speed of typing", "Your phone"], "answer": 0, "why": "Nasıl düşündüğünü ve iletişim kurduğunu."},
+            {"q": "What should you do if you get stuck?", "options": ["Say what you have tried and use hints", "Stay silent", "Leave", "Guess randomly"], "answer": 0, "why": "Ne denediğini anlat, ipuçlarını kullan."},
+            {"q": "Why prepare questions for the interviewer?", "options": ["It shows real interest", "It ends the interview", "It is a rule", "It is a test of memory"], "answer": 0, "why": "Gerçek ilgiyi gösterir."},
+        ],
+    },
+    {
+        "id": "microcontrollers", "title": "How Sensors and Microcontrollers Work Together", "level": "B1",
+        "summary": "Sensör, mikrodenetleyici ve eyleyicinin bir arada çalışması: temel gömülü sistem döngüsü.",
+        "paragraphs": [
+            "Look around you: a washing machine, a car, a smart watch, and a microwave oven all contain a tiny computer that you never see. These are embedded systems, and most of them follow the same simple idea: sense, think, act.",
+            "The senses are sensors. A temperature sensor turns heat into a small electrical signal, a light sensor measures brightness, and a distance sensor uses sound or light to find out how far an object is. Most sensors give an analog signal, which means a continuous voltage.",
+            "The thinking part is the microcontroller, a small computer on a single chip. A converter changes the analog signal into numbers that the program can read. The program, which is stored as firmware, compares the numbers with limits and decides what to do.",
+            "The acting part is an actuator, for example a motor, a valve, a heater, or a simple LED. The microcontroller sends a signal to the actuator, and the physical world changes. Then the sensors measure the new situation, and the loop starts again many times per second.",
+            "A thermostat is a perfect example. The sensor measures the room temperature, the controller compares it with your target, and the actuator switches the heater on or off. This is called a feedback loop. Boards such as Arduino make it easy to try this at home, with a few cheap parts and a short program.",
+        ],
+        "glossary": {"embedded systems": "gömülü sistemler", "sensors": "sensörler", "analog signal": "analog sinyal", "microcontroller": "mikrodenetleyici", "firmware": "donanım yazılımı", "actuator": "eyleyici", "feedback loop": "geri besleme döngüsü", "thermostat": "termostat", "voltage": "gerilim"},
+        "questions": [
+            {"q": "What are the three steps of an embedded system?", "options": ["Sense, think, act", "Read, write, delete", "Buy, sell, repair", "Start, wait, stop"], "answer": 0, "why": "Algıla, düşün, harekete geç."},
+            {"q": "What does an actuator do?", "options": ["Changes the physical world, like a motor or heater", "Measures temperature", "Stores firmware", "Draws a circuit"], "answer": 0, "why": "Motor, ısıtıcı gibi fiziksel dünyayı değiştirir."},
+            {"q": "What is a thermostat an example of?", "options": ["A feedback loop", "A database", "A language", "A router"], "answer": 0, "why": "Geri besleme döngüsü örneği."},
+        ],
+    },
+]
+
+
+LINKS += [
+    {"title": "DEV Community", "url": "https://dev.to/", "level": "B1-B2", "note": "Geliştiricilerin yazdığı binlerce kısa makale; 'beginners' etiketinden başla."},
+    {"title": "Flutter Dokümantasyonu", "url": "https://docs.flutter.dev/", "level": "B1-B2", "note": "Kendi uygulamanı yaparken İngilizce teknik doküman okuma pratiği."},
+    {"title": "Unity Learn", "url": "https://learn.unity.com/", "level": "B1-B2", "note": "Oyun geliştirme dersleri; videolu ve yazılı anlatım."},
+    {"title": "Smashing Magazine", "url": "https://www.smashingmagazine.com/", "level": "B2", "note": "Web tasarımı, arayüz ve ön yüz geliştirme üzerine ayrıntılı makaleler."},
+    {"title": "Hacker News", "url": "https://news.ycombinator.com/", "level": "B2-C1", "note": "Teknoloji dünyasından haber ve tartışmalar; gerçek mühendis dili."},
+    {"title": "TED: Technology Talks", "url": "https://www.ted.com/topics/technology", "level": "B1-B2", "note": "Teknoloji konuşmaları; İngilizce altyazıyla dinleme ve konuşma pratiği."},
+    {"title": "BBC 6 Minute English", "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english", "level": "A2-B2", "note": "Altı dakikalık sesli sohbetler ve metinleri; her gün dinlemek için ideal."},
+    {"title": "Simple English Wikipedia: Computer science", "url": "https://simple.wikipedia.org/wiki/Computer_science", "level": "A2-B1", "note": "Bilgisayar bilimini sade İngilizceyle anlatır."},
+]

@@ -31,72 +31,111 @@ class ReadingPage extends StatelessWidget {
   }
 }
 
-class _ArticleList extends StatelessWidget {
+class _ArticleList extends StatefulWidget {
   const _ArticleList();
+  @override
+  State<_ArticleList> createState() => _ArticleListState();
+}
+
+class _ArticleListState extends State<_ArticleList> {
+  String? _seviye; // null: hepsi
+  bool _sadeceOkunmayan = false;
+
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
     return ListenableBuilder(
       listenable: Store.i,
-      builder: (context, _) => ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          Text(
-            'Uygulamanın içinde, internetsiz de okuyabileceğin kısa makaleler. Bilinmeyen sözcüklere dokun, Türkçesini gör.',
-            style: t.textTheme.bodyMedium?.copyWith(
-              color: t.colorScheme.onSurfaceVariant,
-            ),
-          ),
-          const SizedBox(height: 14),
-          for (final a in Content.i.articles)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: AppCard(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => ArticlePage(a: a)),
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(a.title, style: t.textTheme.titleMedium),
-                          const SizedBox(height: 6),
-                          Text(
-                            a.summary,
-                            style: t.textTheme.bodySmall,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          const SizedBox(height: 8),
-                          Row(
-                            children: [
-                              LevelChip(a.level),
-                              const SizedBox(width: 8),
-                              Text(
-                                '${a.minutes} dk okuma',
-                                style: t.textTheme.bodySmall,
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    if (Store.i.readArticles.contains(a.id))
-                      const Padding(
-                        padding: EdgeInsets.only(left: 8),
-                        child: Icon(Icons.check_circle, color: Colors.green),
-                      )
-                    else
-                      const Icon(Icons.chevron_right),
-                  ],
-                ),
+      builder: (context, _) {
+        final okunan = Store.i.readArticles;
+        final tum = Content.i.articles;
+        final liste = tum
+            .where((a) => _seviye == null || a.level == _seviye)
+            .where((a) => !_sadeceOkunmayan || !okunan.contains(a.id))
+            .toList();
+        return ListView(
+          padding: const EdgeInsets.all(16),
+          children: [
+            Text(
+              '${tum.length} kısa makale, uygulamanın içinde internetsiz de okunur. Bilinmeyen sözcüklere dokun, Türkçesini gör. '
+              '${okunan.length}/${tum.length} okundu.',
+              style: t.textTheme.bodyMedium?.copyWith(
+                color: t.colorScheme.onSurfaceVariant,
               ),
             ),
-        ],
-      ),
+            const SizedBox(height: 10),
+            Wrap(
+              spacing: 8,
+              children: [
+                for (final v in const [null, 'B1', 'B2'])
+                  ChoiceChip(
+                    label: Text(v ?? 'Hepsi'),
+                    selected: _seviye == v,
+                    onSelected: (_) => setState(() => _seviye = v),
+                  ),
+                FilterChip(
+                  label: const Text('Okunmayanlar'),
+                  selected: _sadeceOkunmayan,
+                  onSelected: (x) => setState(() => _sadeceOkunmayan = x),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            if (liste.isEmpty)
+              const Padding(
+                padding: EdgeInsets.all(24),
+                child: Center(child: Text('Bu filtrede makale kalmadı.')),
+              ),
+            for (final a in liste)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: AppCard(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => ArticlePage(a: a)),
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(a.title, style: t.textTheme.titleMedium),
+                            const SizedBox(height: 6),
+                            Text(
+                              a.summary,
+                              style: t.textTheme.bodySmall,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            const SizedBox(height: 8),
+                            Row(
+                              children: [
+                                LevelChip(a.level),
+                                const SizedBox(width: 8),
+                                Text(
+                                  '${a.minutes} dk okuma',
+                                  style: t.textTheme.bodySmall,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      if (okunan.contains(a.id))
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8),
+                          child: Icon(Icons.check_circle, color: Colors.green),
+                        )
+                      else
+                        const Icon(Icons.chevron_right),
+                    ],
+                  ),
+                ),
+              ),
+          ],
+        );
+      },
     );
   }
 }
