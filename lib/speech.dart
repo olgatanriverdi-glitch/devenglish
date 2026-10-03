@@ -1,3 +1,5 @@
+import 'dart:io' show Platform;
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:speech_to_text/speech_to_text.dart';
@@ -23,6 +25,20 @@ class Tts {
       await _t.setLanguage('en-US');
       await _t.awaitSpeakCompletion(true);
       await _t.setVolume(1.0);
+      if (!kIsWeb && Platform.isIOS) {
+        // Sessiz modda da konuşsun, hoparlörden çıksın, mikrofonla (konuşma tanıma) birlikte çalışsın
+        await _t.setSharedInstance(true);
+        await _t.setIosAudioCategory(
+          IosTextToSpeechAudioCategory.playAndRecord,
+          [
+            IosTextToSpeechAudioCategoryOptions.defaultToSpeaker,
+            IosTextToSpeechAudioCategoryOptions.allowBluetooth,
+            IosTextToSpeechAudioCategoryOptions.allowBluetoothA2DP,
+            IosTextToSpeechAudioCategoryOptions.mixWithOthers,
+          ],
+          IosTextToSpeechAudioMode.defaultMode,
+        );
+      }
       await _sesleriSec();
       _hazir = true;
     } catch (e) {

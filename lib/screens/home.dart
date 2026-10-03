@@ -76,6 +76,7 @@ class HomePage extends StatelessWidget {
                       value: bugun.words / s.dailyGoal,
                       label: '${bugun.words}',
                       sub: '/ ${s.dailyGoal} kelime',
+                      size: 100,
                     ),
                     const SizedBox(width: 20),
                     Expanded(
@@ -281,7 +282,7 @@ class _Gorev extends StatelessWidget {
         const SizedBox(width: 8),
         Icon(ikon, size: 18),
         const SizedBox(width: 6),
-        Text(ad),
+        Expanded(child: Text(ad, maxLines: 1, overflow: TextOverflow.ellipsis)),
       ],
     ),
   );
