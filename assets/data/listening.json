@@ -1,0 +1,1315 @@
+{
+"dialogues": [
+{
+"id": "daily-standup",
+"title": "Daily Stand-up",
+"level": "A2",
+"minutes": 1,
+"about": "İki takım arkadaşı günlük toplantıda dünkü işlerini, bugünkü planlarını ve engellerini anlatıyor.",
+"lines": [
+{
+"s": 0,
+"t": "Good morning, Tom. Let's start the stand-up."
+},
+{
+"s": 1,
+"t": "Morning, Sara. Yesterday I finished the login page and fixed two small bugs."
+},
+{
+"s": 0,
+"t": "Great. What are you working on today?"
+},
+{
+"s": 1,
+"t": "Today I will connect the login page to the API. After that I will write some unit tests."
+},
+{
+"s": 0,
+"t": "Do you have any blockers?"
+},
+{
+"s": 1,
+"t": "Yes, one. I don't have the API key for the test server yet."
+},
+{
+"s": 0,
+"t": "OK, I will ask the backend team right now. You should get it before lunch."
+},
+{
+"s": 1,
+"t": "Thanks, that would help a lot. What about you?"
+},
+{
+"s": 0,
+"t": "Yesterday I reviewed three pull requests. Today I will update the documentation and prepare the release notes."
+},
+{
+"s": 1,
+"t": "Sounds good. Let's meet again tomorrow at nine."
+}
+],
+"questions": [
+{
+"q": "What did Tom finish yesterday?",
+"options": [
+"The login page and two bug fixes",
+"The release notes",
+"Three pull requests",
+"The unit tests"
+],
+"answer": 0,
+"why": "Tom: 'I finished the login page and fixed two small bugs.'"
+},
+{
+"q": "What is Tom's blocker?",
+"options": [
+"A failing test",
+"He has no API key for the test server",
+"A merge conflict",
+"He is sick"
+],
+"answer": 1,
+"why": "API anahtarı henüz yok."
+},
+{
+"q": "What will Sara do today?",
+"options": [
+"Fix bugs",
+"Connect the login page",
+"Update the documentation and prepare release notes",
+"Talk to the client"
+],
+"answer": 2,
+"why": "Sara dokümantasyonu güncelleyip release notes hazırlayacak."
+}
+]
+},
+{
+"id": "code-review",
+"title": "A Code Review",
+"level": "B1",
+"minutes": 1,
+"about": "Bir geliştirici, takım arkadaşının pull request'ini inceliyor ve önerilerde bulunuyor.",
+"lines": [
+{
+"s": 0,
+"t": "Hi Ali, I looked at your pull request. Overall it looks good, but I have a few comments."
+},
+{
+"s": 1,
+"t": "Thanks for the quick review. What did you find?"
+},
+{
+"s": 0,
+"t": "First, the function that calculates the discount is too long. It does three different things."
+},
+{
+"s": 1,
+"t": "You're right. Should I split it into smaller functions?"
+},
+{
+"s": 0,
+"t": "Yes, that would make it easier to read and to test. Also, the variable name 'x' is not very clear."
+},
+{
+"s": 1,
+"t": "Good point. I will rename it to 'totalPrice'."
+},
+{
+"s": 0,
+"t": "One more thing. I could not find a test for the case when the cart is empty."
+},
+{
+"s": 1,
+"t": "Oh, I forgot that edge case. I'll add a unit test for it today."
+},
+{
+"s": 0,
+"t": "Perfect. Once you push the changes, I will approve the pull request."
+},
+{
+"s": 1,
+"t": "Great, thanks for the helpful feedback."
+}
+],
+"questions": [
+{
+"q": "What is the problem with the discount function?",
+"options": [
+"It has a syntax error",
+"It is too slow",
+"It is too long and does several things",
+"It has no name"
+],
+"answer": 2,
+"why": "'It is too long. It does three different things.'"
+},
+{
+"q": "Why does the reviewer mention the variable 'x'?",
+"options": [
+"The name is not clear",
+"It is never used",
+"It is a constant",
+"It causes a bug"
+],
+"answer": 0,
+"why": "'x' isim olarak anlaşılır değil."
+},
+{
+"q": "What test is missing?",
+"options": [
+"A test for a large cart",
+"A test for an empty cart",
+"A performance test",
+"A security test"
+],
+"answer": 1,
+"why": "Boş sepet (empty cart) için test yok."
+},
+{
+"q": "When will the reviewer approve the pull request?",
+"options": [
+"Right now",
+"After Ali pushes the changes",
+"Next week",
+"Never"
+],
+"answer": 1,
+"why": "'Once you push the changes, I will approve...'"
+}
+]
+},
+{
+"id": "bug-report",
+"title": "Reporting a Bug",
+"level": "B1",
+"minutes": 1,
+"about": "Bir test uzmanı ve bir geliştirici, uygulamanın çökmesine neden olan hatayı birlikte yeniden üretmeye çalışıyor.",
+"lines": [
+{
+"s": 0,
+"t": "Hi Daniel, I found a serious bug in the mobile app. It crashes when I upload a profile photo."
+},
+{
+"s": 1,
+"t": "Can you reproduce it every time?"
+},
+{
+"s": 0,
+"t": "Almost every time. It only happens when the photo is larger than five megabytes."
+},
+{
+"s": 1,
+"t": "Interesting. Which phone and which version of the app are you using?"
+},
+{
+"s": 0,
+"t": "An iPhone 13, version 2.4.1. I attached the crash log to the ticket."
+},
+{
+"s": 1,
+"t": "Thanks. I think the problem is the file size limit. The server might reject large files without sending an error message."
+},
+{
+"s": 0,
+"t": "That makes sense. The app just freezes and then closes."
+},
+{
+"s": 1,
+"t": "I will add a check before the upload and show a friendly message to the user."
+},
+{
+"s": 0,
+"t": "Good idea. Can you also give me a workaround for the testers?"
+},
+{
+"s": 1,
+"t": "Sure. For now, they can use smaller photos. I will fix it in the next patch."
+}
+],
+"questions": [
+{
+"q": "When does the app crash?",
+"options": [
+"When logging in",
+"When uploading a photo larger than 5 MB",
+"When the phone is offline",
+"When the app updates"
+],
+"answer": 1,
+"why": "Fotoğraf 5 MB'den büyükse çöküyor."
+},
+{
+"q": "What did the tester attach to the ticket?",
+"options": [
+"A screenshot",
+"A video",
+"The crash log",
+"The source code"
+],
+"answer": 2,
+"why": "'I attached the crash log to the ticket.'"
+},
+{
+"q": "What is the workaround for the testers?",
+"options": [
+"Use a different phone",
+"Use smaller photos",
+"Restart the server",
+"Wait for a month"
+],
+"answer": 1,
+"why": "Geçici çözüm: daha küçük fotoğraf kullanmak."
+}
+]
+},
+{
+"id": "job-interview",
+"title": "A Junior Developer Interview",
+"level": "B1",
+"minutes": 2,
+"about": "Bir şirket, stajyer/junior geliştirici adayıyla projeleri ve güçlü yönleri hakkında konuşuyor.",
+"lines": [
+{
+"s": 0,
+"t": "Welcome, Elif. Thank you for coming. Could you tell me a little about yourself?"
+},
+{
+"s": 1,
+"t": "Thank you for having me. I'm a second-year software engineering student. I enjoy building mobile apps and solving problems."
+},
+{
+"s": 0,
+"t": "Can you describe a project you are proud of?"
+},
+{
+"s": 1,
+"t": "Yes. Last semester I built a mobile app that shows cafeteria menus for universities. It reads the data from a server and updates every day."
+},
+{
+"s": 0,
+"t": "That sounds useful. What was the hardest part?"
+},
+{
+"s": 1,
+"t": "The data from the school was sometimes wrong, so I wrote code to detect and fix mistakes automatically."
+},
+{
+"s": 0,
+"t": "How do you work in a team?"
+},
+{
+"s": 1,
+"t": "I try to communicate clearly. If I'm blocked, I ask for help early. I also like code reviews because I learn a lot from them."
+},
+{
+"s": 0,
+"t": "What is one weakness you are working on?"
+},
+{
+"s": 1,
+"t": "I sometimes spend too much time making code perfect. Now I try to finish a working version first and improve it later."
+},
+{
+"s": 0,
+"t": "Thank you, Elif. We will contact you next week."
+}
+],
+"questions": [
+{
+"q": "What kind of project did Elif describe?",
+"options": [
+"A video game",
+"A mobile app for cafeteria menus",
+"A banking system",
+"A website for a shop"
+],
+"answer": 1,
+"why": "Üniversite yemekhane menüsü uygulaması."
+},
+{
+"q": "What was the hardest part of her project?",
+"options": [
+"Designing the logo",
+"Finding users",
+"Fixing wrong data from the school",
+"Paying for servers"
+],
+"answer": 2,
+"why": "Okuldan gelen veri bazen yanlıştı."
+},
+{
+"q": "What does Elif do when she is blocked?",
+"options": [
+"Waits silently",
+"Asks for help early",
+"Changes the project",
+"Stops working"
+],
+"answer": 1,
+"why": "'If I'm blocked, I ask for help early.'"
+},
+{
+"q": "What is her weakness?",
+"options": [
+"She is always late",
+"She spends too much time making code perfect",
+"She does not like teams",
+"She cannot test code"
+],
+"answer": 1,
+"why": "Kodu mükemmel yapmaya fazla zaman harcıyor."
+}
+]
+},
+{
+"id": "git-help",
+"title": "Help with Git",
+"level": "A2",
+"minutes": 1,
+"about": "Bir stajyer, kıdemli bir arkadaşından dal (branch) ve birleştirme çakışması konusunda yardım istiyor.",
+"lines": [
+{
+"s": 0,
+"t": "Excuse me, Mark. Do you have a minute? I have a problem with Git."
+},
+{
+"s": 1,
+"t": "Sure, Nina. What's wrong?"
+},
+{
+"s": 0,
+"t": "I tried to merge my branch into main, but I got a conflict."
+},
+{
+"s": 1,
+"t": "Don't worry, conflicts are normal. It means two people changed the same line."
+},
+{
+"s": 0,
+"t": "What should I do now?"
+},
+{
+"s": 1,
+"t": "Open the file. You will see markers that show both versions. Choose the correct code and delete the markers."
+},
+{
+"s": 0,
+"t": "And then?"
+},
+{
+"s": 1,
+"t": "Save the file, add it, and create a new commit. Then push your branch."
+},
+{
+"s": 0,
+"t": "That sounds easy. Thank you so much!"
+},
+{
+"s": 1,
+"t": "No problem. Next time, pull the latest changes before you start working. It helps to avoid conflicts."
+}
+],
+"questions": [
+{
+"q": "What problem does Nina have?",
+"options": [
+"She cannot install Git",
+"She has a merge conflict",
+"She lost her password",
+"She deleted a branch"
+],
+"answer": 1,
+"why": "Merge conflict (birleştirme çakışması) yaşıyor."
+},
+{
+"q": "What does a conflict mean?",
+"options": [
+"The server is down",
+"Two people changed the same line",
+"The branch is old",
+"Git is broken"
+],
+"answer": 1,
+"why": "Aynı satırı iki kişi değiştirmiş."
+},
+{
+"q": "How can she avoid conflicts next time?",
+"options": [
+"Work on the main branch only",
+"Pull the latest changes before she starts",
+"Use a different computer",
+"Write shorter code"
+],
+"answer": 1,
+"why": "Çalışmaya başlamadan önce son değişiklikleri çekmek."
+}
+]
+},
+{
+"id": "production-incident",
+"title": "A Production Incident",
+"level": "B2",
+"minutes": 2,
+"about": "Canlı ortamda bir kesinti yaşanıyor; ekip sorunu bulup önceki sürüme dönüyor ve sonraki adımları konuşuyor.",
+"lines": [
+{
+"s": 0,
+"t": "Everyone, we have an incident. The website is returning errors for about thirty percent of the users."
+},
+{
+"s": 1,
+"t": "I'm looking at the monitoring dashboard now. The error rate went up right after the last release."
+},
+{
+"s": 0,
+"t": "How long ago did we deploy?"
+},
+{
+"s": 1,
+"t": "About twenty minutes ago. The new version changed how we connect to the database."
+},
+{
+"s": 0,
+"t": "Then the safest option is to roll back to the previous version. Do we agree?"
+},
+{
+"s": 1,
+"t": "Yes. I'll start the rollback right now. It should take around five minutes."
+},
+{
+"s": 0,
+"t": "While you do that, I will update the status page and inform the customers."
+},
+{
+"s": 1,
+"t": "The rollback is complete. Error rates are dropping. Everything looks normal again."
+},
+{
+"s": 0,
+"t": "Great work. Let's write down a timeline of what happened while it is still fresh."
+},
+{
+"s": 1,
+"t": "Agreed. Tomorrow we should hold a postmortem and find out why our tests did not catch this problem."
+},
+{
+"s": 0,
+"t": "Yes, and we should add an alert for database connection errors so we notice it faster next time."
+}
+],
+"questions": [
+{
+"q": "How many users were affected?",
+"options": [
+"About ten percent",
+"About thirty percent",
+"All of them",
+"Nobody"
+],
+"answer": 1,
+"why": "'about thirty percent of the users'."
+},
+{
+"q": "What caused the problem?",
+"options": [
+"A hardware failure",
+"A change in how the app connects to the database",
+"A network attack",
+"A power cut"
+],
+"answer": 1,
+"why": "Yeni sürüm veritabanı bağlantısını değiştirmişti."
+},
+{
+"q": "What was the decision?",
+"options": [
+"Fix the code live",
+"Shut down the website",
+"Roll back to the previous version",
+"Ignore the errors"
+],
+"answer": 2,
+"why": "Önceki sürüme geri dönmek (roll back)."
+},
+{
+"q": "What will they do tomorrow?",
+"options": [
+"Release a new version",
+"Hold a postmortem",
+"Hire new people",
+"Change the database"
+],
+"answer": 1,
+"why": "Postmortem toplantısı yapacaklar."
+}
+]
+},
+{
+"id": "sprint-planning",
+"title": "Sprint Planning",
+"level": "B1",
+"minutes": 1,
+"about": "Scrum takımı iki haftalık sprint için iş listesinden görev seçiyor ve tahmin yapıyor.",
+"lines": [
+{
+"s": 0,
+"t": "Let's start the sprint planning. Our goal for this sprint is to release the new search feature."
+},
+{
+"s": 1,
+"t": "I looked at the backlog. The search story has the highest priority."
+},
+{
+"s": 0,
+"t": "How long do you think it will take?"
+},
+{
+"s": 1,
+"t": "I estimate about five days for the backend and three days for the frontend."
+},
+{
+"s": 0,
+"t": "That is a lot. Can we reduce the scope?"
+},
+{
+"s": 1,
+"t": "We could skip the filters for now and add them in the next sprint."
+},
+{
+"s": 0,
+"t": "Good idea. Let's focus on a simple version first. What about the bug fixes?"
+},
+{
+"s": 1,
+"t": "We have two critical bugs. I suggest we fix them first because they affect many users."
+},
+{
+"s": 0,
+"t": "Agreed. Then we will have enough time for the search feature and some testing."
+},
+{
+"s": 1,
+"t": "Perfect. I will create the tasks and assign them to the team."
+}
+],
+"questions": [
+{
+"q": "What is the goal of the sprint?",
+"options": [
+"Fix all bugs",
+"Release the new search feature",
+"Hire a designer",
+"Update the database"
+],
+"answer": 1,
+"why": "Hedef yeni arama özelliği."
+},
+{
+"q": "How do they reduce the scope?",
+"options": [
+"Skip testing",
+"Skip the filters for now",
+"Remove the backend",
+"Work on weekends"
+],
+"answer": 1,
+"why": "Filtreleri sonraki sprint'e bırakıyorlar."
+},
+{
+"q": "Why do they fix the critical bugs first?",
+"options": [
+"They are easy",
+"They affect many users",
+"The manager asked",
+"They are interesting"
+],
+"answer": 1,
+"why": "Çok sayıda kullanıcıyı etkiliyorlar."
+}
+]
+},
+{
+"id": "requirements-chat",
+"title": "Clarifying Requirements",
+"level": "B2",
+"minutes": 2,
+"about": "Bir analist müşteriden \"hızlı bir uygulama\" isteğinin ne anlama geldiğini netleştirmesini istiyor.",
+"lines": [
+{
+"s": 0,
+"t": "Thanks for meeting with us. You mentioned that you want the app to be fast. Could you clarify what that means for you?"
+},
+{
+"s": 1,
+"t": "Well, our users get frustrated when they wait. I want pages to open immediately."
+},
+{
+"s": 0,
+"t": "Let's be more specific. Would two seconds be acceptable for the main page?"
+},
+{
+"s": 1,
+"t": "Two seconds is fine, but the search results must appear in less than one second."
+},
+{
+"s": 0,
+"t": "Understood. How many users do you expect at the same time?"
+},
+{
+"s": 1,
+"t": "Right now about five hundred, but we plan to grow to ten thousand within a year."
+},
+{
+"s": 0,
+"t": "In that case, we should design the system to be scalable from the beginning."
+},
+{
+"s": 1,
+"t": "Will that make the project more expensive?"
+},
+{
+"s": 0,
+"t": "Slightly, but it will save money later. Otherwise you would need to rebuild the system when you grow."
+},
+{
+"s": 1,
+"t": "That makes sense. Please write these points in the specification so we can approve them."
+},
+{
+"s": 0,
+"t": "Of course. I'll send you a draft by Friday."
+}
+],
+"questions": [
+{
+"q": "What must happen in less than one second?",
+"options": [
+"The main page loading",
+"Search results appearing",
+"Logging in",
+"Sending emails"
+],
+"answer": 1,
+"why": "Arama sonuçları 1 saniyeden kısa sürede gelmeli."
+},
+{
+"q": "How many users does the client expect in a year?",
+"options": [
+"Five hundred",
+"Five thousand",
+"Ten thousand",
+"One million"
+],
+"answer": 2,
+"why": "Bir yıl içinde on bin kullanıcı."
+},
+{
+"q": "Why does the analyst recommend a scalable design?",
+"options": [
+"It looks nicer",
+"It saves money later",
+"It is required by law",
+"It is simpler"
+],
+"answer": 1,
+"why": "Sonradan sistemi yeniden yazmak zorunda kalmamak için."
+},
+{
+"q": "When will the analyst send the draft?",
+"options": [
+"Tomorrow",
+"By Friday",
+"Next month",
+"Today"
+],
+"answer": 1,
+"why": "'I'll send you a draft by Friday.'"
+}
+]
+},
+{
+"id": "pair-programming",
+"title": "Pair Programming",
+"level": "B1",
+"minutes": 1,
+"about": "İki geliştirici birlikte çalışarak bir döngüdeki hatayı buluyor.",
+"lines": [
+{
+"s": 0,
+"t": "OK, I'm the driver, so I will type. You are the navigator, so you tell me what to think about."
+},
+{
+"s": 1,
+"t": "Sounds good. The goal is to find out why the list is empty at the end."
+},
+{
+"s": 0,
+"t": "Let me add a breakpoint inside the loop and run the debugger."
+},
+{
+"s": 1,
+"t": "Look at the variable 'count'. It is always zero."
+},
+{
+"s": 0,
+"t": "You're right. Wait... I see it. We create a new list on every iteration."
+},
+{
+"s": 1,
+"t": "Exactly. We should create the list before the loop and only add items inside it."
+},
+{
+"s": 0,
+"t": "Let me fix that. Now I run the code again."
+},
+{
+"s": 1,
+"t": "It works! The list has twelve items. Let's write a test so this bug cannot come back."
+},
+{
+"s": 0,
+"t": "Good idea. Pair programming is really helpful. I would not have seen that alone."
+}
+],
+"questions": [
+{
+"q": "What is the bug?",
+"options": [
+"The loop never starts",
+"A new list is created on every iteration",
+"The variable has the wrong name",
+"The test is missing"
+],
+"answer": 1,
+"why": "Her turda yeni liste oluşturuluyor."
+},
+{
+"q": "What does the navigator do?",
+"options": [
+"Types the code",
+"Tells the driver what to think about",
+"Runs the server",
+"Writes documentation"
+],
+"answer": 1,
+"why": "Navigator yönlendirir, driver yazar."
+},
+{
+"q": "What do they do after the fix?",
+"options": [
+"Go home",
+"Write a test",
+"Delete the list",
+"Restart the computer"
+],
+"answer": 1,
+"why": "Hatanın geri gelmemesi için test yazıyorlar."
+}
+]
+},
+{
+"id": "onboarding-day",
+"title": "First Day at the Company",
+"level": "A2",
+"minutes": 1,
+"about": "Yeni bir çalışan ilk gün iş arkadaşıyla geliştirme ortamını kuruyor.",
+"lines": [
+{
+"s": 0,
+"t": "Welcome to the team, Can! I'm Julia. I will help you during your first week."
+},
+{
+"s": 1,
+"t": "Thank you, Julia. I'm a little nervous, but I'm excited."
+},
+{
+"s": 0,
+"t": "Don't worry. First, let's set up your laptop. You need to install the editor and clone the main repository."
+},
+{
+"s": 1,
+"t": "Which version control system do you use?"
+},
+{
+"s": 0,
+"t": "We use Git. I will give you access to our repository on GitHub."
+},
+{
+"s": 1,
+"t": "Great. Where can I find the documentation?"
+},
+{
+"s": 0,
+"t": "It is in the wiki. Please read the getting started page today."
+},
+{
+"s": 1,
+"t": "OK. And when is the team meeting?"
+},
+{
+"s": 0,
+"t": "Every morning at nine thirty. It's a short stand-up. You can just say what you plan to learn today."
+},
+{
+"s": 1,
+"t": "That sounds friendly. Thank you for your help."
+}
+],
+"questions": [
+{
+"q": "What must Can install first?",
+"options": [
+"A game",
+"The editor and the repository",
+"A new phone",
+"A virus scanner"
+],
+"answer": 1,
+"why": "Editör kurup ana depoyu klonlayacak."
+},
+{
+"q": "Where is the documentation?",
+"options": [
+"In an email",
+"In the wiki",
+"On paper",
+"In the kitchen"
+],
+"answer": 1,
+"why": "Dokümantasyon wiki'de."
+},
+{
+"q": "When is the daily team meeting?",
+"options": [
+"At nine thirty every morning",
+"At five every evening",
+"Once a month",
+"On Fridays only"
+],
+"answer": 0,
+"why": "Her sabah 09:30."
+}
+]
+},
+{
+"id": "tech-talk-microservices",
+"title": "Short Talk: Why We Moved to Microservices",
+"level": "B2",
+"minutes": 2,
+"about": "Tek konuşmacılı kısa bir teknik sunum: bir şirket monolit yapıdan mikroservislere neden geçti?",
+"lines": [
+{
+"s": 0,
+"t": "Good afternoon, everyone. Today I want to talk about why our company moved from a monolith to microservices."
+},
+{
+"s": 0,
+"t": "Three years ago, our application was one big program. Every team worked in the same code base. It was simple at the beginning, but it became harder every month."
+},
+{
+"s": 0,
+"t": "First, a small change required us to deploy the whole application. A tiny bug in one module could bring down everything."
+},
+{
+"s": 0,
+"t": "Second, the teams were blocking each other. They had to wait for each other before they could release anything."
+},
+{
+"s": 0,
+"t": "So we split the system into small services. Each service has one job, its own database, and its own team."
+},
+{
+"s": 0,
+"t": "The result was positive. We now deploy many times a day, and a failure in one service does not stop the others."
+},
+{
+"s": 0,
+"t": "However, microservices are not free. We needed better monitoring, and the network between services became a new source of problems."
+},
+{
+"s": 0,
+"t": "My advice is simple. Do not start with microservices. Start simple, and split the system only when the pain is real. Thank you for listening."
+}
+],
+"questions": [
+{
+"q": "What was the old application like?",
+"options": [
+"Many small services",
+"One big program",
+"A mobile app",
+"A spreadsheet"
+],
+"answer": 1,
+"why": "Tek büyük program (monolith)."
+},
+{
+"q": "What is one advantage of microservices mentioned?",
+"options": [
+"They are cheaper",
+"A failure in one service does not stop the others",
+"They need no monitoring",
+"They remove the network"
+],
+"answer": 1,
+"why": "Bir servisteki hata diğerlerini durdurmuyor."
+},
+{
+"q": "What is the speaker's advice?",
+"options": [
+"Always start with microservices",
+"Never use microservices",
+"Start simple and split only when needed",
+"Hire more people"
+],
+"answer": 2,
+"why": "Basit başla, sadece gerçekten gerektiğinde böl."
+},
+{
+"q": "What new problem did microservices create?",
+"options": [
+"Slow typing",
+"The network between services",
+"Too few teams",
+"No databases"
+],
+"answer": 1,
+"why": "Servisler arası ağ yeni sorun kaynağı oldu."
+}
+]
+},
+{
+"id": "release-debate",
+"title": "Release on Friday?",
+"level": "B1",
+"minutes": 1,
+"about": "İki mühendis, yeni sürümü cuma günü yayınlamanın riskli olup olmadığını tartışıyor.",
+"lines": [
+{
+"s": 0,
+"t": "The new version is ready. I think we should deploy it today."
+},
+{
+"s": 1,
+"t": "Today is Friday. I'm not sure that's a good idea."
+},
+{
+"s": 0,
+"t": "Why not? All the tests are green."
+},
+{
+"s": 1,
+"t": "If something goes wrong, we will have to work during the weekend. And half of the team is already gone."
+},
+{
+"s": 0,
+"t": "That's a fair point. But the customers are waiting for this feature."
+},
+{
+"s": 1,
+"t": "What if we release on Monday morning instead? Then everyone is here and we can react quickly."
+},
+{
+"s": 0,
+"t": "OK, I see your point. A delay of one weekend is not a big risk."
+},
+{
+"s": 1,
+"t": "Great. In the meantime, we can test it once more in the staging environment."
+},
+{
+"s": 0,
+"t": "Agreed. I'll tell the product manager that we will deploy on Monday."
+}
+],
+"questions": [
+{
+"q": "Why is the second speaker against releasing on Friday?",
+"options": [
+"The tests are red",
+"They may have to work during the weekend",
+"The feature is not ready",
+"The server is old"
+],
+"answer": 1,
+"why": "Sorun çıkarsa hafta sonu çalışmak gerekir."
+},
+{
+"q": "When do they decide to release?",
+"options": [
+"Today",
+"Monday morning",
+"Next month",
+"Tomorrow night"
+],
+"answer": 1,
+"why": "Pazartesi sabahı."
+},
+{
+"q": "What will they do in the meantime?",
+"options": [
+"Nothing",
+"Test again in staging",
+"Delete the feature",
+"Change the team"
+],
+"answer": 1,
+"why": "Staging ortamında bir kez daha test."
+}
+]
+}
+],
+"sentences": [
+{
+"t": "The function returns true if the file exists.",
+"level": "A2",
+"tr": "Dosya varsa fonksiyon true döndürür."
+},
+{
+"t": "I fixed the bug and pushed my changes.",
+"level": "A2",
+"tr": "Hatayı düzelttim ve değişikliklerimi gönderdim."
+},
+{
+"t": "Please send me the link to the repository.",
+"level": "A2",
+"tr": "Lütfen bana deponun bağlantısını gönder."
+},
+{
+"t": "Our daily stand-up starts at nine o'clock.",
+"level": "A2",
+"tr": "Günlük toplantımız dokuzda başlıyor."
+},
+{
+"t": "The server is down, so the app does not work.",
+"level": "A2",
+"tr": "Sunucu kapalı, bu yüzden uygulama çalışmıyor."
+},
+{
+"t": "I'm learning how to write clean code.",
+"level": "A2",
+"tr": "Temiz kod yazmayı öğreniyorum."
+},
+{
+"t": "Can you review my pull request today?",
+"level": "A2",
+"tr": "Bugün pull request'imi inceleyebilir misin?"
+},
+{
+"t": "The database stores all customer information.",
+"level": "A2",
+"tr": "Veritabanı tüm müşteri bilgilerini saklar."
+},
+{
+"t": "We need to test the new feature before the release.",
+"level": "B1",
+"tr": "Yayından önce yeni özelliği test etmemiz gerekiyor."
+},
+{
+"t": "The application crashes when the user uploads a large file.",
+"level": "B1",
+"tr": "Kullanıcı büyük bir dosya yüklediğinde uygulama çöküyor."
+},
+{
+"t": "I couldn't reproduce the error on my computer.",
+"level": "B1",
+"tr": "Hatayı kendi bilgisayarımda yeniden üretemedim."
+},
+{
+"t": "Could you explain how this algorithm works?",
+"level": "B1",
+"tr": "Bu algoritmanın nasıl çalıştığını açıklar mısın?"
+},
+{
+"t": "We deploy to production every Thursday afternoon.",
+"level": "B1",
+"tr": "Her perşembe öğleden sonra canlıya çıkıyoruz."
+},
+{
+"t": "The API returns the data in JSON format.",
+"level": "B1",
+"tr": "API veriyi JSON biçiminde döndürür."
+},
+{
+"t": "Writing tests helps us find problems early.",
+"level": "B1",
+"tr": "Test yazmak sorunları erken bulmamıza yardım eder."
+},
+{
+"t": "She works as a backend developer in a small startup.",
+"level": "B1",
+"tr": "Küçük bir girişimde arka uç geliştirici olarak çalışıyor."
+},
+{
+"t": "Every module should have a single responsibility.",
+"level": "B1",
+"tr": "Her modülün tek bir sorumluluğu olmalı."
+},
+{
+"t": "I'd like to apply for the summer internship at your company.",
+"level": "B1",
+"tr": "Şirketinizdeki yaz stajına başvurmak istiyorum."
+},
+{
+"t": "The error message was not clear, so I asked my teammate for help.",
+"level": "B1",
+"tr": "Hata mesajı net değildi, bu yüzden takım arkadaşımdan yardım istedim."
+},
+{
+"t": "We use version control to track every change in the code.",
+"level": "B1",
+"tr": "Koddaki her değişikliği izlemek için sürüm kontrolü kullanıyoruz."
+},
+{
+"t": "The new release fixes several security vulnerabilities.",
+"level": "B2",
+"tr": "Yeni sürüm birkaç güvenlik açığını kapatıyor."
+},
+{
+"t": "Asynchronous calls prevent the interface from freezing.",
+"level": "B2",
+"tr": "Eşzamansız çağrılar arayüzün donmasını önler."
+},
+{
+"t": "Good documentation is as important as good code.",
+"level": "B2",
+"tr": "İyi dokümantasyon, iyi kod kadar önemlidir."
+},
+{
+"t": "We need a scalable architecture that can handle a million users.",
+"level": "B2",
+"tr": "Bir milyon kullanıcıyı kaldırabilecek ölçeklenebilir bir mimariye ihtiyacımız var."
+},
+{
+"t": "The team decided to refactor the legacy code instead of rewriting it.",
+"level": "B2",
+"tr": "Ekip eski kodu baştan yazmak yerine yeniden düzenlemeye karar verdi."
+},
+{
+"t": "Technical debt grows when we skip tests to meet a deadline.",
+"level": "B2",
+"tr": "Son teslim tarihine yetişmek için testleri atladığımızda teknik borç büyür."
+},
+{
+"t": "The latency increased because the cache was not working properly.",
+"level": "B2",
+"tr": "Önbellek düzgün çalışmadığı için gecikme arttı."
+},
+{
+"t": "Before we merge, please resolve the conflicts and run all the tests.",
+"level": "B2",
+"tr": "Birleştirmeden önce lütfen çakışmaları çöz ve tüm testleri çalıştır."
+},
+{
+"t": "The project is on track, but we are slightly behind schedule on the mobile app.",
+"level": "B2",
+"tr": "Proje planlandığı gibi gidiyor ama mobil uygulamada programın biraz gerisindeyiz."
+},
+{
+"t": "An engineer must balance cost, safety, and performance in every design.",
+"level": "B2",
+"tr": "Bir mühendis her tasarımda maliyet, güvenlik ve performansı dengelemelidir."
+},
+{
+"t": "The sensor sends a signal to the controller every ten milliseconds.",
+"level": "B1",
+"tr": "Sensör her on milisaniyede bir kontrolcüye sinyal gönderir."
+},
+{
+"t": "Passwords should be stored as hashes, never as plain text.",
+"level": "B2",
+"tr": "Parolalar asla düz metin olarak değil, özet (hash) olarak saklanmalıdır."
+},
+{
+"t": "Could you elaborate on the requirements for the login screen?",
+"level": "B2",
+"tr": "Giriş ekranının gereksinimlerini biraz açabilir misin?"
+},
+{
+"t": "I will follow up with the client and send you an update tomorrow.",
+"level": "B1",
+"tr": "Müşteriyle iletişime geçip yarın sana bir güncelleme göndereceğim."
+},
+{
+"t": "Our application supports both Android and iOS.",
+"level": "A2",
+"tr": "Uygulamamız hem Android'i hem iOS'u destekliyor."
+},
+{
+"t": "The user interface should be simple and easy to use.",
+"level": "A2",
+"tr": "Kullanıcı arayüzü basit ve kullanımı kolay olmalı."
+},
+{
+"t": "I'm responsible for the frontend of this project.",
+"level": "A2",
+"tr": "Bu projenin ön yüzünden ben sorumluyum."
+},
+{
+"t": "Let me share my screen so you can see the problem.",
+"level": "A2",
+"tr": "Sorunu görebilmen için ekranımı paylaşayım."
+},
+{
+"t": "The deadline is next Friday, so we have to hurry.",
+"level": "A2",
+"tr": "Son teslim tarihi gelecek cuma, bu yüzden acele etmeliyiz."
+},
+{
+"t": "A good engineer never stops learning new technologies.",
+"level": "B1",
+"tr": "İyi bir mühendis yeni teknolojiler öğrenmeyi asla bırakmaz."
+},
+{
+"t": "When did you start learning to program?",
+"level": "A2",
+"tr": "Programlamayı öğrenmeye ne zaman başladın?"
+},
+{
+"t": "The pipeline failed because one of the tests did not pass.",
+"level": "B1",
+"tr": "Testlerden biri geçmediği için iş hattı başarısız oldu."
+},
+{
+"t": "We rolled back the update because it caused a serious problem.",
+"level": "B1",
+"tr": "Ciddi bir soruna yol açtığı için güncellemeyi geri aldık."
+},
+{
+"t": "Dependency injection makes the code easier to test and maintain.",
+"level": "B2",
+"tr": "Bağımlılık enjeksiyonu kodu test etmeyi ve sürdürmeyi kolaylaştırır."
+},
+{
+"t": "The algorithm has a time complexity of order n log n.",
+"level": "B2",
+"tr": "Algoritmanın zaman karmaşıklığı n log n mertebesindedir."
+},
+{
+"t": "I prefer to write the tests first and then implement the feature.",
+"level": "B1",
+"tr": "Önce testleri yazıp sonra özelliği uygulamayı tercih ederim."
+},
+{
+"t": "Our mentor gave us valuable feedback on our final presentation.",
+"level": "B1",
+"tr": "Mentorumuz final sunumumuz hakkında değerli geri bildirim verdi."
+},
+{
+"t": "It is important to validate user input to prevent attacks.",
+"level": "B2",
+"tr": "Saldırıları önlemek için kullanıcı girdisini doğrulamak önemlidir."
+},
+{
+"t": "The project failed because the requirements kept changing.",
+"level": "B2",
+"tr": "Gereksinimler sürekli değiştiği için proje başarısız oldu."
+},
+{
+"t": "Do you have any questions about the task?",
+"level": "A2",
+"tr": "Görevle ilgili sorun var mı?"
+}
+]
+}

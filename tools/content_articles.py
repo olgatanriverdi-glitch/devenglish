@@ -1,0 +1,173 @@
+"""Uygulama içi okuma metinleri (özgün, B1-B2). glossary: metindeki zor kelimeler -> Türkçe (dokununca açılır)."""
+
+ARTICLES = [
+    {
+        "id": "what-happens-url", "title": "What Happens When You Type a URL?", "level": "B1",
+        "summary": "Tarayıcıya bir adres yazıp Enter'a bastığında arka planda neler olur: DNS, istek, yanıt ve ekrana çizme.",
+        "paragraphs": [
+            "Every day we type web addresses into our browsers without thinking about it. But in less than a second, many things happen behind the screen.",
+            "First, the browser needs to find the server. Computers do not understand names like example.com; they use numbers called IP addresses. So the browser asks a DNS server, which works like a phone book, to translate the name into an IP address.",
+            "Next, the browser opens a connection to the server. If the address starts with HTTPS, the connection is encrypted, which means that other people cannot read the data that travels between you and the website.",
+            "Then the browser sends a request. The request says what the browser wants, for example the home page. The server receives the request, finds the right data, and sends back a response. The response contains a status code, such as 200 for success or 404 when the page does not exist, and the content of the page.",
+            "Finally, the browser reads the HTML and builds the page. It also downloads other files, like images, styles, and scripts. When everything is ready, the browser renders the page on your screen.",
+            "Engineers try to make each of these steps faster. For example, they store copies of files in a cache so that the browser does not have to download them again. Understanding this process helps you find the reason when a website is slow or not working.",
+        ],
+        "glossary": {"translate": "çevirmek", "encrypted": "şifrelenmiş", "request": "istek", "response": "yanıt", "status code": "durum kodu", "render": "ekrana çizmek", "cache": "önbellek", "server": "sunucu", "connection": "bağlantı"},
+        "questions": [
+            {"q": "What does a DNS server do?", "options": ["It stores web pages", "It translates names into IP addresses", "It encrypts data", "It draws the page"], "answer": 1, "why": "DNS, alan adını IP adresine çevirir."},
+            {"q": "What does HTTPS provide?", "options": ["A faster server", "An encrypted connection", "More images", "A free domain"], "answer": 1, "why": "HTTPS bağlantıyı şifreler."},
+            {"q": "What does status code 404 mean?", "options": ["Success", "Server error", "The page does not exist", "Slow connection"], "answer": 2, "why": "404: sayfa bulunamadı."},
+        ],
+    },
+    {
+        "id": "why-version-control", "title": "Why Every Developer Needs Version Control", "level": "B1",
+        "summary": "Git gibi sürüm kontrol sistemleri neden vazgeçilmez: geçmiş, takım çalışması ve güvenli deneme.",
+        "paragraphs": [
+            "Imagine that you work on a project for two weeks and then you break something. You cannot remember what you changed. Without version control, you have a big problem.",
+            "Version control is a system that records every change in your files. Each change is saved as a commit with a short message that explains what you did and why. Because of this history, you can see who changed what, and you can go back to any earlier version.",
+            "Version control is also essential for teamwork. Each developer works on a separate branch, so people do not disturb each other. When a feature is ready, it is merged into the main branch. Sometimes two people change the same line, and this creates a conflict. It looks scary at first, but you only need to decide which version is correct.",
+            "Another advantage is that you can experiment safely. If your idea does not work, you simply delete the branch and nothing is lost. This makes developers braver and more creative.",
+            "Platforms like GitHub add more features: pull requests, code reviews, and issue tracking. Even if you work alone, it is a good habit to use Git. It works like a safety net, and it also shows your work to future employers.",
+        ],
+        "glossary": {"version control": "sürüm kontrolü", "commit": "değişiklik kaydı", "branch": "dal", "merged": "birleştirilmiş", "conflict": "çakışma", "essential": "vazgeçilmez", "safety net": "güvenlik ağı", "experiment": "deneme yapmak", "disturb": "rahatsız etmek"},
+        "questions": [
+            {"q": "What is a commit?", "options": ["A deleted branch", "A saved change with a message", "A type of server", "A programming language"], "answer": 1, "why": "Commit, mesajla kaydedilen değişikliktir."},
+            {"q": "Why do developers work on separate branches?", "options": ["To disturb each other less", "To make files bigger", "To avoid writing code", "Because Git requires it"], "answer": 0, "why": "Birbirlerini rahatsız etmemek için."},
+            {"q": "What does the writer say about working alone?", "options": ["Git is useless", "It is still a good habit to use Git", "You should avoid GitHub", "Branches are not allowed"], "answer": 1, "why": "Tek başına çalışsan bile Git kullanmak iyi alışkanlık."},
+        ],
+    },
+    {
+        "id": "clean-code", "title": "Five Habits of Clean Code", "level": "B1",
+        "summary": "Okunabilir kod yazmak için beş alışkanlık: isimlendirme, kısa fonksiyonlar, tekrar etmeme, yorumlar ve test.",
+        "paragraphs": [
+            "Computers can run messy code, but humans cannot read it easily. Since developers spend more time reading code than writing it, clean code is a valuable skill. Here are five simple habits.",
+            "First, choose clear names. A variable called 'd' says nothing, but 'daysUntilDeadline' explains itself. Good names make comments almost unnecessary.",
+            "Second, keep functions short. A function should do one thing and do it well. If you need the word 'and' to describe what a function does, it is probably doing too much.",
+            "Third, do not repeat yourself. When you copy and paste the same code in five places, a future bug must be fixed five times. Move the repeated code into one function and reuse it.",
+            "Fourth, write comments that explain why, not what. The code already shows what happens; a comment should explain the reason behind a surprising decision.",
+            "Fifth, write tests. Tests make you brave: you can refactor the code and immediately see if you broke something. Clean code is not about being perfect. It is about leaving the code a little better than you found it.",
+        ],
+        "glossary": {"messy": "dağınık", "valuable": "değerli", "unnecessary": "gereksiz", "repeat": "tekrar etmek", "reason": "sebep", "surprising": "şaşırtıcı", "refactor": "yeniden düzenlemek", "habit": "alışkanlık"},
+        "questions": [
+            {"q": "Why is clean code valuable?", "options": ["Computers run it faster", "Developers read code more than they write it", "It needs no tests", "It is shorter"], "answer": 1, "why": "Geliştiriciler kodu yazmaktan çok okur."},
+            {"q": "What should comments explain?", "options": ["What the code does", "Why a decision was made", "Who wrote the code", "How long it took"], "answer": 1, "why": "Yorumlar 'neden' sorusunu yanıtlamalı."},
+            {"q": "What is the problem with copying and pasting code?", "options": ["It is illegal", "A bug must be fixed in many places", "It makes functions short", "It deletes tests"], "answer": 1, "why": "Hata gelecekte birçok yerde düzeltilmek zorunda kalır."},
+        ],
+    },
+    {
+        "id": "rest-apis", "title": "REST APIs in Plain English", "level": "B2",
+        "summary": "Web API'leri HTTP yöntemleri ve kaynaklarla nasıl çalışır; REST'in temel fikirleri.",
+        "paragraphs": [
+            "When a mobile app shows your messages, it does not store them itself. It asks a server through an API, an interface that defines how programs communicate. The most common style for web APIs is called REST.",
+            "In REST, everything is a resource, for example a user, an order, or a photo. Each resource has an address, called an endpoint, such as /users/42. The client uses standard HTTP methods to work with it: GET reads data, POST creates something new, PUT or PATCH updates it, and DELETE removes it.",
+            "A good REST API is predictable. If you know how to get a list of users, you can guess how to get a list of orders. The server answers with a status code that tells you what happened: 200 means success, 201 means something was created, 400 means that the request was wrong, and 500 means that the server has a problem.",
+            "Data usually travels in JSON, a simple text format that both humans and programs can read. Another important rule is that the server does not remember previous requests. Each request must contain all the information that the server needs, for example an authentication token.",
+            "Designing an API is a long-term decision, because other developers depend on it. Changing it carelessly can break their applications. That is why teams use versions, such as /v1/users, and announce clearly when they deprecate an old endpoint.",
+        ],
+        "glossary": {"resource": "kaynak", "predictable": "tahmin edilebilir", "depend on": "-e bağlı olmak", "carelessly": "dikkatsizce", "announce": "duyurmak", "deprecate": "kullanımdan kaldırmak", "authentication": "kimlik doğrulama", "interface": "arayüz", "endpoint": "uç nokta"},
+        "questions": [
+            {"q": "Which HTTP method creates a new resource?", "options": ["GET", "POST", "DELETE", "HEAD"], "answer": 1, "why": "POST yeni kaynak oluşturur."},
+            {"q": "What does status code 500 mean?", "options": ["Success", "Something was created", "The request was wrong", "The server has a problem"], "answer": 3, "why": "500: sunucu hatası."},
+            {"q": "Why do teams use versions like /v1/users?", "options": ["To make URLs longer", "To avoid breaking other applications when changing the API", "To hide the data", "To save money"], "answer": 1, "why": "API değişince başkalarının uygulamaları bozulmasın diye."},
+        ],
+    },
+    {
+        "id": "how-databases-work", "title": "How Databases Keep Your Data Safe", "level": "B2",
+        "summary": "Veritabanları veriyi nasıl düzenler; tablolar, indeksler ve transaction fikri.",
+        "paragraphs": [
+            "Every time you place an order online, a database records it. A database is more than a big file: it is a system designed to store information safely and to find it quickly.",
+            "Relational databases organize data into tables with rows and columns. Each row has a primary key, a unique value like an id, and tables are connected through foreign keys. For example, an order row can contain the id of the customer who made it. You use SQL queries to ask questions such as 'show all orders from last month'.",
+            "Searching a huge table row by row would be very slow. To solve this, databases create indexes. An index works like the index of a book: instead of reading all the pages, you go directly to the right place. The price is some extra storage and slightly slower writes.",
+            "Safety is just as important as speed. Imagine that a bank transfer removes money from one account but crashes before adding it to another account. To prevent this, databases use transactions. A transaction is a group of operations that either all succeed or all fail. If something goes wrong, the database performs a rollback and returns to the previous state.",
+            "Finally, nobody should trust a single copy of the data. Teams take regular backups and keep replicas on other servers. If one machine breaks, another one can take over, and users may not even notice.",
+        ],
+        "glossary": {"relational": "ilişkisel", "unique": "benzersiz", "huge": "çok büyük", "index": "indeks", "transaction": "işlem (transaction)", "rollback": "geri alma", "replica": "kopya sunucu", "backup": "yedek", "crash": "çökmek"},
+        "questions": [
+            {"q": "What does an index do?", "options": ["It deletes old data", "It helps find data faster", "It encrypts the table", "It creates backups"], "answer": 1, "why": "İndeks aramayı hızlandırır."},
+            {"q": "What is a transaction?", "options": ["A group of operations that all succeed or all fail", "A type of table", "A backup file", "A programming language"], "answer": 0, "why": "Hepsi başarılı olur ya da hiçbiri."},
+            {"q": "Why are replicas useful?", "options": ["They make queries longer", "Another server can take over if one breaks", "They remove the need for SQL", "They reduce security"], "answer": 1, "why": "Biri bozulursa diğeri devralır."},
+        ],
+    },
+    {
+        "id": "agile-in-short", "title": "Agile in a Nutshell", "level": "B1",
+        "summary": "Çevik yazılım geliştirme: kısa döngüler, geri bildirim ve değişime uyum.",
+        "paragraphs": [
+            "In the past, many teams planned a whole project for months and delivered the product only at the end. Often the result was not what the customer needed anymore. Agile was created to solve this problem.",
+            "The main idea of Agile is to work in short cycles. In Scrum, one of the most popular Agile frameworks, a cycle is called a sprint and usually lasts two weeks. At the beginning of a sprint, the team chooses the most important tasks from the backlog. At the end, they show a working piece of software to the customer.",
+            "Regular feedback is the heart of Agile. If the customer sees a small part every two weeks, misunderstandings are found early and they are cheap to fix. Teams also hold a short stand-up every day and a retrospective after each sprint, where they discuss what went well and what to improve.",
+            "Agile does not mean having no plan. It means accepting that plans change and being ready to adapt. A good team still estimates the work, defines priorities, and writes down the requirements, but it does this in small steps.",
+            "Of course, Agile is not magic. Without trust and good communication, any process will fail. The tools matter less than the people who use them.",
+        ],
+        "glossary": {"deliver": "teslim etmek", "framework": "çatı yapı", "backlog": "iş listesi", "feedback": "geri bildirim", "misunderstanding": "yanlış anlama", "adapt": "uyum sağlamak", "estimate": "tahmin etmek", "priorities": "öncelikler", "retrospective": "geriye bakış toplantısı"},
+        "questions": [
+            {"q": "How long does a typical sprint last?", "options": ["One day", "Two weeks", "Six months", "One year"], "answer": 1, "why": "Genellikle iki hafta."},
+            {"q": "Why is regular feedback useful?", "options": ["Misunderstandings are found early and cheap to fix", "It replaces testing", "It makes the team bigger", "It removes the backlog"], "answer": 0, "why": "Yanlış anlamalar erken ve ucuza düzeltilir."},
+            {"q": "What does the writer say about Agile?", "options": ["It means no plan", "It is magic", "It means accepting that plans change", "It needs no communication"], "answer": 2, "why": "Planların değişebileceğini kabul etmek demek."},
+        ],
+    },
+    {
+        "id": "containers-explained", "title": "Containers: 'It Works on My Machine' Solved", "level": "B2",
+        "summary": "Docker gibi konteynerler uygulamayı bağımlılıklarıyla paketler; her yerde aynı çalışır.",
+        "paragraphs": [
+            "Every developer knows this sentence: 'But it works on my machine!' The program runs perfectly on a laptop, but it fails on the server because the versions of the software are different. Containers were invented to solve this problem.",
+            "A container packages an application together with everything it needs: the code, the libraries, and the settings. Because the package is the same everywhere, the application behaves the same on your laptop, on a test server, and in the cloud.",
+            "Containers are often compared to virtual machines, but they are lighter. A virtual machine includes a complete operating system, which is heavy and slow to start. Containers share the operating system of the host, so they start in seconds and use less memory.",
+            "A container is created from an image, which is like a template. You describe the image in a simple file, for example with Docker, and then anyone can build and run it with one command. When you need more capacity, you start more containers from the same image.",
+            "In large systems, thousands of containers run at the same time. Tools such as Kubernetes manage them automatically: they restart containers that crash and distribute the load. This is called orchestration. Learning containers is a valuable step for every modern developer.",
+        ],
+        "glossary": {"package": "paketlemek", "behave": "davranmak", "virtual machine": "sanal makine", "operating system": "işletim sistemi", "template": "şablon", "capacity": "kapasite", "distribute": "dağıtmak", "orchestration": "orkestrasyon", "invented": "icat edilmiş"},
+        "questions": [
+            {"q": "What problem do containers solve?", "options": ["Slow internet", "Software behaving differently on different machines", "Missing passwords", "Small screens"], "answer": 1, "why": "'Bende çalışıyor' sorununu çözer."},
+            {"q": "Why are containers lighter than virtual machines?", "options": ["They have no code", "They share the host's operating system", "They run only at night", "They are written in Java"], "answer": 1, "why": "Ana sistemin işletim sistemini paylaşırlar."},
+            {"q": "What does Kubernetes do?", "options": ["Writes code", "Manages many containers automatically", "Creates passwords", "Draws diagrams"], "answer": 1, "why": "Çok sayıda konteyneri otomatik yönetir."},
+        ],
+    },
+    {
+        "id": "big-o-intro", "title": "Big O Notation Without the Fear", "level": "B2",
+        "summary": "Algoritmaların girdi büyüdükçe ne kadar yavaşladığını anlatan Big O gösterimine giriş.",
+        "paragraphs": [
+            "Suppose that you have two programs that solve the same problem. Both are fast with ten items, but with a million items one finishes in a second and the other needs an hour. How can we know this before we run them? Big O notation gives us the answer.",
+            "Big O describes how the running time of an algorithm grows when the input becomes bigger. It does not measure seconds. Instead it counts the steps in relation to the input size, which we call n.",
+            "O(1) means constant time: the work stays the same, no matter how big the input is. Reading an item from an array by its index is O(1). O(n) means linear time: if the input doubles, the work doubles. Searching for a name in an unsorted list is O(n) because you may have to look at every item.",
+            "O(log n) is much better. Binary search finds a name in a sorted list of a million items in only about twenty steps, because every step cuts the search area in half. On the other hand, O(n squared) grows very fast. A loop inside another loop over the same list is often O(n squared), and it becomes painfully slow with large inputs.",
+            "You do not need advanced mathematics to use this idea. When you write code, ask yourself: 'What happens if the data becomes a thousand times bigger?' This simple question prevents many performance problems.",
+        ],
+        "glossary": {"grow": "büyümek", "input": "girdi", "constant": "sabit", "linear": "doğrusal", "unsorted": "sıralanmamış", "search area": "arama alanı", "painfully": "can sıkıcı derecede", "performance": "performans", "notation": "gösterim"},
+        "questions": [
+            {"q": "What does Big O describe?", "options": ["The color of code", "How running time grows with input size", "The price of a program", "The number of developers"], "answer": 1, "why": "Girdi büyüdükçe çalışma süresinin nasıl arttığını."},
+            {"q": "Why is binary search so fast?", "options": ["It uses more memory", "Every step cuts the search area in half", "It checks every item", "It skips sorting"], "answer": 1, "why": "Her adım arama alanını yarıya indirir."},
+            {"q": "Which situation is often O(n squared)?", "options": ["Reading an array by index", "A loop inside another loop over the same list", "Binary search", "Adding two numbers"], "answer": 1, "why": "İç içe döngü genellikle O(n²)."},
+        ],
+    },
+    {
+        "id": "ask-good-questions", "title": "How to Ask for Help Like a Professional", "level": "B1",
+        "summary": "Takım arkadaşlarından ve forumlardan etkili yardım isteme: sorunu hazırlama, ayrıntı verme, teşekkür etme.",
+        "paragraphs": [
+            "Every developer gets stuck. What separates beginners from professionals is not that professionals never need help; it is that they know how to ask for it well.",
+            "Before you ask, try to solve the problem yourself for a short time. Read the error message carefully, search for it online, and check the documentation. Often, the answer is already there. If you still cannot solve it, you can ask with a clear conscience.",
+            "A good question contains four things. First, say what you want to achieve. Second, describe what you tried and what happened. Third, include the exact error message and a small piece of code that shows the problem. Fourth, mention your environment, such as the version of the language or the operating system.",
+            "Compare two messages. 'My code doesn't work, please help!' tells the other person nothing. 'I'm trying to parse a JSON file in Python, but I get a KeyError on line 12. Here is the code and the file' makes it easy to help you.",
+            "Be polite and patient. People help in their free time, so say thank you, and tell them how you solved the problem. When you find the answer yourself, write it down; it will help the next person who has the same question.",
+        ],
+        "glossary": {"separate": "ayırmak", "achieve": "başarmak", "exact": "tam, kesin", "environment": "ortam", "parse": "ayrıştırmak", "patient": "sabırlı", "conscience": "vicdan", "documentation": "dokümantasyon", "stuck": "takılıp kalmış"},
+        "questions": [
+            {"q": "What should you do before you ask for help?", "options": ["Ask immediately", "Try to solve it yourself for a short time", "Delete the code", "Wait one week"], "answer": 1, "why": "Önce kısa süre kendin çözmeyi dene."},
+            {"q": "Which detail belongs in a good question?", "options": ["Your favorite color", "The exact error message", "Your age", "A joke"], "answer": 1, "why": "Hatanın tam metni."},
+            {"q": "What should you do after you solve the problem?", "options": ["Nothing", "Tell people how you solved it", "Delete the question", "Ask again"], "answer": 1, "why": "Çözümü paylaşmak sonraki kişiye yardım eder."},
+        ],
+    },
+]
+
+# Dış kaynaklar (okuma/dinleme için güvenilir siteler). note: ne işe yarar (Türkçe)
+LINKS = [
+    {"title": "MDN Web Docs", "url": "https://developer.mozilla.org/en-US/docs/Learn", "level": "B1-B2", "note": "Web geliştirme için en iyi İngilizce öğrenme rehberi. Anlatım açık ve örnekli."},
+    {"title": "freeCodeCamp News", "url": "https://www.freecodecamp.org/news/", "level": "B1", "note": "Başlangıç dostu yazılım makaleleri ve eğitimler."},
+    {"title": "Martin Fowler's Blog", "url": "https://martinfowler.com/", "level": "B2-C1", "note": "Yazılım mimarisi ve çevik yöntemler üzerine klasik makaleler."},
+    {"title": "The GitHub Blog", "url": "https://github.blog/", "level": "B1-B2", "note": "Yazılım dünyasından güncel haberler ve mühendislik yazıları."},
+    {"title": "Stack Overflow Blog", "url": "https://stackoverflow.blog/", "level": "B1-B2", "note": "Geliştirici kültürü, podcast'ler ve teknik yazılar."},
+    {"title": "web.dev", "url": "https://web.dev/learn", "level": "B1-B2", "note": "Google'dan modern web geliştirme kursları."},
+    {"title": "Real Python", "url": "https://realpython.com/", "level": "B1-B2", "note": "Python öğrenenler için ayrıntılı, iyi yazılmış öğreticiler."},
+    {"title": "CS50 (Harvard)", "url": "https://cs50.harvard.edu/x/", "level": "B1-B2", "note": "Ücretsiz bilgisayar bilimi dersi; videoların İngilizce altyazısı var, dinleme için çok iyi."},
+    {"title": "Simple English Wikipedia: Software engineering", "url": "https://simple.wikipedia.org/wiki/Software_engineering", "level": "A2-B1", "note": "Sade İngilizceyle yazılmış kısa açıklamalar. Kavramlara hızlı giriş."},
+    {"title": "BBC Learning English", "url": "https://www.bbc.co.uk/learningenglish", "level": "A2-B2", "note": "Genel İngilizce: dinleme, konuşma ve kelime çalışmaları."},
+]

@@ -1,0 +1,343 @@
+# term | pos | Türkçe | simple English definition | example sentence (terim cümlede aynen geçmeli)
+## prog | Programlama Temelleri
+variable | n. | değişken | A named place in memory that stores a value. | The variable holds the user's age.
+function | n. | fonksiyon | A block of code that does one task and can be reused. | I wrote a function to calculate the total price.
+parameter | n. | parametre | A value you pass into a function so it can use it. | The function takes two parameters: width and height.
+argument | n. | argüman | The actual value you give to a function when you call it. | You must pass a string as the first argument.
+return value | n. | dönüş değeri | The result that a function gives back to the code that called it. | The return value is true if the file exists.
+loop | n. | döngü | Code that repeats until a condition is no longer true. | The loop runs once for every item in the list.
+condition | n. | koşul | An expression that is either true or false and controls the flow. | If the condition is false, the program skips this block.
+statement | n. | ifade, deyim | One complete instruction in a program. | Each statement ends with a semicolon.
+expression | n. | ifade | A piece of code that produces a value. | The expression 2 + 3 evaluates to 5.
+operator | n. | operatör | A symbol that performs an action on values, such as + or &&. | The modulo operator gives the remainder of a division.
+syntax | n. | sözdizimi | The rules that describe how code must be written. | A missing bracket caused a syntax error.
+compile | v. | derlemek | To translate source code into a form the computer can run. | It takes two minutes to compile the whole project.
+interpreter | n. | yorumlayıcı | A program that runs code line by line without compiling it first. | Python code is run by an interpreter.
+runtime | n. | çalışma zamanı | The period when a program is running, or the environment that runs it. | The error only appears at runtime.
+exception | n. | istisna, hata durumu | An unexpected problem that stops the normal flow of a program. | The program throws an exception when the file is missing.
+handle | v. | ele almak | To deal with something, such as an error, in your code. | We handle network errors by showing a message.
+debug | v. | hata ayıklamak | To find and fix problems in code. | It took me three hours to debug this issue.
+breakpoint | n. | kesme noktası | A marked line where the debugger pauses the program. | I set a breakpoint on line 42 to inspect the variables.
+scope | n. | kapsam | The part of the code where a variable can be used. | The variable is only available inside the scope of the function.
+constant | n. | sabit | A value that cannot change after it is set. | Store the tax rate as a constant.
+string | n. | metin dizisi | A sequence of characters, such as a word or sentence. | The function converts a string to uppercase.
+integer | n. | tam sayı | A whole number without a decimal part. | An integer cannot store the value 3.14.
+boolean | n. | mantıksal değer | A type that can only be true or false. | The flag is a boolean that shows if the user is logged in.
+null | n. | boş değer | A special value that means there is no value. | The method returns null when nothing is found.
+overflow | n. | taşma | A situation where a value is too big for the space reserved for it. | An integer overflow caused the counter to become negative.
+recursion | n. | özyineleme | When a function calls itself to solve a smaller version of a problem. | Recursion is a natural way to walk through a folder tree.
+inheritance | n. | kalıtım | A way for a class to get the properties and methods of another class. | The Dog class uses inheritance to reuse code from Animal.
+polymorphism | n. | çok biçimlilik | The ability of different objects to respond to the same method in different ways. | Polymorphism lets us call draw() on any shape.
+encapsulation | n. | kapsülleme | Hiding the internal details of an object and exposing only what is needed. | Encapsulation keeps the balance private inside the account class.
+abstraction | n. | soyutlama | Hiding complex details and showing only the important parts. | A good interface is a clear abstraction of the system.
+instance | n. | örnek, nesne | A single object created from a class. | Each instance of the class has its own data.
+## dsa | Veri Yapıları ve Algoritmalar
+algorithm | n. | algoritma | A set of clear steps to solve a problem. | This algorithm finds the shortest path between two cities.
+data structure | n. | veri yapısı | A way of organizing data so it can be used efficiently. | A hash table is a data structure for fast lookups.
+array | n. | dizi | An ordered collection of items accessed by their position. | The array stores the scores of all students.
+linked list | n. | bağlı liste | A chain of items where each item points to the next one. | Adding an item to a linked list is fast.
+stack | n. | yığın | A collection where the last item added is the first one removed. | The undo feature uses a stack.
+queue | n. | kuyruk | A collection where the first item added is the first one removed. | Print jobs wait in a queue.
+hash table | n. | karma tablo | A structure that maps keys to values using a hash function. | A hash table gives almost instant access to a value by its key.
+tree | n. | ağaç | A structure of connected nodes with one root and no cycles. | The file system is organized as a tree.
+graph | n. | çizge, graf | A set of nodes connected by edges. | A social network can be modeled as a graph.
+node | n. | düğüm | A single element in a list, tree, or graph. | Each node stores a value and a link to its children.
+traverse | v. | dolaşmak | To visit every element of a data structure in some order. | We traverse the tree to print all the names.
+sort | v. | sıralamak | To arrange items in a particular order. | We sort the users by their registration date.
+search | v. | aramak | To look for a specific item in a collection. | Binary search can search a sorted list very quickly.
+iterate | v. | yinelemek, üzerinde gezmek | To go through the items of a collection one by one. | You can iterate over the list with a for loop.
+complexity | n. | karmaşıklık | A measure of how much time or memory an algorithm needs. | The time complexity of this solution is O(n log n).
+Big O notation | n. | Büyük O gösterimi | A way to describe how the cost of an algorithm grows with input size. | Big O notation helps us compare two algorithms.
+optimize | v. | optimize etmek | To make code faster or use fewer resources. | We need to optimize the query because it is too slow.
+bottleneck | n. | darboğaz | The slowest part that limits the speed of the whole system. | The database was the bottleneck in our application.
+brute force | n. | kaba kuvvet | A simple method that tries every possible solution. | A brute force approach is too slow for large inputs.
+greedy | adj. | açgözlü | Describes an algorithm that makes the best choice at each step. | A greedy algorithm does not always find the best overall result.
+dynamic programming | n. | dinamik programlama | Solving a big problem by storing and reusing answers to smaller ones. | Dynamic programming reduces the running time from exponential to polynomial.
+binary search | n. | ikili arama | Finding an item in a sorted list by repeatedly halving the search area. | Binary search needs only 20 steps to look through a million items.
+index | n. | indeks, dizin | The position number of an item in an array. | The first element has index zero.
+pointer | n. | işaretçi | A variable that stores the memory address of another value. | A null pointer caused the program to crash.
+heap | n. | yığın bellek, öbek | A memory area for dynamic allocation, or a tree-based data structure. | Objects created with new are stored on the heap.
+buffer | n. | tampon | A temporary storage area for data being moved from one place to another. | The video player fills a buffer before it starts playing.
+cache | n. | önbellek | A fast storage that keeps copies of data you use often. | We store the result in a cache to avoid repeated calculations.
+latency | n. | gecikme | The time between a request and the start of the response. | High latency makes the app feel slow.
+throughput | n. | işlem hacmi | The amount of work a system can do in a given time. | The new server doubled our throughput.
+scalable | adj. | ölçeklenebilir | Able to handle more work by adding resources. | We need a scalable design that supports a million users.
+## web | Web ve API
+API | n. | API, uygulama arayüzü | A set of rules that lets one program talk to another. | The mobile app gets the data from our API.
+endpoint | n. | uç nokta | A specific URL where an API receives requests. | The endpoint /users returns a list of users.
+request | n. | istek | A message sent to a server asking for something. | The browser sends a request to the server.
+response | n. | yanıt | The message a server sends back after a request. | The response contains the data in JSON format.
+client | n. | istemci | The program that asks a server for a service. | The client sends the login form to the server.
+server | n. | sunucu | A computer or program that provides data or services to clients. | The server was down for ten minutes.
+frontend | n. | ön yüz | The part of an application that the user sees and uses. | She works on the frontend and builds the user interface.
+backend | n. | arka uç | The part of an application that runs on the server and handles the logic. | The backend stores the data and checks the permissions.
+full-stack | adj. | tam yığın | Working on both the frontend and the backend. | We are hiring a full-stack developer.
+framework | n. | çatı, framework | A ready-made structure of code that you build your application on. | Flutter is a framework for building mobile apps.
+library | n. | kütüphane | A collection of reusable code that you call from your program. | I added a library to parse dates.
+dependency | n. | bağımlılık | Another piece of software that your project needs to work. | Update every dependency before the release.
+package manager | n. | paket yöneticisi | A tool that installs and updates the libraries your project uses. | npm is a popular package manager for JavaScript.
+JSON | n. | JSON | A simple text format for sending structured data. | The server returns the result as JSON.
+REST | n. | REST | A common style for designing web APIs using standard HTTP methods. | Our REST API supports GET, POST, and DELETE.
+HTTP | n. | HTTP | The protocol that browsers and servers use to exchange web pages and data. | HTTP status 404 means the page was not found.
+status code | n. | durum kodu | A number in a response that shows if the request succeeded. | The server returned status code 500.
+header | n. | başlık bilgisi | Extra information sent with a request or response. | The authorization header contains the token.
+cookie | n. | çerez | A small piece of data a website stores in your browser. | The site uses a cookie to remember that you are logged in.
+session | n. | oturum | A period of interaction between a user and an application. | Your session expires after thirty minutes.
+route | n. | rota, yönlendirme yolu | A rule that connects a URL to the code that handles it. | We added a new route for the settings page.
+render | v. | ekrana çizmek, oluşturmak | To turn code or data into what the user sees. | The browser can render the page in less than a second.
+responsive | adj. | duyarlı (ekrana uyumlu) | Adapting well to different screen sizes. | The website is responsive, so it works on phones too.
+state | n. | durum | The current data of an application at a given moment. | The app keeps the state of the shopping cart.
+component | n. | bileşen | A reusable part of a user interface. | The login form is a separate component.
+asynchronous | adj. | eşzamansız | Not happening at the same time; the program continues while waiting. | Network calls are asynchronous, so the screen does not freeze.
+callback | n. | geri çağırma | A function that is passed to another function and called later. | The callback runs when the download finishes.
+promise | n. | söz (JavaScript) | An object that represents a result that will be available in the future. | The promise resolves when the data arrives.
+timeout | n. | zaman aşımı | The maximum time to wait before giving up. | The request failed with a timeout after thirty seconds.
+payload | n. | yük (veri gövdesi) | The main data carried in a request or response. | The payload contains the user's name and email.
+webhook | n. | web kancası | A way for a service to send your app a message when an event happens. | GitHub calls our webhook when someone pushes code.
+## db | Veritabanı
+database | n. | veritabanı | An organized collection of data stored on a computer. | All customer information is saved in the database.
+table | n. | tablo | A set of rows and columns in a relational database. | The users table has a column for each field.
+row | n. | satır | One record in a table. | Each row represents one customer.
+column | n. | sütun | A field of a table that stores one type of data. | The email column must be unique.
+query | n. | sorgu | A request to get or change data in a database. | This query returns all orders from last month.
+SQL | n. | SQL | A language used to work with relational databases. | I use SQL to filter the data.
+primary key | n. | birincil anahtar | A column that uniquely identifies each row. | The id column is the primary key of the table.
+foreign key | n. | yabancı anahtar | A column that links a row to a row in another table. | The foreign key connects each order to a customer.
+relationship | n. | ilişki | A connection between two tables. | There is a one-to-many relationship between users and posts.
+join | v. | birleştirmek (tablolar) | To combine rows from two tables based on a related column. | You can join the orders and customers tables by customer id.
+schema | n. | şema | The structure that defines tables, columns, and types. | We changed the schema to add a phone number field.
+migration | n. | veri/şema taşıma | A scripted change to the database structure. | Run the migration before you start the server.
+transaction | n. | işlem (transaction) | A group of operations that either all succeed or all fail. | The bank uses a transaction to move money between accounts.
+rollback | n. | geri alma | Undoing changes to return to a previous state. | An error caused a rollback of the whole transaction.
+commit | v. | onaylamak, kaydetmek | To make changes permanent in a database or repository. | Commit the transaction only after both steps succeed.
+constraint | n. | kısıt | A rule that the data in a table must follow. | A unique constraint prevents duplicate emails.
+normalization | n. | normalleştirme | Organizing tables to reduce repeated data. | Normalization helped us remove duplicate information.
+NoSQL | n. | NoSQL | A type of database that does not use the traditional table model. | We chose a NoSQL database for flexible documents.
+document | n. | belge (doküman) | A record stored as JSON-like data in a document database. | Each document contains the details of one product.
+replica | n. | kopya (çoğaltma) | A copy of a database kept in sync with the main one. | Read queries go to a replica to reduce the load.
+backup | n. | yedek | A copy of data stored in case the original is lost. | We take a backup of the database every night.
+retrieve | v. | geri getirmek, çekmek | To get data from a storage system. | The app will retrieve the profile from the database.
+store | v. | saklamak | To keep data in a place where it can be used later. | We store passwords as hashes, not as plain text.
+persist | v. | kalıcı olarak saklamak | To save data so that it still exists after the program closes. | The app should persist the settings on the device.
+ORM | n. | ORM | A tool that maps database tables to objects in code. | The ORM lets us work with objects instead of writing SQL.
+## devops | DevOps ve Bulut
+deploy | v. | yayına almak | To release software so that users can use it. | We deploy to production every Friday.
+release | n. | sürüm, yayın | A version of the software made available to users. | The new release fixes five bugs.
+pipeline | n. | iş hattı | An automated series of steps that builds, tests, and deploys code. | The pipeline fails if any test fails.
+CI/CD | n. | CI/CD | Practices that automatically build, test, and deliver code changes. | Our CI/CD setup deploys the app after every merge.
+build | n. | derleme/inşa | The process of turning source code into a runnable application. | The build failed because of a missing file.
+repository | n. | depo | A place where the code and its history are stored. | Clone the repository to your computer.
+branch | n. | dal | A separate line of development in version control. | I created a new branch for the login feature.
+merge | v. | birleştirmek | To combine changes from one branch into another. | Please merge your branch after the review.
+pull request | n. | çekme isteği | A request to review and merge your changes into the main branch. | I opened a pull request with the new feature.
+conflict | n. | çakışma | A situation when two changes cannot be combined automatically. | There is a merge conflict in the config file.
+commit message | n. | commit mesajı | A short text that explains what a change does. | Write a clear commit message so others understand the change.
+rebase | v. | yeniden temellendirmek | To move your commits on top of a newer base commit. | I will rebase my branch on main before the merge.
+clone | v. | klonlamak | To make a local copy of a repository. | First, clone the repository from GitHub.
+fork | n. | çatal (kopya depo) | Your own copy of someone else's repository. | I made a fork and fixed the typo in the documentation.
+version control | n. | sürüm kontrolü | A system that tracks changes to files over time. | Git is the most popular version control system.
+container | n. | konteyner | A lightweight package that runs an app with everything it needs. | We run each service in its own container.
+image | n. | imaj | A packaged template used to create containers. | The image contains the code and its dependencies.
+orchestration | n. | orkestrasyon | Automatically managing many containers or services. | Kubernetes handles orchestration of our containers.
+cluster | n. | küme | A group of computers that work together as one system. | The cluster has ten servers.
+cloud | n. | bulut | Computing services provided over the internet. | We moved our servers to the cloud.
+infrastructure | n. | altyapı | The servers, networks, and tools that an application runs on. | The team manages the infrastructure with code.
+monitoring | n. | izleme | Continuously watching a system to detect problems. | Monitoring alerted us when the server's memory was almost full.
+alert | n. | uyarı | An automatic message sent when something goes wrong. | An alert woke me up at 3 a.m.
+log | n. | günlük kaydı | A record of events that happen in a system. | Check the log to see why the service crashed.
+uptime | n. | çalışma süresi | The percentage of time a system is available. | Our uptime was 99.9 percent last month.
+downtime | n. | kesinti süresi | A period when a system is not available. | The update caused two hours of downtime.
+rollout | n. | kademeli yayın | The process of releasing a change to users step by step. | We start with a gradual rollout to ten percent of users.
+staging | n. | hazırlık ortamı | A test environment that is similar to production. | Test the feature in staging before the release.
+production | n. | canlı ortam | The live environment that real users use. | The bug only appears in production.
+environment | n. | ortam | The setup where the software runs, such as development or production. | Each environment has its own configuration.
+configuration | n. | yapılandırma | The settings that control how software behaves. | The database address is stored in the configuration file.
+## test | Test ve Kalite
+unit test | n. | birim testi | A test that checks one small piece of code. | I added a unit test for the discount function.
+integration test | n. | entegrasyon testi | A test that checks that several parts work together. | The integration test checks the whole login flow.
+assertion | n. | doğrulama ifadesi | A statement in a test that checks an expected result. | The assertion fails if the total is not 100.
+test case | n. | test senaryosu | A set of steps and expected results for one test. | Each test case covers a different input.
+coverage | n. | kapsama | The percentage of code that is run by tests. | Our test coverage is 85 percent.
+regression | n. | gerileme | A bug where something that worked before stops working. | The update caused a regression in the search feature.
+bug | n. | hata, böcek | A mistake in code that causes wrong behavior. | I found a bug in the payment form.
+defect | n. | kusur | A fault in software that makes it behave incorrectly. | The team fixed the defect before the release.
+reproduce | v. | yeniden üretmek | To make a problem happen again by following specific steps. | I can't reproduce the error on my machine.
+fix | v. | düzeltmek | To repair a problem in code. | I will fix the crash tomorrow morning.
+patch | n. | yama | A small update that fixes a problem. | We released a security patch last night.
+workaround | n. | geçici çözüm | A temporary solution that avoids a problem without fixing it. | Restarting the app is a workaround until we fix the bug.
+mock | v. | taklit etmek | To replace a real part with a fake one in a test. | We mock the payment service in our tests.
+stub | n. | taslak/sahte parça | A simple fake that returns fixed answers during a test. | The stub always returns the same user.
+flaky | adj. | güvenilmez (bazen geçen) | Describes a test that sometimes passes and sometimes fails. | This flaky test fails once every ten runs.
+automation | n. | otomasyon | Using tools to do tasks without manual work. | Test automation saves us hours every week.
+manual testing | n. | manuel test | Testing software by hand without scripts. | We still use manual testing for the new design.
+acceptance criteria | n. | kabul kriterleri | Conditions that a feature must meet to be accepted. | The acceptance criteria say the page must load in two seconds.
+edge case | n. | uç durum | An unusual situation at the limits of normal use. | Empty input is an edge case that we must handle.
+benchmark | n. | kıyaslama testi | A test that measures how fast something runs. | The benchmark shows the new version is twice as fast.
+code review | n. | kod incelemesi | When other developers read your code to find problems and suggest improvements. | Every change needs a code review before it is merged.
+linter | n. | lint aracı | A tool that checks code for style problems and common mistakes. | The linter warns about unused variables.
+refactor | v. | yeniden düzenlemek | To improve the structure of code without changing what it does. | We should refactor this class because it is too long.
+technical debt | n. | teknik borç | The future cost of quick, imperfect solutions in code. | Skipping tests creates technical debt.
+maintainable | adj. | sürdürülebilir (bakımı kolay) | Easy to understand, change, and fix over time. | Clear names make code more maintainable.
+readable | adj. | okunabilir | Easy for humans to read and understand. | Short functions are more readable.
+## process | Süreç ve Agile
+requirement | n. | gereksinim | Something the software must do or have. | The main requirement is that users can reset their password.
+specification | n. | şartname | A detailed description of how something should work. | The specification describes every field of the form.
+stakeholder | n. | paydaş | A person who is interested in or affected by a project. | We showed the prototype to the stakeholders.
+user story | n. | kullanıcı hikayesi | A short description of a feature from the user's point of view. | Each user story starts with "As a user, I want...".
+backlog | n. | iş listesi (backlog) | A prioritized list of work for a team. | We added the idea to the product backlog.
+sprint | n. | sprint | A short, fixed period in which a team completes planned work. | Our sprint lasts two weeks.
+Agile | adj. | çevik | An approach that delivers software in small steps and adapts to change. | We use an Agile process with short iterations.
+Scrum | n. | Scrum | An Agile framework with sprints, roles, and regular meetings. | In Scrum, the team meets every day for a short stand-up.
+stand-up | n. | günlük kısa toplantı | A short daily meeting where team members share progress. | Our stand-up starts at nine every morning.
+retrospective | n. | geriye bakış toplantısı | A meeting at the end of a sprint to discuss what went well and what to improve. | In the retrospective, we agreed to write more tests.
+milestone | n. | kilometre taşı | An important point or goal in a project. | The first milestone is a working prototype.
+deadline | n. | son teslim tarihi | The date by which something must be finished. | The deadline for the project is next Friday.
+estimate | v. | tahmin etmek | To guess how much time or effort a task needs. | It is hard to estimate how long the migration will take.
+priority | n. | öncelik | How important a task is compared to others. | Fixing the login bug is our top priority.
+scope creep | n. | kapsam kayması | When a project keeps growing with new features beyond the plan. | Scope creep delayed the release by a month.
+iteration | n. | yineleme, tur | One cycle of planning, building, and reviewing in a project. | Each iteration adds a few small features.
+prototype | n. | prototip | An early, simple version made to test an idea. | We built a prototype in two days.
+MVP | n. | MVP (asgari uygulanabilir ürün) | The simplest version of a product that can be released to learn from users. | Let's launch an MVP and collect feedback.
+feedback | n. | geri bildirim | Comments about something that help improve it. | We received a lot of feedback from the first users.
+documentation | n. | dokümantasyon | Written explanations of how software works and how to use it. | Good documentation saves new developers a lot of time.
+handover | n. | devir teslim | Passing work and knowledge from one person or team to another. | Before she left, she wrote a handover document.
+roadmap | n. | yol haritası | A plan that shows what will be built and when. | The roadmap includes a mobile app next year.
+workflow | n. | iş akışı | The series of steps that work goes through. | We improved our workflow to reduce waiting time.
+traceability | n. | izlenebilirlik | The ability to link requirements to code and tests. | Traceability helps us see which tests cover each requirement.
+life cycle | n. | yaşam döngüsü | All the stages of software from idea to retirement. | The software life cycle includes design, development, testing, and maintenance.
+## arch | Mimari ve Tasarım
+architecture | n. | mimari | The main structure and design of a software system. | The architecture separates the interface from the business logic.
+module | n. | modül | A separate part of a program that has its own purpose. | Each module has a clear responsibility.
+interface | n. | arayüz | A defined way for parts of a system to communicate. | The class implements the payment interface.
+layer | n. | katman | A level of a system that has a specific role. | The data layer talks to the database.
+monolith | n. | monolit | An application built as one single unit. | We split the monolith into smaller services.
+microservice | n. | mikroservis | A small, independent service that does one job. | Each microservice has its own database.
+coupling | n. | bağımlılık (sıkı bağlılık) | How strongly one part of a system depends on another. | Low coupling makes the code easier to change.
+cohesion | n. | uyum (içsel tutarlılık) | How closely the things inside one module belong together. | High cohesion means a module does one thing well.
+design pattern | n. | tasarım deseni | A proven solution to a common design problem. | The observer is a common design pattern.
+singleton | n. | tekil nesne | A class that has only one instance. | The app uses a singleton to manage the settings.
+factory | n. | fabrika (nesne üretici) | Code that creates objects for you. | A factory creates the right type of vehicle.
+dependency injection | n. | bağımlılık enjeksiyonu | Giving an object what it needs from outside instead of creating it inside. | Dependency injection makes the class easier to test.
+separation of concerns | n. | sorumlulukların ayrılması | Dividing a program so that each part handles one concern. | Separation of concerns keeps the user interface and logic apart.
+abstract class | n. | soyut sınıf | A class that cannot be used directly and is meant to be extended. | The abstract class defines the methods that all shapes must have.
+reusable | adj. | yeniden kullanılabilir | Able to be used again in other places. | We created reusable components for buttons and forms.
+extensible | adj. | genişletilebilir | Designed so new features can be added easily. | An extensible design allows us to add new payment methods.
+trade-off | n. | ödünleşim | A balance where you give up one thing to get another. | There is a trade-off between speed and accuracy.
+single point of failure | n. | tek hata noktası | A part that stops the whole system if it fails. | The only database server is a single point of failure.
+fault tolerance | n. | hata toleransı | The ability of a system to keep working when a part fails. | Fault tolerance keeps the service online during a server crash.
+load balancer | n. | yük dengeleyici | A tool that spreads requests across several servers. | The load balancer sends each request to the least busy server.
+message queue | n. | mesaj kuyruğu | A system that stores messages until a service can process them. | The order is placed in a message queue and processed later.
+event | n. | olay | Something that happens in a system, such as a click or a message. | The app listens for an event when the user presses the button.
+middleware | n. | ara katman yazılımı | Software that sits between two parts and processes requests. | The authentication middleware checks the token on every request.
+legacy | adj. | eski (miras) | Old software that is still used and hard to change. | We maintain a legacy system written twenty years ago.
+boilerplate | n. | tekrarlı hazır kod | Repeated code that you must write again and again. | The framework removes a lot of boilerplate.
+## sec | Güvenlik
+authentication | n. | kimlik doğrulama | Checking that a user is who they say they are. | Authentication requires a username and a password.
+authorization | n. | yetkilendirme | Deciding what an authenticated user is allowed to do. | Authorization makes sure only admins can delete users.
+password | n. | parola | A secret word used to prove your identity. | Choose a long password that is hard to guess.
+hash | n. | karma değeri (özet) | A fixed-length value created from data by a one-way function. | We save the hash of the password, not the password.
+encryption | n. | şifreleme | Changing data into a secret form that only authorized people can read. | Encryption protects the messages from attackers.
+decrypt | v. | şifresini çözmek | To change encrypted data back into readable form. | Only the receiver can decrypt the message.
+token | n. | jeton | A piece of data that proves a user is logged in. | The server sends a token after a successful login.
+vulnerability | n. | güvenlik açığı | A weakness that an attacker can use. | The team found a serious vulnerability in the login form.
+exploit | v. | istismar etmek | To use a weakness for an attack. | Attackers can exploit this bug to steal data.
+attacker | n. | saldırgan | A person who tries to break into a system. | The attacker tried to guess the password many times.
+breach | n. | ihlal (veri sızıntısı) | An event in which private data is accessed without permission. | The data breach exposed millions of emails.
+firewall | n. | güvenlik duvarı | A system that blocks unwanted network traffic. | The firewall blocks all connections except port 443.
+phishing | n. | oltalama | A trick that uses fake messages to steal personal information. | Never click a link in a suspicious phishing email.
+injection | n. | enjeksiyon saldırısı | An attack in which harmful code is inserted into input. | Prepared statements prevent SQL injection.
+sanitize | v. | temizlemek (girdiyi) | To remove dangerous parts from user input. | Always sanitize the input before you save it.
+validate | v. | doğrulamak | To check that data is correct and in the expected form. | The server must validate every field in the form.
+permission | n. | izin | The right to do something in a system. | The app asks for permission to use the camera.
+privacy | n. | gizlilik | The right to keep personal information protected. | The privacy policy explains how we use your data.
+two-factor | adj. | iki aşamalı | Using two different proofs of identity to log in. | Turn on two-factor authentication for your email.
+secure | adj. | güvenli | Protected from attack or unauthorized access. | The connection is secure because it uses HTTPS.
+audit | n. | denetim | An official check of a system or process. | A security audit found three problems.
+## work | İş Hayatı ve Toplantılar
+colleague | n. | iş arkadaşı | A person you work with. | My colleague helped me solve the problem.
+teammate | n. | takım arkadaşı | A member of the same team. | I asked my teammate to review my pull request.
+mentor | n. | akıl hocası, mentor | An experienced person who guides someone less experienced. | My mentor taught me how to write clean code.
+intern | n. | stajyer | A student or trainee who works for a short time to gain experience. | The company hired three interns for the summer.
+junior | adj. | kıdemsiz | Having less experience in a job. | She is a junior developer in the backend team.
+senior | adj. | kıdemli | Having a lot of experience in a job. | A senior engineer reviewed the design.
+résumé | n. | özgeçmiş | A short document that lists your education and work experience. | I updated my résumé before the internship application.
+interview | n. | mülakat | A formal meeting to decide if someone is right for a job. | The technical interview included two coding questions.
+internship | n. | staj | A short period of work to learn about a job. | I'm looking for a summer internship at a software company.
+remote | adj. | uzaktan | Not in the same place; working from home or another location. | Our team works remote on Fridays.
+meeting | n. | toplantı | An event where people discuss something together. | The meeting starts at ten and ends at eleven.
+agenda | n. | gündem | A list of topics to discuss in a meeting. | Please send me the agenda before the meeting.
+update | n. | güncelleme | Recent information about the progress of something. | I'll give you a quick update on the project.
+blocker | n. | engel | Something that stops you from continuing your work. | The missing API key is a blocker for me.
+bandwidth | n. | kapasite (zaman/emek) | The amount of time and energy a person has for new work. | I don't have the bandwidth to take another task this week.
+follow up | phr. v. | takip etmek | To contact someone again to continue a conversation or task. | I will follow up with you on Monday.
+touch base | phr. | kısaca görüşmek | To contact someone briefly to share information. | Let's touch base tomorrow about the release.
+take ownership | phr. | sahiplenmek | To accept responsibility for a task or problem. | Please take ownership of this task and report back on Monday.
+raise a concern | phr. | endişe dile getirmek | To tell others about a worry or a possible problem. | I want to raise a concern about the tight schedule.
+clarify | v. | netleştirmek | To make something easier to understand. | Could you clarify what you mean by "fast"?
+elaborate | v. | ayrıntılandırmak | To give more details about something. | Can you elaborate on how the caching works?
+assume | v. | varsaymak | To think that something is true without checking. | We assumed that the user was online.
+agree | v. | katılmak | To have the same opinion as someone else. | I agree with your suggestion to split the task.
+suggest | v. | önermek | To offer an idea or plan for others to consider. | I suggest that we write the tests first.
+propose | v. | teklif etmek | To formally present a plan or idea. | I'd like to propose a new design for the dashboard.
+postpone | v. | ertelemek | To move something to a later time. | We had to postpone the release to next week.
+prioritize | v. | öncelik vermek | To decide which tasks are most important and do them first. | We need to prioritize the security fixes.
+deliver | v. | teslim etmek | To complete work and give it to the customer. | The team delivered the project one week early.
+on track | phr. | planlandığı gibi ilerleyen | Progressing as planned. | The project is on track for the March release.
+behind schedule | phr. | programın gerisinde | Later than planned. | We are two weeks behind schedule.
+## eng | Genel Mühendislik
+engineer | n. | mühendis | A person who designs, builds, or maintains systems and machines. | She is a software engineer at a startup.
+design | v. | tasarlamak | To plan how something will look and work. | We design the system to handle heavy traffic.
+requirement analysis | n. | gereksinim analizi | The process of finding out what a system needs to do. | Requirement analysis is the first step of the project.
+tolerance | n. | tolerans | The allowed amount of difference from an exact value. | The part has a tolerance of 0.1 millimeters.
+efficiency | n. | verimlilik | How well something uses resources to produce results. | The new engine improves fuel efficiency.
+reliability | n. | güvenilirlik | The ability of a system to work correctly over time. | Reliability is very important for medical devices.
+durability | n. | dayanıklılık | The ability to last a long time without breaking. | The test measures the durability of the material.
+safety | n. | emniyet, güvenlik | Protection from danger or harm. | Safety is the first priority in the design of a bridge.
+maintenance | n. | bakım | Regular work to keep a system in good condition. | The machines need regular maintenance.
+failure | n. | arıza, hata | A situation where a system stops working correctly. | The failure of one sensor stopped the whole machine.
+load | n. | yük | The weight or force that a structure or system must carry. | The bridge can carry a heavy load.
+stress | n. | gerilme | The force applied to a material per unit area. | The material breaks under high stress.
+voltage | n. | gerilim, voltaj | The electrical force that pushes current through a circuit. | The battery provides a voltage of 5 volts.
+current | n. | akım | The flow of electric charge in a circuit. | A high current can damage the wires.
+resistance | n. | direnç | How strongly a material opposes the flow of electric current. | The resistance of the wire increases when it gets hot.
+circuit | n. | devre | A closed path that electric current flows through. | I built a simple circuit with a battery and an LED.
+sensor | n. | sensör, algılayıcı | A device that detects changes such as temperature or light. | The sensor measures the temperature of the room.
+actuator | n. | eyleyici | A device that causes movement, such as a motor. | The actuator opens the valve when it receives a signal.
+signal | n. | sinyal | Information sent as electrical or radio waves. | The sensor sends a signal to the controller.
+microcontroller | n. | mikrodenetleyici | A small computer on one chip used to control devices. | An Arduino is a board with a microcontroller.
+embedded system | n. | gömülü sistem | A computer built into a device to do a specific job. | The washing machine runs on an embedded system.
+firmware | n. | donanım yazılımı | Software stored in a device that controls its basic functions. | We released a firmware update for the router.
+calibrate | v. | kalibre etmek | To adjust a device so that its measurements are accurate. | You need to calibrate the sensor before you use it.
+accuracy | n. | doğruluk | How close a measurement is to the true value. | The accuracy of the scale is one gram.
+precision | n. | hassasiyet | How close repeated measurements are to each other. | The machine cuts with high precision.
+simulation | n. | simülasyon | A computer model that imitates a real system. | We tested the bridge design in a simulation.
+specification sheet | n. | teknik veri sayfası | A document that lists the technical details of a product. | Check the specification sheet for the maximum voltage.
+standard | n. | standart | An official rule or agreement about how something should be made. | The device meets the international safety standard.
+renewable | adj. | yenilenebilir | Coming from a source that is naturally replaced, like solar power. | Wind is a renewable energy source.
+## verbs | Mühendis Fiilleri ve Kalıplar
+implement | v. | uygulamak, hayata geçirmek | To write the code that makes a feature work. | We will implement the search feature next sprint.
+integrate | v. | entegre etmek | To combine different parts so they work together. | We integrate the payment service into the app.
+deploy to production | phr. | canlıya almak | To release software to the live environment. | We deploy to production only after all tests pass.
+deprecate | v. | kullanımdan kaldırmaya başlamak | To mark a feature as old and planned for removal. | The team will deprecate the old API next year.
+maintain | v. | sürdürmek, bakımını yapmak | To keep software working and up to date. | She maintains the open-source library.
+extend | v. | genişletmek | To add new features to something that already exists. | You can extend the base class with your own methods.
+override | v. | geçersiz kılmak | To replace the behavior of a method in a subclass. | The child class will override the default method.
+invoke | v. | çağırmak | To call a function or start a process. | The button will invoke the save function.
+initialize | v. | ilk değer vermek | To set something to its starting state. | Initialize the variable before you use it.
+declare | v. | tanımlamak (bildirmek) | To tell the program about a variable or function and its type. | You must declare the variable before the loop.
+assign | v. | atamak | To give a value to a variable. | Assign the result to a new variable.
+append | v. | sona eklemek | To add something to the end of a list or file. | Append the new item to the end of the list.
+concatenate | v. | birleştirmek (art arda eklemek) | To join two strings together. | Concatenate the first name and the last name.
+parse | v. | ayrıştırmak | To read text and turn it into structured data. | The app can parse the JSON from the server.
+serialize | v. | seri hale getirmek | To convert an object into a format that can be stored or sent. | We serialize the object to JSON before sending it.
+fetch | v. | getirmek | To get data from a server or database. | The page will fetch the latest posts when it opens.
+trigger | v. | tetiklemek | To cause an action or event to start. | Clicking the button triggers an email.
+configure | v. | yapılandırmak | To set up software with the right settings. | You need to configure the database connection first.
+install | v. | kurmak | To put software on a computer so it can be used. | Install the dependencies with one command.
+upgrade | v. | yükseltmek | To change to a newer or better version. | We plan to upgrade the framework next month.
+roll back | phr. v. | önceki sürüme dönmek | To return software to an earlier version. | We had to roll back the release because of a critical bug.
+scale up | phr. v. | büyütmek (kapasiteyi) | To increase the capacity of a system. | We scale up the servers during sales.
+crash | v. | çökmek | To suddenly stop working. | The app crashes when I open the camera.
+freeze | v. | donmak | To stop responding. | The screen freezes for a few seconds after each click.
+leak | v. | sızıntı yapmak | To use more and more memory because it is not released. | The app leaks memory and becomes slower over time.
+overwrite | v. | üzerine yazmak | To replace existing data with new data. | Be careful not to overwrite the original file.

@@ -1,0 +1,3024 @@
+{
+"categories": [
+{
+"id": "prog",
+"name": "Programlama Temelleri"
+},
+{
+"id": "dsa",
+"name": "Veri Yapıları ve Algoritmalar"
+},
+{
+"id": "web",
+"name": "Web ve API"
+},
+{
+"id": "db",
+"name": "Veritabanı"
+},
+{
+"id": "devops",
+"name": "DevOps ve Bulut"
+},
+{
+"id": "test",
+"name": "Test ve Kalite"
+},
+{
+"id": "process",
+"name": "Süreç ve Agile"
+},
+{
+"id": "arch",
+"name": "Mimari ve Tasarım"
+},
+{
+"id": "sec",
+"name": "Güvenlik"
+},
+{
+"id": "work",
+"name": "İş Hayatı ve Toplantılar"
+},
+{
+"id": "eng",
+"name": "Genel Mühendislik"
+},
+{
+"id": "verbs",
+"name": "Mühendis Fiilleri ve Kalıplar"
+}
+],
+"words": [
+{
+"id": "variable",
+"term": "variable",
+"pos": "n.",
+"tr": "değişken",
+"def": "A named place in memory that stores a value.",
+"ex": "The variable holds the user's age.",
+"cat": "prog"
+},
+{
+"id": "function",
+"term": "function",
+"pos": "n.",
+"tr": "fonksiyon",
+"def": "A block of code that does one task and can be reused.",
+"ex": "I wrote a function to calculate the total price.",
+"cat": "prog"
+},
+{
+"id": "parameter",
+"term": "parameter",
+"pos": "n.",
+"tr": "parametre",
+"def": "A value you pass into a function so it can use it.",
+"ex": "The function takes two parameters: width and height.",
+"cat": "prog"
+},
+{
+"id": "argument",
+"term": "argument",
+"pos": "n.",
+"tr": "argüman",
+"def": "The actual value you give to a function when you call it.",
+"ex": "You must pass a string as the first argument.",
+"cat": "prog"
+},
+{
+"id": "return-value",
+"term": "return value",
+"pos": "n.",
+"tr": "dönüş değeri",
+"def": "The result that a function gives back to the code that called it.",
+"ex": "The return value is true if the file exists.",
+"cat": "prog"
+},
+{
+"id": "loop",
+"term": "loop",
+"pos": "n.",
+"tr": "döngü",
+"def": "Code that repeats until a condition is no longer true.",
+"ex": "The loop runs once for every item in the list.",
+"cat": "prog"
+},
+{
+"id": "condition",
+"term": "condition",
+"pos": "n.",
+"tr": "koşul",
+"def": "An expression that is either true or false and controls the flow.",
+"ex": "If the condition is false, the program skips this block.",
+"cat": "prog"
+},
+{
+"id": "statement",
+"term": "statement",
+"pos": "n.",
+"tr": "ifade, deyim",
+"def": "One complete instruction in a program.",
+"ex": "Each statement ends with a semicolon.",
+"cat": "prog"
+},
+{
+"id": "expression",
+"term": "expression",
+"pos": "n.",
+"tr": "ifade",
+"def": "A piece of code that produces a value.",
+"ex": "The expression 2 + 3 evaluates to 5.",
+"cat": "prog"
+},
+{
+"id": "operator",
+"term": "operator",
+"pos": "n.",
+"tr": "operatör",
+"def": "A symbol that performs an action on values, such as + or &&.",
+"ex": "The modulo operator gives the remainder of a division.",
+"cat": "prog"
+},
+{
+"id": "syntax",
+"term": "syntax",
+"pos": "n.",
+"tr": "sözdizimi",
+"def": "The rules that describe how code must be written.",
+"ex": "A missing bracket caused a syntax error.",
+"cat": "prog"
+},
+{
+"id": "compile",
+"term": "compile",
+"pos": "v.",
+"tr": "derlemek",
+"def": "To translate source code into a form the computer can run.",
+"ex": "It takes two minutes to compile the whole project.",
+"cat": "prog"
+},
+{
+"id": "interpreter",
+"term": "interpreter",
+"pos": "n.",
+"tr": "yorumlayıcı",
+"def": "A program that runs code line by line without compiling it first.",
+"ex": "Python code is run by an interpreter.",
+"cat": "prog"
+},
+{
+"id": "runtime",
+"term": "runtime",
+"pos": "n.",
+"tr": "çalışma zamanı",
+"def": "The period when a program is running, or the environment that runs it.",
+"ex": "The error only appears at runtime.",
+"cat": "prog"
+},
+{
+"id": "exception",
+"term": "exception",
+"pos": "n.",
+"tr": "istisna, hata durumu",
+"def": "An unexpected problem that stops the normal flow of a program.",
+"ex": "The program throws an exception when the file is missing.",
+"cat": "prog"
+},
+{
+"id": "handle",
+"term": "handle",
+"pos": "v.",
+"tr": "ele almak",
+"def": "To deal with something, such as an error, in your code.",
+"ex": "We handle network errors by showing a message.",
+"cat": "prog"
+},
+{
+"id": "debug",
+"term": "debug",
+"pos": "v.",
+"tr": "hata ayıklamak",
+"def": "To find and fix problems in code.",
+"ex": "It took me three hours to debug this issue.",
+"cat": "prog"
+},
+{
+"id": "breakpoint",
+"term": "breakpoint",
+"pos": "n.",
+"tr": "kesme noktası",
+"def": "A marked line where the debugger pauses the program.",
+"ex": "I set a breakpoint on line 42 to inspect the variables.",
+"cat": "prog"
+},
+{
+"id": "scope",
+"term": "scope",
+"pos": "n.",
+"tr": "kapsam",
+"def": "The part of the code where a variable can be used.",
+"ex": "The variable is only available inside the scope of the function.",
+"cat": "prog"
+},
+{
+"id": "constant",
+"term": "constant",
+"pos": "n.",
+"tr": "sabit",
+"def": "A value that cannot change after it is set.",
+"ex": "Store the tax rate as a constant.",
+"cat": "prog"
+},
+{
+"id": "string",
+"term": "string",
+"pos": "n.",
+"tr": "metin dizisi",
+"def": "A sequence of characters, such as a word or sentence.",
+"ex": "The function converts a string to uppercase.",
+"cat": "prog"
+},
+{
+"id": "integer",
+"term": "integer",
+"pos": "n.",
+"tr": "tam sayı",
+"def": "A whole number without a decimal part.",
+"ex": "An integer cannot store the value 3.14.",
+"cat": "prog"
+},
+{
+"id": "boolean",
+"term": "boolean",
+"pos": "n.",
+"tr": "mantıksal değer",
+"def": "A type that can only be true or false.",
+"ex": "The flag is a boolean that shows if the user is logged in.",
+"cat": "prog"
+},
+{
+"id": "null",
+"term": "null",
+"pos": "n.",
+"tr": "boş değer",
+"def": "A special value that means there is no value.",
+"ex": "The method returns null when nothing is found.",
+"cat": "prog"
+},
+{
+"id": "overflow",
+"term": "overflow",
+"pos": "n.",
+"tr": "taşma",
+"def": "A situation where a value is too big for the space reserved for it.",
+"ex": "An integer overflow caused the counter to become negative.",
+"cat": "prog"
+},
+{
+"id": "recursion",
+"term": "recursion",
+"pos": "n.",
+"tr": "özyineleme",
+"def": "When a function calls itself to solve a smaller version of a problem.",
+"ex": "Recursion is a natural way to walk through a folder tree.",
+"cat": "prog"
+},
+{
+"id": "inheritance",
+"term": "inheritance",
+"pos": "n.",
+"tr": "kalıtım",
+"def": "A way for a class to get the properties and methods of another class.",
+"ex": "The Dog class uses inheritance to reuse code from Animal.",
+"cat": "prog"
+},
+{
+"id": "polymorphism",
+"term": "polymorphism",
+"pos": "n.",
+"tr": "çok biçimlilik",
+"def": "The ability of different objects to respond to the same method in different ways.",
+"ex": "Polymorphism lets us call draw() on any shape.",
+"cat": "prog"
+},
+{
+"id": "encapsulation",
+"term": "encapsulation",
+"pos": "n.",
+"tr": "kapsülleme",
+"def": "Hiding the internal details of an object and exposing only what is needed.",
+"ex": "Encapsulation keeps the balance private inside the account class.",
+"cat": "prog"
+},
+{
+"id": "abstraction",
+"term": "abstraction",
+"pos": "n.",
+"tr": "soyutlama",
+"def": "Hiding complex details and showing only the important parts.",
+"ex": "A good interface is a clear abstraction of the system.",
+"cat": "prog"
+},
+{
+"id": "instance",
+"term": "instance",
+"pos": "n.",
+"tr": "örnek, nesne",
+"def": "A single object created from a class.",
+"ex": "Each instance of the class has its own data.",
+"cat": "prog"
+},
+{
+"id": "algorithm",
+"term": "algorithm",
+"pos": "n.",
+"tr": "algoritma",
+"def": "A set of clear steps to solve a problem.",
+"ex": "This algorithm finds the shortest path between two cities.",
+"cat": "dsa"
+},
+{
+"id": "data-structure",
+"term": "data structure",
+"pos": "n.",
+"tr": "veri yapısı",
+"def": "A way of organizing data so it can be used efficiently.",
+"ex": "A hash table is a data structure for fast lookups.",
+"cat": "dsa"
+},
+{
+"id": "array",
+"term": "array",
+"pos": "n.",
+"tr": "dizi",
+"def": "An ordered collection of items accessed by their position.",
+"ex": "The array stores the scores of all students.",
+"cat": "dsa"
+},
+{
+"id": "linked-list",
+"term": "linked list",
+"pos": "n.",
+"tr": "bağlı liste",
+"def": "A chain of items where each item points to the next one.",
+"ex": "Adding an item to a linked list is fast.",
+"cat": "dsa"
+},
+{
+"id": "stack",
+"term": "stack",
+"pos": "n.",
+"tr": "yığın",
+"def": "A collection where the last item added is the first one removed.",
+"ex": "The undo feature uses a stack.",
+"cat": "dsa"
+},
+{
+"id": "queue",
+"term": "queue",
+"pos": "n.",
+"tr": "kuyruk",
+"def": "A collection where the first item added is the first one removed.",
+"ex": "Print jobs wait in a queue.",
+"cat": "dsa"
+},
+{
+"id": "hash-table",
+"term": "hash table",
+"pos": "n.",
+"tr": "karma tablo",
+"def": "A structure that maps keys to values using a hash function.",
+"ex": "A hash table gives almost instant access to a value by its key.",
+"cat": "dsa"
+},
+{
+"id": "tree",
+"term": "tree",
+"pos": "n.",
+"tr": "ağaç",
+"def": "A structure of connected nodes with one root and no cycles.",
+"ex": "The file system is organized as a tree.",
+"cat": "dsa"
+},
+{
+"id": "graph",
+"term": "graph",
+"pos": "n.",
+"tr": "çizge, graf",
+"def": "A set of nodes connected by edges.",
+"ex": "A social network can be modeled as a graph.",
+"cat": "dsa"
+},
+{
+"id": "node",
+"term": "node",
+"pos": "n.",
+"tr": "düğüm",
+"def": "A single element in a list, tree, or graph.",
+"ex": "Each node stores a value and a link to its children.",
+"cat": "dsa"
+},
+{
+"id": "traverse",
+"term": "traverse",
+"pos": "v.",
+"tr": "dolaşmak",
+"def": "To visit every element of a data structure in some order.",
+"ex": "We traverse the tree to print all the names.",
+"cat": "dsa"
+},
+{
+"id": "sort",
+"term": "sort",
+"pos": "v.",
+"tr": "sıralamak",
+"def": "To arrange items in a particular order.",
+"ex": "We sort the users by their registration date.",
+"cat": "dsa"
+},
+{
+"id": "search",
+"term": "search",
+"pos": "v.",
+"tr": "aramak",
+"def": "To look for a specific item in a collection.",
+"ex": "Binary search can search a sorted list very quickly.",
+"cat": "dsa"
+},
+{
+"id": "iterate",
+"term": "iterate",
+"pos": "v.",
+"tr": "yinelemek, üzerinde gezmek",
+"def": "To go through the items of a collection one by one.",
+"ex": "You can iterate over the list with a for loop.",
+"cat": "dsa"
+},
+{
+"id": "complexity",
+"term": "complexity",
+"pos": "n.",
+"tr": "karmaşıklık",
+"def": "A measure of how much time or memory an algorithm needs.",
+"ex": "The time complexity of this solution is O(n log n).",
+"cat": "dsa"
+},
+{
+"id": "big-o-notation",
+"term": "Big O notation",
+"pos": "n.",
+"tr": "Büyük O gösterimi",
+"def": "A way to describe how the cost of an algorithm grows with input size.",
+"ex": "Big O notation helps us compare two algorithms.",
+"cat": "dsa"
+},
+{
+"id": "optimize",
+"term": "optimize",
+"pos": "v.",
+"tr": "optimize etmek",
+"def": "To make code faster or use fewer resources.",
+"ex": "We need to optimize the query because it is too slow.",
+"cat": "dsa"
+},
+{
+"id": "bottleneck",
+"term": "bottleneck",
+"pos": "n.",
+"tr": "darboğaz",
+"def": "The slowest part that limits the speed of the whole system.",
+"ex": "The database was the bottleneck in our application.",
+"cat": "dsa"
+},
+{
+"id": "brute-force",
+"term": "brute force",
+"pos": "n.",
+"tr": "kaba kuvvet",
+"def": "A simple method that tries every possible solution.",
+"ex": "A brute force approach is too slow for large inputs.",
+"cat": "dsa"
+},
+{
+"id": "greedy",
+"term": "greedy",
+"pos": "adj.",
+"tr": "açgözlü",
+"def": "Describes an algorithm that makes the best choice at each step.",
+"ex": "A greedy algorithm does not always find the best overall result.",
+"cat": "dsa"
+},
+{
+"id": "dynamic-programming",
+"term": "dynamic programming",
+"pos": "n.",
+"tr": "dinamik programlama",
+"def": "Solving a big problem by storing and reusing answers to smaller ones.",
+"ex": "Dynamic programming reduces the running time from exponential to polynomial.",
+"cat": "dsa"
+},
+{
+"id": "binary-search",
+"term": "binary search",
+"pos": "n.",
+"tr": "ikili arama",
+"def": "Finding an item in a sorted list by repeatedly halving the search area.",
+"ex": "Binary search needs only 20 steps to look through a million items.",
+"cat": "dsa"
+},
+{
+"id": "index",
+"term": "index",
+"pos": "n.",
+"tr": "indeks, dizin",
+"def": "The position number of an item in an array.",
+"ex": "The first element has index zero.",
+"cat": "dsa"
+},
+{
+"id": "pointer",
+"term": "pointer",
+"pos": "n.",
+"tr": "işaretçi",
+"def": "A variable that stores the memory address of another value.",
+"ex": "A null pointer caused the program to crash.",
+"cat": "dsa"
+},
+{
+"id": "heap",
+"term": "heap",
+"pos": "n.",
+"tr": "yığın bellek, öbek",
+"def": "A memory area for dynamic allocation, or a tree-based data structure.",
+"ex": "Objects created with new are stored on the heap.",
+"cat": "dsa"
+},
+{
+"id": "buffer",
+"term": "buffer",
+"pos": "n.",
+"tr": "tampon",
+"def": "A temporary storage area for data being moved from one place to another.",
+"ex": "The video player fills a buffer before it starts playing.",
+"cat": "dsa"
+},
+{
+"id": "cache",
+"term": "cache",
+"pos": "n.",
+"tr": "önbellek",
+"def": "A fast storage that keeps copies of data you use often.",
+"ex": "We store the result in a cache to avoid repeated calculations.",
+"cat": "dsa"
+},
+{
+"id": "latency",
+"term": "latency",
+"pos": "n.",
+"tr": "gecikme",
+"def": "The time between a request and the start of the response.",
+"ex": "High latency makes the app feel slow.",
+"cat": "dsa"
+},
+{
+"id": "throughput",
+"term": "throughput",
+"pos": "n.",
+"tr": "işlem hacmi",
+"def": "The amount of work a system can do in a given time.",
+"ex": "The new server doubled our throughput.",
+"cat": "dsa"
+},
+{
+"id": "scalable",
+"term": "scalable",
+"pos": "adj.",
+"tr": "ölçeklenebilir",
+"def": "Able to handle more work by adding resources.",
+"ex": "We need a scalable design that supports a million users.",
+"cat": "dsa"
+},
+{
+"id": "api",
+"term": "API",
+"pos": "n.",
+"tr": "API, uygulama arayüzü",
+"def": "A set of rules that lets one program talk to another.",
+"ex": "The mobile app gets the data from our API.",
+"cat": "web"
+},
+{
+"id": "endpoint",
+"term": "endpoint",
+"pos": "n.",
+"tr": "uç nokta",
+"def": "A specific URL where an API receives requests.",
+"ex": "The endpoint /users returns a list of users.",
+"cat": "web"
+},
+{
+"id": "request",
+"term": "request",
+"pos": "n.",
+"tr": "istek",
+"def": "A message sent to a server asking for something.",
+"ex": "The browser sends a request to the server.",
+"cat": "web"
+},
+{
+"id": "response",
+"term": "response",
+"pos": "n.",
+"tr": "yanıt",
+"def": "The message a server sends back after a request.",
+"ex": "The response contains the data in JSON format.",
+"cat": "web"
+},
+{
+"id": "client",
+"term": "client",
+"pos": "n.",
+"tr": "istemci",
+"def": "The program that asks a server for a service.",
+"ex": "The client sends the login form to the server.",
+"cat": "web"
+},
+{
+"id": "server",
+"term": "server",
+"pos": "n.",
+"tr": "sunucu",
+"def": "A computer or program that provides data or services to clients.",
+"ex": "The server was down for ten minutes.",
+"cat": "web"
+},
+{
+"id": "frontend",
+"term": "frontend",
+"pos": "n.",
+"tr": "ön yüz",
+"def": "The part of an application that the user sees and uses.",
+"ex": "She works on the frontend and builds the user interface.",
+"cat": "web"
+},
+{
+"id": "backend",
+"term": "backend",
+"pos": "n.",
+"tr": "arka uç",
+"def": "The part of an application that runs on the server and handles the logic.",
+"ex": "The backend stores the data and checks the permissions.",
+"cat": "web"
+},
+{
+"id": "full-stack",
+"term": "full-stack",
+"pos": "adj.",
+"tr": "tam yığın",
+"def": "Working on both the frontend and the backend.",
+"ex": "We are hiring a full-stack developer.",
+"cat": "web"
+},
+{
+"id": "framework",
+"term": "framework",
+"pos": "n.",
+"tr": "çatı, framework",
+"def": "A ready-made structure of code that you build your application on.",
+"ex": "Flutter is a framework for building mobile apps.",
+"cat": "web"
+},
+{
+"id": "library",
+"term": "library",
+"pos": "n.",
+"tr": "kütüphane",
+"def": "A collection of reusable code that you call from your program.",
+"ex": "I added a library to parse dates.",
+"cat": "web"
+},
+{
+"id": "dependency",
+"term": "dependency",
+"pos": "n.",
+"tr": "bağımlılık",
+"def": "Another piece of software that your project needs to work.",
+"ex": "Update every dependency before the release.",
+"cat": "web"
+},
+{
+"id": "package-manager",
+"term": "package manager",
+"pos": "n.",
+"tr": "paket yöneticisi",
+"def": "A tool that installs and updates the libraries your project uses.",
+"ex": "npm is a popular package manager for JavaScript.",
+"cat": "web"
+},
+{
+"id": "json",
+"term": "JSON",
+"pos": "n.",
+"tr": "JSON",
+"def": "A simple text format for sending structured data.",
+"ex": "The server returns the result as JSON.",
+"cat": "web"
+},
+{
+"id": "rest",
+"term": "REST",
+"pos": "n.",
+"tr": "REST",
+"def": "A common style for designing web APIs using standard HTTP methods.",
+"ex": "Our REST API supports GET, POST, and DELETE.",
+"cat": "web"
+},
+{
+"id": "http",
+"term": "HTTP",
+"pos": "n.",
+"tr": "HTTP",
+"def": "The protocol that browsers and servers use to exchange web pages and data.",
+"ex": "HTTP status 404 means the page was not found.",
+"cat": "web"
+},
+{
+"id": "status-code",
+"term": "status code",
+"pos": "n.",
+"tr": "durum kodu",
+"def": "A number in a response that shows if the request succeeded.",
+"ex": "The server returned status code 500.",
+"cat": "web"
+},
+{
+"id": "header",
+"term": "header",
+"pos": "n.",
+"tr": "başlık bilgisi",
+"def": "Extra information sent with a request or response.",
+"ex": "The authorization header contains the token.",
+"cat": "web"
+},
+{
+"id": "cookie",
+"term": "cookie",
+"pos": "n.",
+"tr": "çerez",
+"def": "A small piece of data a website stores in your browser.",
+"ex": "The site uses a cookie to remember that you are logged in.",
+"cat": "web"
+},
+{
+"id": "session",
+"term": "session",
+"pos": "n.",
+"tr": "oturum",
+"def": "A period of interaction between a user and an application.",
+"ex": "Your session expires after thirty minutes.",
+"cat": "web"
+},
+{
+"id": "route",
+"term": "route",
+"pos": "n.",
+"tr": "rota, yönlendirme yolu",
+"def": "A rule that connects a URL to the code that handles it.",
+"ex": "We added a new route for the settings page.",
+"cat": "web"
+},
+{
+"id": "render",
+"term": "render",
+"pos": "v.",
+"tr": "ekrana çizmek, oluşturmak",
+"def": "To turn code or data into what the user sees.",
+"ex": "The browser can render the page in less than a second.",
+"cat": "web"
+},
+{
+"id": "responsive",
+"term": "responsive",
+"pos": "adj.",
+"tr": "duyarlı (ekrana uyumlu)",
+"def": "Adapting well to different screen sizes.",
+"ex": "The website is responsive, so it works on phones too.",
+"cat": "web"
+},
+{
+"id": "state",
+"term": "state",
+"pos": "n.",
+"tr": "durum",
+"def": "The current data of an application at a given moment.",
+"ex": "The app keeps the state of the shopping cart.",
+"cat": "web"
+},
+{
+"id": "component",
+"term": "component",
+"pos": "n.",
+"tr": "bileşen",
+"def": "A reusable part of a user interface.",
+"ex": "The login form is a separate component.",
+"cat": "web"
+},
+{
+"id": "asynchronous",
+"term": "asynchronous",
+"pos": "adj.",
+"tr": "eşzamansız",
+"def": "Not happening at the same time; the program continues while waiting.",
+"ex": "Network calls are asynchronous, so the screen does not freeze.",
+"cat": "web"
+},
+{
+"id": "callback",
+"term": "callback",
+"pos": "n.",
+"tr": "geri çağırma",
+"def": "A function that is passed to another function and called later.",
+"ex": "The callback runs when the download finishes.",
+"cat": "web"
+},
+{
+"id": "promise",
+"term": "promise",
+"pos": "n.",
+"tr": "söz (JavaScript)",
+"def": "An object that represents a result that will be available in the future.",
+"ex": "The promise resolves when the data arrives.",
+"cat": "web"
+},
+{
+"id": "timeout",
+"term": "timeout",
+"pos": "n.",
+"tr": "zaman aşımı",
+"def": "The maximum time to wait before giving up.",
+"ex": "The request failed with a timeout after thirty seconds.",
+"cat": "web"
+},
+{
+"id": "payload",
+"term": "payload",
+"pos": "n.",
+"tr": "yük (veri gövdesi)",
+"def": "The main data carried in a request or response.",
+"ex": "The payload contains the user's name and email.",
+"cat": "web"
+},
+{
+"id": "webhook",
+"term": "webhook",
+"pos": "n.",
+"tr": "web kancası",
+"def": "A way for a service to send your app a message when an event happens.",
+"ex": "GitHub calls our webhook when someone pushes code.",
+"cat": "web"
+},
+{
+"id": "database",
+"term": "database",
+"pos": "n.",
+"tr": "veritabanı",
+"def": "An organized collection of data stored on a computer.",
+"ex": "All customer information is saved in the database.",
+"cat": "db"
+},
+{
+"id": "table",
+"term": "table",
+"pos": "n.",
+"tr": "tablo",
+"def": "A set of rows and columns in a relational database.",
+"ex": "The users table has a column for each field.",
+"cat": "db"
+},
+{
+"id": "row",
+"term": "row",
+"pos": "n.",
+"tr": "satır",
+"def": "One record in a table.",
+"ex": "Each row represents one customer.",
+"cat": "db"
+},
+{
+"id": "column",
+"term": "column",
+"pos": "n.",
+"tr": "sütun",
+"def": "A field of a table that stores one type of data.",
+"ex": "The email column must be unique.",
+"cat": "db"
+},
+{
+"id": "query",
+"term": "query",
+"pos": "n.",
+"tr": "sorgu",
+"def": "A request to get or change data in a database.",
+"ex": "This query returns all orders from last month.",
+"cat": "db"
+},
+{
+"id": "sql",
+"term": "SQL",
+"pos": "n.",
+"tr": "SQL",
+"def": "A language used to work with relational databases.",
+"ex": "I use SQL to filter the data.",
+"cat": "db"
+},
+{
+"id": "primary-key",
+"term": "primary key",
+"pos": "n.",
+"tr": "birincil anahtar",
+"def": "A column that uniquely identifies each row.",
+"ex": "The id column is the primary key of the table.",
+"cat": "db"
+},
+{
+"id": "foreign-key",
+"term": "foreign key",
+"pos": "n.",
+"tr": "yabancı anahtar",
+"def": "A column that links a row to a row in another table.",
+"ex": "The foreign key connects each order to a customer.",
+"cat": "db"
+},
+{
+"id": "relationship",
+"term": "relationship",
+"pos": "n.",
+"tr": "ilişki",
+"def": "A connection between two tables.",
+"ex": "There is a one-to-many relationship between users and posts.",
+"cat": "db"
+},
+{
+"id": "join",
+"term": "join",
+"pos": "v.",
+"tr": "birleştirmek (tablolar)",
+"def": "To combine rows from two tables based on a related column.",
+"ex": "You can join the orders and customers tables by customer id.",
+"cat": "db"
+},
+{
+"id": "schema",
+"term": "schema",
+"pos": "n.",
+"tr": "şema",
+"def": "The structure that defines tables, columns, and types.",
+"ex": "We changed the schema to add a phone number field.",
+"cat": "db"
+},
+{
+"id": "migration",
+"term": "migration",
+"pos": "n.",
+"tr": "veri/şema taşıma",
+"def": "A scripted change to the database structure.",
+"ex": "Run the migration before you start the server.",
+"cat": "db"
+},
+{
+"id": "transaction",
+"term": "transaction",
+"pos": "n.",
+"tr": "işlem (transaction)",
+"def": "A group of operations that either all succeed or all fail.",
+"ex": "The bank uses a transaction to move money between accounts.",
+"cat": "db"
+},
+{
+"id": "rollback",
+"term": "rollback",
+"pos": "n.",
+"tr": "geri alma",
+"def": "Undoing changes to return to a previous state.",
+"ex": "An error caused a rollback of the whole transaction.",
+"cat": "db"
+},
+{
+"id": "commit",
+"term": "commit",
+"pos": "v.",
+"tr": "onaylamak, kaydetmek",
+"def": "To make changes permanent in a database or repository.",
+"ex": "Commit the transaction only after both steps succeed.",
+"cat": "db"
+},
+{
+"id": "constraint",
+"term": "constraint",
+"pos": "n.",
+"tr": "kısıt",
+"def": "A rule that the data in a table must follow.",
+"ex": "A unique constraint prevents duplicate emails.",
+"cat": "db"
+},
+{
+"id": "normalization",
+"term": "normalization",
+"pos": "n.",
+"tr": "normalleştirme",
+"def": "Organizing tables to reduce repeated data.",
+"ex": "Normalization helped us remove duplicate information.",
+"cat": "db"
+},
+{
+"id": "nosql",
+"term": "NoSQL",
+"pos": "n.",
+"tr": "NoSQL",
+"def": "A type of database that does not use the traditional table model.",
+"ex": "We chose a NoSQL database for flexible documents.",
+"cat": "db"
+},
+{
+"id": "document",
+"term": "document",
+"pos": "n.",
+"tr": "belge (doküman)",
+"def": "A record stored as JSON-like data in a document database.",
+"ex": "Each document contains the details of one product.",
+"cat": "db"
+},
+{
+"id": "replica",
+"term": "replica",
+"pos": "n.",
+"tr": "kopya (çoğaltma)",
+"def": "A copy of a database kept in sync with the main one.",
+"ex": "Read queries go to a replica to reduce the load.",
+"cat": "db"
+},
+{
+"id": "backup",
+"term": "backup",
+"pos": "n.",
+"tr": "yedek",
+"def": "A copy of data stored in case the original is lost.",
+"ex": "We take a backup of the database every night.",
+"cat": "db"
+},
+{
+"id": "retrieve",
+"term": "retrieve",
+"pos": "v.",
+"tr": "geri getirmek, çekmek",
+"def": "To get data from a storage system.",
+"ex": "The app will retrieve the profile from the database.",
+"cat": "db"
+},
+{
+"id": "store",
+"term": "store",
+"pos": "v.",
+"tr": "saklamak",
+"def": "To keep data in a place where it can be used later.",
+"ex": "We store passwords as hashes, not as plain text.",
+"cat": "db"
+},
+{
+"id": "persist",
+"term": "persist",
+"pos": "v.",
+"tr": "kalıcı olarak saklamak",
+"def": "To save data so that it still exists after the program closes.",
+"ex": "The app should persist the settings on the device.",
+"cat": "db"
+},
+{
+"id": "orm",
+"term": "ORM",
+"pos": "n.",
+"tr": "ORM",
+"def": "A tool that maps database tables to objects in code.",
+"ex": "The ORM lets us work with objects instead of writing SQL.",
+"cat": "db"
+},
+{
+"id": "deploy",
+"term": "deploy",
+"pos": "v.",
+"tr": "yayına almak",
+"def": "To release software so that users can use it.",
+"ex": "We deploy to production every Friday.",
+"cat": "devops"
+},
+{
+"id": "release",
+"term": "release",
+"pos": "n.",
+"tr": "sürüm, yayın",
+"def": "A version of the software made available to users.",
+"ex": "The new release fixes five bugs.",
+"cat": "devops"
+},
+{
+"id": "pipeline",
+"term": "pipeline",
+"pos": "n.",
+"tr": "iş hattı",
+"def": "An automated series of steps that builds, tests, and deploys code.",
+"ex": "The pipeline fails if any test fails.",
+"cat": "devops"
+},
+{
+"id": "ci-cd",
+"term": "CI/CD",
+"pos": "n.",
+"tr": "CI/CD",
+"def": "Practices that automatically build, test, and deliver code changes.",
+"ex": "Our CI/CD setup deploys the app after every merge.",
+"cat": "devops"
+},
+{
+"id": "build",
+"term": "build",
+"pos": "n.",
+"tr": "derleme/inşa",
+"def": "The process of turning source code into a runnable application.",
+"ex": "The build failed because of a missing file.",
+"cat": "devops"
+},
+{
+"id": "repository",
+"term": "repository",
+"pos": "n.",
+"tr": "depo",
+"def": "A place where the code and its history are stored.",
+"ex": "Clone the repository to your computer.",
+"cat": "devops"
+},
+{
+"id": "branch",
+"term": "branch",
+"pos": "n.",
+"tr": "dal",
+"def": "A separate line of development in version control.",
+"ex": "I created a new branch for the login feature.",
+"cat": "devops"
+},
+{
+"id": "merge",
+"term": "merge",
+"pos": "v.",
+"tr": "birleştirmek",
+"def": "To combine changes from one branch into another.",
+"ex": "Please merge your branch after the review.",
+"cat": "devops"
+},
+{
+"id": "pull-request",
+"term": "pull request",
+"pos": "n.",
+"tr": "çekme isteği",
+"def": "A request to review and merge your changes into the main branch.",
+"ex": "I opened a pull request with the new feature.",
+"cat": "devops"
+},
+{
+"id": "conflict",
+"term": "conflict",
+"pos": "n.",
+"tr": "çakışma",
+"def": "A situation when two changes cannot be combined automatically.",
+"ex": "There is a merge conflict in the config file.",
+"cat": "devops"
+},
+{
+"id": "commit-message",
+"term": "commit message",
+"pos": "n.",
+"tr": "commit mesajı",
+"def": "A short text that explains what a change does.",
+"ex": "Write a clear commit message so others understand the change.",
+"cat": "devops"
+},
+{
+"id": "rebase",
+"term": "rebase",
+"pos": "v.",
+"tr": "yeniden temellendirmek",
+"def": "To move your commits on top of a newer base commit.",
+"ex": "I will rebase my branch on main before the merge.",
+"cat": "devops"
+},
+{
+"id": "clone",
+"term": "clone",
+"pos": "v.",
+"tr": "klonlamak",
+"def": "To make a local copy of a repository.",
+"ex": "First, clone the repository from GitHub.",
+"cat": "devops"
+},
+{
+"id": "fork",
+"term": "fork",
+"pos": "n.",
+"tr": "çatal (kopya depo)",
+"def": "Your own copy of someone else's repository.",
+"ex": "I made a fork and fixed the typo in the documentation.",
+"cat": "devops"
+},
+{
+"id": "version-control",
+"term": "version control",
+"pos": "n.",
+"tr": "sürüm kontrolü",
+"def": "A system that tracks changes to files over time.",
+"ex": "Git is the most popular version control system.",
+"cat": "devops"
+},
+{
+"id": "container",
+"term": "container",
+"pos": "n.",
+"tr": "konteyner",
+"def": "A lightweight package that runs an app with everything it needs.",
+"ex": "We run each service in its own container.",
+"cat": "devops"
+},
+{
+"id": "image",
+"term": "image",
+"pos": "n.",
+"tr": "imaj",
+"def": "A packaged template used to create containers.",
+"ex": "The image contains the code and its dependencies.",
+"cat": "devops"
+},
+{
+"id": "orchestration",
+"term": "orchestration",
+"pos": "n.",
+"tr": "orkestrasyon",
+"def": "Automatically managing many containers or services.",
+"ex": "Kubernetes handles orchestration of our containers.",
+"cat": "devops"
+},
+{
+"id": "cluster",
+"term": "cluster",
+"pos": "n.",
+"tr": "küme",
+"def": "A group of computers that work together as one system.",
+"ex": "The cluster has ten servers.",
+"cat": "devops"
+},
+{
+"id": "cloud",
+"term": "cloud",
+"pos": "n.",
+"tr": "bulut",
+"def": "Computing services provided over the internet.",
+"ex": "We moved our servers to the cloud.",
+"cat": "devops"
+},
+{
+"id": "infrastructure",
+"term": "infrastructure",
+"pos": "n.",
+"tr": "altyapı",
+"def": "The servers, networks, and tools that an application runs on.",
+"ex": "The team manages the infrastructure with code.",
+"cat": "devops"
+},
+{
+"id": "monitoring",
+"term": "monitoring",
+"pos": "n.",
+"tr": "izleme",
+"def": "Continuously watching a system to detect problems.",
+"ex": "Monitoring alerted us when the server's memory was almost full.",
+"cat": "devops"
+},
+{
+"id": "alert",
+"term": "alert",
+"pos": "n.",
+"tr": "uyarı",
+"def": "An automatic message sent when something goes wrong.",
+"ex": "An alert woke me up at 3 a.m.",
+"cat": "devops"
+},
+{
+"id": "log",
+"term": "log",
+"pos": "n.",
+"tr": "günlük kaydı",
+"def": "A record of events that happen in a system.",
+"ex": "Check the log to see why the service crashed.",
+"cat": "devops"
+},
+{
+"id": "uptime",
+"term": "uptime",
+"pos": "n.",
+"tr": "çalışma süresi",
+"def": "The percentage of time a system is available.",
+"ex": "Our uptime was 99.9 percent last month.",
+"cat": "devops"
+},
+{
+"id": "downtime",
+"term": "downtime",
+"pos": "n.",
+"tr": "kesinti süresi",
+"def": "A period when a system is not available.",
+"ex": "The update caused two hours of downtime.",
+"cat": "devops"
+},
+{
+"id": "rollout",
+"term": "rollout",
+"pos": "n.",
+"tr": "kademeli yayın",
+"def": "The process of releasing a change to users step by step.",
+"ex": "We start with a gradual rollout to ten percent of users.",
+"cat": "devops"
+},
+{
+"id": "staging",
+"term": "staging",
+"pos": "n.",
+"tr": "hazırlık ortamı",
+"def": "A test environment that is similar to production.",
+"ex": "Test the feature in staging before the release.",
+"cat": "devops"
+},
+{
+"id": "production",
+"term": "production",
+"pos": "n.",
+"tr": "canlı ortam",
+"def": "The live environment that real users use.",
+"ex": "The bug only appears in production.",
+"cat": "devops"
+},
+{
+"id": "environment",
+"term": "environment",
+"pos": "n.",
+"tr": "ortam",
+"def": "The setup where the software runs, such as development or production.",
+"ex": "Each environment has its own configuration.",
+"cat": "devops"
+},
+{
+"id": "configuration",
+"term": "configuration",
+"pos": "n.",
+"tr": "yapılandırma",
+"def": "The settings that control how software behaves.",
+"ex": "The database address is stored in the configuration file.",
+"cat": "devops"
+},
+{
+"id": "unit-test",
+"term": "unit test",
+"pos": "n.",
+"tr": "birim testi",
+"def": "A test that checks one small piece of code.",
+"ex": "I added a unit test for the discount function.",
+"cat": "test"
+},
+{
+"id": "integration-test",
+"term": "integration test",
+"pos": "n.",
+"tr": "entegrasyon testi",
+"def": "A test that checks that several parts work together.",
+"ex": "The integration test checks the whole login flow.",
+"cat": "test"
+},
+{
+"id": "assertion",
+"term": "assertion",
+"pos": "n.",
+"tr": "doğrulama ifadesi",
+"def": "A statement in a test that checks an expected result.",
+"ex": "The assertion fails if the total is not 100.",
+"cat": "test"
+},
+{
+"id": "test-case",
+"term": "test case",
+"pos": "n.",
+"tr": "test senaryosu",
+"def": "A set of steps and expected results for one test.",
+"ex": "Each test case covers a different input.",
+"cat": "test"
+},
+{
+"id": "coverage",
+"term": "coverage",
+"pos": "n.",
+"tr": "kapsama",
+"def": "The percentage of code that is run by tests.",
+"ex": "Our test coverage is 85 percent.",
+"cat": "test"
+},
+{
+"id": "regression",
+"term": "regression",
+"pos": "n.",
+"tr": "gerileme",
+"def": "A bug where something that worked before stops working.",
+"ex": "The update caused a regression in the search feature.",
+"cat": "test"
+},
+{
+"id": "bug",
+"term": "bug",
+"pos": "n.",
+"tr": "hata, böcek",
+"def": "A mistake in code that causes wrong behavior.",
+"ex": "I found a bug in the payment form.",
+"cat": "test"
+},
+{
+"id": "defect",
+"term": "defect",
+"pos": "n.",
+"tr": "kusur",
+"def": "A fault in software that makes it behave incorrectly.",
+"ex": "The team fixed the defect before the release.",
+"cat": "test"
+},
+{
+"id": "reproduce",
+"term": "reproduce",
+"pos": "v.",
+"tr": "yeniden üretmek",
+"def": "To make a problem happen again by following specific steps.",
+"ex": "I can't reproduce the error on my machine.",
+"cat": "test"
+},
+{
+"id": "fix",
+"term": "fix",
+"pos": "v.",
+"tr": "düzeltmek",
+"def": "To repair a problem in code.",
+"ex": "I will fix the crash tomorrow morning.",
+"cat": "test"
+},
+{
+"id": "patch",
+"term": "patch",
+"pos": "n.",
+"tr": "yama",
+"def": "A small update that fixes a problem.",
+"ex": "We released a security patch last night.",
+"cat": "test"
+},
+{
+"id": "workaround",
+"term": "workaround",
+"pos": "n.",
+"tr": "geçici çözüm",
+"def": "A temporary solution that avoids a problem without fixing it.",
+"ex": "Restarting the app is a workaround until we fix the bug.",
+"cat": "test"
+},
+{
+"id": "mock",
+"term": "mock",
+"pos": "v.",
+"tr": "taklit etmek",
+"def": "To replace a real part with a fake one in a test.",
+"ex": "We mock the payment service in our tests.",
+"cat": "test"
+},
+{
+"id": "stub",
+"term": "stub",
+"pos": "n.",
+"tr": "taslak/sahte parça",
+"def": "A simple fake that returns fixed answers during a test.",
+"ex": "The stub always returns the same user.",
+"cat": "test"
+},
+{
+"id": "flaky",
+"term": "flaky",
+"pos": "adj.",
+"tr": "güvenilmez (bazen geçen)",
+"def": "Describes a test that sometimes passes and sometimes fails.",
+"ex": "This flaky test fails once every ten runs.",
+"cat": "test"
+},
+{
+"id": "automation",
+"term": "automation",
+"pos": "n.",
+"tr": "otomasyon",
+"def": "Using tools to do tasks without manual work.",
+"ex": "Test automation saves us hours every week.",
+"cat": "test"
+},
+{
+"id": "manual-testing",
+"term": "manual testing",
+"pos": "n.",
+"tr": "manuel test",
+"def": "Testing software by hand without scripts.",
+"ex": "We still use manual testing for the new design.",
+"cat": "test"
+},
+{
+"id": "acceptance-criteria",
+"term": "acceptance criteria",
+"pos": "n.",
+"tr": "kabul kriterleri",
+"def": "Conditions that a feature must meet to be accepted.",
+"ex": "The acceptance criteria say the page must load in two seconds.",
+"cat": "test"
+},
+{
+"id": "edge-case",
+"term": "edge case",
+"pos": "n.",
+"tr": "uç durum",
+"def": "An unusual situation at the limits of normal use.",
+"ex": "Empty input is an edge case that we must handle.",
+"cat": "test"
+},
+{
+"id": "benchmark",
+"term": "benchmark",
+"pos": "n.",
+"tr": "kıyaslama testi",
+"def": "A test that measures how fast something runs.",
+"ex": "The benchmark shows the new version is twice as fast.",
+"cat": "test"
+},
+{
+"id": "code-review",
+"term": "code review",
+"pos": "n.",
+"tr": "kod incelemesi",
+"def": "When other developers read your code to find problems and suggest improvements.",
+"ex": "Every change needs a code review before it is merged.",
+"cat": "test"
+},
+{
+"id": "linter",
+"term": "linter",
+"pos": "n.",
+"tr": "lint aracı",
+"def": "A tool that checks code for style problems and common mistakes.",
+"ex": "The linter warns about unused variables.",
+"cat": "test"
+},
+{
+"id": "refactor",
+"term": "refactor",
+"pos": "v.",
+"tr": "yeniden düzenlemek",
+"def": "To improve the structure of code without changing what it does.",
+"ex": "We should refactor this class because it is too long.",
+"cat": "test"
+},
+{
+"id": "technical-debt",
+"term": "technical debt",
+"pos": "n.",
+"tr": "teknik borç",
+"def": "The future cost of quick, imperfect solutions in code.",
+"ex": "Skipping tests creates technical debt.",
+"cat": "test"
+},
+{
+"id": "maintainable",
+"term": "maintainable",
+"pos": "adj.",
+"tr": "sürdürülebilir (bakımı kolay)",
+"def": "Easy to understand, change, and fix over time.",
+"ex": "Clear names make code more maintainable.",
+"cat": "test"
+},
+{
+"id": "readable",
+"term": "readable",
+"pos": "adj.",
+"tr": "okunabilir",
+"def": "Easy for humans to read and understand.",
+"ex": "Short functions are more readable.",
+"cat": "test"
+},
+{
+"id": "requirement",
+"term": "requirement",
+"pos": "n.",
+"tr": "gereksinim",
+"def": "Something the software must do or have.",
+"ex": "The main requirement is that users can reset their password.",
+"cat": "process"
+},
+{
+"id": "specification",
+"term": "specification",
+"pos": "n.",
+"tr": "şartname",
+"def": "A detailed description of how something should work.",
+"ex": "The specification describes every field of the form.",
+"cat": "process"
+},
+{
+"id": "stakeholder",
+"term": "stakeholder",
+"pos": "n.",
+"tr": "paydaş",
+"def": "A person who is interested in or affected by a project.",
+"ex": "We showed the prototype to the stakeholders.",
+"cat": "process"
+},
+{
+"id": "user-story",
+"term": "user story",
+"pos": "n.",
+"tr": "kullanıcı hikayesi",
+"def": "A short description of a feature from the user's point of view.",
+"ex": "Each user story starts with \"As a user, I want...\".",
+"cat": "process"
+},
+{
+"id": "backlog",
+"term": "backlog",
+"pos": "n.",
+"tr": "iş listesi (backlog)",
+"def": "A prioritized list of work for a team.",
+"ex": "We added the idea to the product backlog.",
+"cat": "process"
+},
+{
+"id": "sprint",
+"term": "sprint",
+"pos": "n.",
+"tr": "sprint",
+"def": "A short, fixed period in which a team completes planned work.",
+"ex": "Our sprint lasts two weeks.",
+"cat": "process"
+},
+{
+"id": "agile",
+"term": "Agile",
+"pos": "adj.",
+"tr": "çevik",
+"def": "An approach that delivers software in small steps and adapts to change.",
+"ex": "We use an Agile process with short iterations.",
+"cat": "process"
+},
+{
+"id": "scrum",
+"term": "Scrum",
+"pos": "n.",
+"tr": "Scrum",
+"def": "An Agile framework with sprints, roles, and regular meetings.",
+"ex": "In Scrum, the team meets every day for a short stand-up.",
+"cat": "process"
+},
+{
+"id": "stand-up",
+"term": "stand-up",
+"pos": "n.",
+"tr": "günlük kısa toplantı",
+"def": "A short daily meeting where team members share progress.",
+"ex": "Our stand-up starts at nine every morning.",
+"cat": "process"
+},
+{
+"id": "retrospective",
+"term": "retrospective",
+"pos": "n.",
+"tr": "geriye bakış toplantısı",
+"def": "A meeting at the end of a sprint to discuss what went well and what to improve.",
+"ex": "In the retrospective, we agreed to write more tests.",
+"cat": "process"
+},
+{
+"id": "milestone",
+"term": "milestone",
+"pos": "n.",
+"tr": "kilometre taşı",
+"def": "An important point or goal in a project.",
+"ex": "The first milestone is a working prototype.",
+"cat": "process"
+},
+{
+"id": "deadline",
+"term": "deadline",
+"pos": "n.",
+"tr": "son teslim tarihi",
+"def": "The date by which something must be finished.",
+"ex": "The deadline for the project is next Friday.",
+"cat": "process"
+},
+{
+"id": "estimate",
+"term": "estimate",
+"pos": "v.",
+"tr": "tahmin etmek",
+"def": "To guess how much time or effort a task needs.",
+"ex": "It is hard to estimate how long the migration will take.",
+"cat": "process"
+},
+{
+"id": "priority",
+"term": "priority",
+"pos": "n.",
+"tr": "öncelik",
+"def": "How important a task is compared to others.",
+"ex": "Fixing the login bug is our top priority.",
+"cat": "process"
+},
+{
+"id": "scope-creep",
+"term": "scope creep",
+"pos": "n.",
+"tr": "kapsam kayması",
+"def": "When a project keeps growing with new features beyond the plan.",
+"ex": "Scope creep delayed the release by a month.",
+"cat": "process"
+},
+{
+"id": "iteration",
+"term": "iteration",
+"pos": "n.",
+"tr": "yineleme, tur",
+"def": "One cycle of planning, building, and reviewing in a project.",
+"ex": "Each iteration adds a few small features.",
+"cat": "process"
+},
+{
+"id": "prototype",
+"term": "prototype",
+"pos": "n.",
+"tr": "prototip",
+"def": "An early, simple version made to test an idea.",
+"ex": "We built a prototype in two days.",
+"cat": "process"
+},
+{
+"id": "mvp",
+"term": "MVP",
+"pos": "n.",
+"tr": "MVP (asgari uygulanabilir ürün)",
+"def": "The simplest version of a product that can be released to learn from users.",
+"ex": "Let's launch an MVP and collect feedback.",
+"cat": "process"
+},
+{
+"id": "feedback",
+"term": "feedback",
+"pos": "n.",
+"tr": "geri bildirim",
+"def": "Comments about something that help improve it.",
+"ex": "We received a lot of feedback from the first users.",
+"cat": "process"
+},
+{
+"id": "documentation",
+"term": "documentation",
+"pos": "n.",
+"tr": "dokümantasyon",
+"def": "Written explanations of how software works and how to use it.",
+"ex": "Good documentation saves new developers a lot of time.",
+"cat": "process"
+},
+{
+"id": "handover",
+"term": "handover",
+"pos": "n.",
+"tr": "devir teslim",
+"def": "Passing work and knowledge from one person or team to another.",
+"ex": "Before she left, she wrote a handover document.",
+"cat": "process"
+},
+{
+"id": "roadmap",
+"term": "roadmap",
+"pos": "n.",
+"tr": "yol haritası",
+"def": "A plan that shows what will be built and when.",
+"ex": "The roadmap includes a mobile app next year.",
+"cat": "process"
+},
+{
+"id": "workflow",
+"term": "workflow",
+"pos": "n.",
+"tr": "iş akışı",
+"def": "The series of steps that work goes through.",
+"ex": "We improved our workflow to reduce waiting time.",
+"cat": "process"
+},
+{
+"id": "traceability",
+"term": "traceability",
+"pos": "n.",
+"tr": "izlenebilirlik",
+"def": "The ability to link requirements to code and tests.",
+"ex": "Traceability helps us see which tests cover each requirement.",
+"cat": "process"
+},
+{
+"id": "life-cycle",
+"term": "life cycle",
+"pos": "n.",
+"tr": "yaşam döngüsü",
+"def": "All the stages of software from idea to retirement.",
+"ex": "The software life cycle includes design, development, testing, and maintenance.",
+"cat": "process"
+},
+{
+"id": "architecture",
+"term": "architecture",
+"pos": "n.",
+"tr": "mimari",
+"def": "The main structure and design of a software system.",
+"ex": "The architecture separates the interface from the business logic.",
+"cat": "arch"
+},
+{
+"id": "module",
+"term": "module",
+"pos": "n.",
+"tr": "modül",
+"def": "A separate part of a program that has its own purpose.",
+"ex": "Each module has a clear responsibility.",
+"cat": "arch"
+},
+{
+"id": "interface",
+"term": "interface",
+"pos": "n.",
+"tr": "arayüz",
+"def": "A defined way for parts of a system to communicate.",
+"ex": "The class implements the payment interface.",
+"cat": "arch"
+},
+{
+"id": "layer",
+"term": "layer",
+"pos": "n.",
+"tr": "katman",
+"def": "A level of a system that has a specific role.",
+"ex": "The data layer talks to the database.",
+"cat": "arch"
+},
+{
+"id": "monolith",
+"term": "monolith",
+"pos": "n.",
+"tr": "monolit",
+"def": "An application built as one single unit.",
+"ex": "We split the monolith into smaller services.",
+"cat": "arch"
+},
+{
+"id": "microservice",
+"term": "microservice",
+"pos": "n.",
+"tr": "mikroservis",
+"def": "A small, independent service that does one job.",
+"ex": "Each microservice has its own database.",
+"cat": "arch"
+},
+{
+"id": "coupling",
+"term": "coupling",
+"pos": "n.",
+"tr": "bağımlılık (sıkı bağlılık)",
+"def": "How strongly one part of a system depends on another.",
+"ex": "Low coupling makes the code easier to change.",
+"cat": "arch"
+},
+{
+"id": "cohesion",
+"term": "cohesion",
+"pos": "n.",
+"tr": "uyum (içsel tutarlılık)",
+"def": "How closely the things inside one module belong together.",
+"ex": "High cohesion means a module does one thing well.",
+"cat": "arch"
+},
+{
+"id": "design-pattern",
+"term": "design pattern",
+"pos": "n.",
+"tr": "tasarım deseni",
+"def": "A proven solution to a common design problem.",
+"ex": "The observer is a common design pattern.",
+"cat": "arch"
+},
+{
+"id": "singleton",
+"term": "singleton",
+"pos": "n.",
+"tr": "tekil nesne",
+"def": "A class that has only one instance.",
+"ex": "The app uses a singleton to manage the settings.",
+"cat": "arch"
+},
+{
+"id": "factory",
+"term": "factory",
+"pos": "n.",
+"tr": "fabrika (nesne üretici)",
+"def": "Code that creates objects for you.",
+"ex": "A factory creates the right type of vehicle.",
+"cat": "arch"
+},
+{
+"id": "dependency-injection",
+"term": "dependency injection",
+"pos": "n.",
+"tr": "bağımlılık enjeksiyonu",
+"def": "Giving an object what it needs from outside instead of creating it inside.",
+"ex": "Dependency injection makes the class easier to test.",
+"cat": "arch"
+},
+{
+"id": "separation-of-concerns",
+"term": "separation of concerns",
+"pos": "n.",
+"tr": "sorumlulukların ayrılması",
+"def": "Dividing a program so that each part handles one concern.",
+"ex": "Separation of concerns keeps the user interface and logic apart.",
+"cat": "arch"
+},
+{
+"id": "abstract-class",
+"term": "abstract class",
+"pos": "n.",
+"tr": "soyut sınıf",
+"def": "A class that cannot be used directly and is meant to be extended.",
+"ex": "The abstract class defines the methods that all shapes must have.",
+"cat": "arch"
+},
+{
+"id": "reusable",
+"term": "reusable",
+"pos": "adj.",
+"tr": "yeniden kullanılabilir",
+"def": "Able to be used again in other places.",
+"ex": "We created reusable components for buttons and forms.",
+"cat": "arch"
+},
+{
+"id": "extensible",
+"term": "extensible",
+"pos": "adj.",
+"tr": "genişletilebilir",
+"def": "Designed so new features can be added easily.",
+"ex": "An extensible design allows us to add new payment methods.",
+"cat": "arch"
+},
+{
+"id": "trade-off",
+"term": "trade-off",
+"pos": "n.",
+"tr": "ödünleşim",
+"def": "A balance where you give up one thing to get another.",
+"ex": "There is a trade-off between speed and accuracy.",
+"cat": "arch"
+},
+{
+"id": "single-point-of-failure",
+"term": "single point of failure",
+"pos": "n.",
+"tr": "tek hata noktası",
+"def": "A part that stops the whole system if it fails.",
+"ex": "The only database server is a single point of failure.",
+"cat": "arch"
+},
+{
+"id": "fault-tolerance",
+"term": "fault tolerance",
+"pos": "n.",
+"tr": "hata toleransı",
+"def": "The ability of a system to keep working when a part fails.",
+"ex": "Fault tolerance keeps the service online during a server crash.",
+"cat": "arch"
+},
+{
+"id": "load-balancer",
+"term": "load balancer",
+"pos": "n.",
+"tr": "yük dengeleyici",
+"def": "A tool that spreads requests across several servers.",
+"ex": "The load balancer sends each request to the least busy server.",
+"cat": "arch"
+},
+{
+"id": "message-queue",
+"term": "message queue",
+"pos": "n.",
+"tr": "mesaj kuyruğu",
+"def": "A system that stores messages until a service can process them.",
+"ex": "The order is placed in a message queue and processed later.",
+"cat": "arch"
+},
+{
+"id": "event",
+"term": "event",
+"pos": "n.",
+"tr": "olay",
+"def": "Something that happens in a system, such as a click or a message.",
+"ex": "The app listens for an event when the user presses the button.",
+"cat": "arch"
+},
+{
+"id": "middleware",
+"term": "middleware",
+"pos": "n.",
+"tr": "ara katman yazılımı",
+"def": "Software that sits between two parts and processes requests.",
+"ex": "The authentication middleware checks the token on every request.",
+"cat": "arch"
+},
+{
+"id": "legacy",
+"term": "legacy",
+"pos": "adj.",
+"tr": "eski (miras)",
+"def": "Old software that is still used and hard to change.",
+"ex": "We maintain a legacy system written twenty years ago.",
+"cat": "arch"
+},
+{
+"id": "boilerplate",
+"term": "boilerplate",
+"pos": "n.",
+"tr": "tekrarlı hazır kod",
+"def": "Repeated code that you must write again and again.",
+"ex": "The framework removes a lot of boilerplate.",
+"cat": "arch"
+},
+{
+"id": "authentication",
+"term": "authentication",
+"pos": "n.",
+"tr": "kimlik doğrulama",
+"def": "Checking that a user is who they say they are.",
+"ex": "Authentication requires a username and a password.",
+"cat": "sec"
+},
+{
+"id": "authorization",
+"term": "authorization",
+"pos": "n.",
+"tr": "yetkilendirme",
+"def": "Deciding what an authenticated user is allowed to do.",
+"ex": "Authorization makes sure only admins can delete users.",
+"cat": "sec"
+},
+{
+"id": "password",
+"term": "password",
+"pos": "n.",
+"tr": "parola",
+"def": "A secret word used to prove your identity.",
+"ex": "Choose a long password that is hard to guess.",
+"cat": "sec"
+},
+{
+"id": "hash",
+"term": "hash",
+"pos": "n.",
+"tr": "karma değeri (özet)",
+"def": "A fixed-length value created from data by a one-way function.",
+"ex": "We save the hash of the password, not the password.",
+"cat": "sec"
+},
+{
+"id": "encryption",
+"term": "encryption",
+"pos": "n.",
+"tr": "şifreleme",
+"def": "Changing data into a secret form that only authorized people can read.",
+"ex": "Encryption protects the messages from attackers.",
+"cat": "sec"
+},
+{
+"id": "decrypt",
+"term": "decrypt",
+"pos": "v.",
+"tr": "şifresini çözmek",
+"def": "To change encrypted data back into readable form.",
+"ex": "Only the receiver can decrypt the message.",
+"cat": "sec"
+},
+{
+"id": "token",
+"term": "token",
+"pos": "n.",
+"tr": "jeton",
+"def": "A piece of data that proves a user is logged in.",
+"ex": "The server sends a token after a successful login.",
+"cat": "sec"
+},
+{
+"id": "vulnerability",
+"term": "vulnerability",
+"pos": "n.",
+"tr": "güvenlik açığı",
+"def": "A weakness that an attacker can use.",
+"ex": "The team found a serious vulnerability in the login form.",
+"cat": "sec"
+},
+{
+"id": "exploit",
+"term": "exploit",
+"pos": "v.",
+"tr": "istismar etmek",
+"def": "To use a weakness for an attack.",
+"ex": "Attackers can exploit this bug to steal data.",
+"cat": "sec"
+},
+{
+"id": "attacker",
+"term": "attacker",
+"pos": "n.",
+"tr": "saldırgan",
+"def": "A person who tries to break into a system.",
+"ex": "The attacker tried to guess the password many times.",
+"cat": "sec"
+},
+{
+"id": "breach",
+"term": "breach",
+"pos": "n.",
+"tr": "ihlal (veri sızıntısı)",
+"def": "An event in which private data is accessed without permission.",
+"ex": "The data breach exposed millions of emails.",
+"cat": "sec"
+},
+{
+"id": "firewall",
+"term": "firewall",
+"pos": "n.",
+"tr": "güvenlik duvarı",
+"def": "A system that blocks unwanted network traffic.",
+"ex": "The firewall blocks all connections except port 443.",
+"cat": "sec"
+},
+{
+"id": "phishing",
+"term": "phishing",
+"pos": "n.",
+"tr": "oltalama",
+"def": "A trick that uses fake messages to steal personal information.",
+"ex": "Never click a link in a suspicious phishing email.",
+"cat": "sec"
+},
+{
+"id": "injection",
+"term": "injection",
+"pos": "n.",
+"tr": "enjeksiyon saldırısı",
+"def": "An attack in which harmful code is inserted into input.",
+"ex": "Prepared statements prevent SQL injection.",
+"cat": "sec"
+},
+{
+"id": "sanitize",
+"term": "sanitize",
+"pos": "v.",
+"tr": "temizlemek (girdiyi)",
+"def": "To remove dangerous parts from user input.",
+"ex": "Always sanitize the input before you save it.",
+"cat": "sec"
+},
+{
+"id": "validate",
+"term": "validate",
+"pos": "v.",
+"tr": "doğrulamak",
+"def": "To check that data is correct and in the expected form.",
+"ex": "The server must validate every field in the form.",
+"cat": "sec"
+},
+{
+"id": "permission",
+"term": "permission",
+"pos": "n.",
+"tr": "izin",
+"def": "The right to do something in a system.",
+"ex": "The app asks for permission to use the camera.",
+"cat": "sec"
+},
+{
+"id": "privacy",
+"term": "privacy",
+"pos": "n.",
+"tr": "gizlilik",
+"def": "The right to keep personal information protected.",
+"ex": "The privacy policy explains how we use your data.",
+"cat": "sec"
+},
+{
+"id": "two-factor",
+"term": "two-factor",
+"pos": "adj.",
+"tr": "iki aşamalı",
+"def": "Using two different proofs of identity to log in.",
+"ex": "Turn on two-factor authentication for your email.",
+"cat": "sec"
+},
+{
+"id": "secure",
+"term": "secure",
+"pos": "adj.",
+"tr": "güvenli",
+"def": "Protected from attack or unauthorized access.",
+"ex": "The connection is secure because it uses HTTPS.",
+"cat": "sec"
+},
+{
+"id": "audit",
+"term": "audit",
+"pos": "n.",
+"tr": "denetim",
+"def": "An official check of a system or process.",
+"ex": "A security audit found three problems.",
+"cat": "sec"
+},
+{
+"id": "colleague",
+"term": "colleague",
+"pos": "n.",
+"tr": "iş arkadaşı",
+"def": "A person you work with.",
+"ex": "My colleague helped me solve the problem.",
+"cat": "work"
+},
+{
+"id": "teammate",
+"term": "teammate",
+"pos": "n.",
+"tr": "takım arkadaşı",
+"def": "A member of the same team.",
+"ex": "I asked my teammate to review my pull request.",
+"cat": "work"
+},
+{
+"id": "mentor",
+"term": "mentor",
+"pos": "n.",
+"tr": "akıl hocası, mentor",
+"def": "An experienced person who guides someone less experienced.",
+"ex": "My mentor taught me how to write clean code.",
+"cat": "work"
+},
+{
+"id": "intern",
+"term": "intern",
+"pos": "n.",
+"tr": "stajyer",
+"def": "A student or trainee who works for a short time to gain experience.",
+"ex": "The company hired three interns for the summer.",
+"cat": "work"
+},
+{
+"id": "junior",
+"term": "junior",
+"pos": "adj.",
+"tr": "kıdemsiz",
+"def": "Having less experience in a job.",
+"ex": "She is a junior developer in the backend team.",
+"cat": "work"
+},
+{
+"id": "senior",
+"term": "senior",
+"pos": "adj.",
+"tr": "kıdemli",
+"def": "Having a lot of experience in a job.",
+"ex": "A senior engineer reviewed the design.",
+"cat": "work"
+},
+{
+"id": "r-sum",
+"term": "résumé",
+"pos": "n.",
+"tr": "özgeçmiş",
+"def": "A short document that lists your education and work experience.",
+"ex": "I updated my résumé before the internship application.",
+"cat": "work"
+},
+{
+"id": "interview",
+"term": "interview",
+"pos": "n.",
+"tr": "mülakat",
+"def": "A formal meeting to decide if someone is right for a job.",
+"ex": "The technical interview included two coding questions.",
+"cat": "work"
+},
+{
+"id": "internship",
+"term": "internship",
+"pos": "n.",
+"tr": "staj",
+"def": "A short period of work to learn about a job.",
+"ex": "I'm looking for a summer internship at a software company.",
+"cat": "work"
+},
+{
+"id": "remote",
+"term": "remote",
+"pos": "adj.",
+"tr": "uzaktan",
+"def": "Not in the same place; working from home or another location.",
+"ex": "Our team works remote on Fridays.",
+"cat": "work"
+},
+{
+"id": "meeting",
+"term": "meeting",
+"pos": "n.",
+"tr": "toplantı",
+"def": "An event where people discuss something together.",
+"ex": "The meeting starts at ten and ends at eleven.",
+"cat": "work"
+},
+{
+"id": "agenda",
+"term": "agenda",
+"pos": "n.",
+"tr": "gündem",
+"def": "A list of topics to discuss in a meeting.",
+"ex": "Please send me the agenda before the meeting.",
+"cat": "work"
+},
+{
+"id": "update",
+"term": "update",
+"pos": "n.",
+"tr": "güncelleme",
+"def": "Recent information about the progress of something.",
+"ex": "I'll give you a quick update on the project.",
+"cat": "work"
+},
+{
+"id": "blocker",
+"term": "blocker",
+"pos": "n.",
+"tr": "engel",
+"def": "Something that stops you from continuing your work.",
+"ex": "The missing API key is a blocker for me.",
+"cat": "work"
+},
+{
+"id": "bandwidth",
+"term": "bandwidth",
+"pos": "n.",
+"tr": "kapasite (zaman/emek)",
+"def": "The amount of time and energy a person has for new work.",
+"ex": "I don't have the bandwidth to take another task this week.",
+"cat": "work"
+},
+{
+"id": "follow-up",
+"term": "follow up",
+"pos": "phr. v.",
+"tr": "takip etmek",
+"def": "To contact someone again to continue a conversation or task.",
+"ex": "I will follow up with you on Monday.",
+"cat": "work"
+},
+{
+"id": "touch-base",
+"term": "touch base",
+"pos": "phr.",
+"tr": "kısaca görüşmek",
+"def": "To contact someone briefly to share information.",
+"ex": "Let's touch base tomorrow about the release.",
+"cat": "work"
+},
+{
+"id": "take-ownership",
+"term": "take ownership",
+"pos": "phr.",
+"tr": "sahiplenmek",
+"def": "To accept responsibility for a task or problem.",
+"ex": "Please take ownership of this task and report back on Monday.",
+"cat": "work"
+},
+{
+"id": "raise-a-concern",
+"term": "raise a concern",
+"pos": "phr.",
+"tr": "endişe dile getirmek",
+"def": "To tell others about a worry or a possible problem.",
+"ex": "I want to raise a concern about the tight schedule.",
+"cat": "work"
+},
+{
+"id": "clarify",
+"term": "clarify",
+"pos": "v.",
+"tr": "netleştirmek",
+"def": "To make something easier to understand.",
+"ex": "Could you clarify what you mean by \"fast\"?",
+"cat": "work"
+},
+{
+"id": "elaborate",
+"term": "elaborate",
+"pos": "v.",
+"tr": "ayrıntılandırmak",
+"def": "To give more details about something.",
+"ex": "Can you elaborate on how the caching works?",
+"cat": "work"
+},
+{
+"id": "assume",
+"term": "assume",
+"pos": "v.",
+"tr": "varsaymak",
+"def": "To think that something is true without checking.",
+"ex": "We assumed that the user was online.",
+"cat": "work"
+},
+{
+"id": "agree",
+"term": "agree",
+"pos": "v.",
+"tr": "katılmak",
+"def": "To have the same opinion as someone else.",
+"ex": "I agree with your suggestion to split the task.",
+"cat": "work"
+},
+{
+"id": "suggest",
+"term": "suggest",
+"pos": "v.",
+"tr": "önermek",
+"def": "To offer an idea or plan for others to consider.",
+"ex": "I suggest that we write the tests first.",
+"cat": "work"
+},
+{
+"id": "propose",
+"term": "propose",
+"pos": "v.",
+"tr": "teklif etmek",
+"def": "To formally present a plan or idea.",
+"ex": "I'd like to propose a new design for the dashboard.",
+"cat": "work"
+},
+{
+"id": "postpone",
+"term": "postpone",
+"pos": "v.",
+"tr": "ertelemek",
+"def": "To move something to a later time.",
+"ex": "We had to postpone the release to next week.",
+"cat": "work"
+},
+{
+"id": "prioritize",
+"term": "prioritize",
+"pos": "v.",
+"tr": "öncelik vermek",
+"def": "To decide which tasks are most important and do them first.",
+"ex": "We need to prioritize the security fixes.",
+"cat": "work"
+},
+{
+"id": "deliver",
+"term": "deliver",
+"pos": "v.",
+"tr": "teslim etmek",
+"def": "To complete work and give it to the customer.",
+"ex": "The team delivered the project one week early.",
+"cat": "work"
+},
+{
+"id": "on-track",
+"term": "on track",
+"pos": "phr.",
+"tr": "planlandığı gibi ilerleyen",
+"def": "Progressing as planned.",
+"ex": "The project is on track for the March release.",
+"cat": "work"
+},
+{
+"id": "behind-schedule",
+"term": "behind schedule",
+"pos": "phr.",
+"tr": "programın gerisinde",
+"def": "Later than planned.",
+"ex": "We are two weeks behind schedule.",
+"cat": "work"
+},
+{
+"id": "engineer",
+"term": "engineer",
+"pos": "n.",
+"tr": "mühendis",
+"def": "A person who designs, builds, or maintains systems and machines.",
+"ex": "She is a software engineer at a startup.",
+"cat": "eng"
+},
+{
+"id": "design",
+"term": "design",
+"pos": "v.",
+"tr": "tasarlamak",
+"def": "To plan how something will look and work.",
+"ex": "We design the system to handle heavy traffic.",
+"cat": "eng"
+},
+{
+"id": "requirement-analysis",
+"term": "requirement analysis",
+"pos": "n.",
+"tr": "gereksinim analizi",
+"def": "The process of finding out what a system needs to do.",
+"ex": "Requirement analysis is the first step of the project.",
+"cat": "eng"
+},
+{
+"id": "tolerance",
+"term": "tolerance",
+"pos": "n.",
+"tr": "tolerans",
+"def": "The allowed amount of difference from an exact value.",
+"ex": "The part has a tolerance of 0.1 millimeters.",
+"cat": "eng"
+},
+{
+"id": "efficiency",
+"term": "efficiency",
+"pos": "n.",
+"tr": "verimlilik",
+"def": "How well something uses resources to produce results.",
+"ex": "The new engine improves fuel efficiency.",
+"cat": "eng"
+},
+{
+"id": "reliability",
+"term": "reliability",
+"pos": "n.",
+"tr": "güvenilirlik",
+"def": "The ability of a system to work correctly over time.",
+"ex": "Reliability is very important for medical devices.",
+"cat": "eng"
+},
+{
+"id": "durability",
+"term": "durability",
+"pos": "n.",
+"tr": "dayanıklılık",
+"def": "The ability to last a long time without breaking.",
+"ex": "The test measures the durability of the material.",
+"cat": "eng"
+},
+{
+"id": "safety",
+"term": "safety",
+"pos": "n.",
+"tr": "emniyet, güvenlik",
+"def": "Protection from danger or harm.",
+"ex": "Safety is the first priority in the design of a bridge.",
+"cat": "eng"
+},
+{
+"id": "maintenance",
+"term": "maintenance",
+"pos": "n.",
+"tr": "bakım",
+"def": "Regular work to keep a system in good condition.",
+"ex": "The machines need regular maintenance.",
+"cat": "eng"
+},
+{
+"id": "failure",
+"term": "failure",
+"pos": "n.",
+"tr": "arıza, hata",
+"def": "A situation where a system stops working correctly.",
+"ex": "The failure of one sensor stopped the whole machine.",
+"cat": "eng"
+},
+{
+"id": "load",
+"term": "load",
+"pos": "n.",
+"tr": "yük",
+"def": "The weight or force that a structure or system must carry.",
+"ex": "The bridge can carry a heavy load.",
+"cat": "eng"
+},
+{
+"id": "stress",
+"term": "stress",
+"pos": "n.",
+"tr": "gerilme",
+"def": "The force applied to a material per unit area.",
+"ex": "The material breaks under high stress.",
+"cat": "eng"
+},
+{
+"id": "voltage",
+"term": "voltage",
+"pos": "n.",
+"tr": "gerilim, voltaj",
+"def": "The electrical force that pushes current through a circuit.",
+"ex": "The battery provides a voltage of 5 volts.",
+"cat": "eng"
+},
+{
+"id": "current",
+"term": "current",
+"pos": "n.",
+"tr": "akım",
+"def": "The flow of electric charge in a circuit.",
+"ex": "A high current can damage the wires.",
+"cat": "eng"
+},
+{
+"id": "resistance",
+"term": "resistance",
+"pos": "n.",
+"tr": "direnç",
+"def": "How strongly a material opposes the flow of electric current.",
+"ex": "The resistance of the wire increases when it gets hot.",
+"cat": "eng"
+},
+{
+"id": "circuit",
+"term": "circuit",
+"pos": "n.",
+"tr": "devre",
+"def": "A closed path that electric current flows through.",
+"ex": "I built a simple circuit with a battery and an LED.",
+"cat": "eng"
+},
+{
+"id": "sensor",
+"term": "sensor",
+"pos": "n.",
+"tr": "sensör, algılayıcı",
+"def": "A device that detects changes such as temperature or light.",
+"ex": "The sensor measures the temperature of the room.",
+"cat": "eng"
+},
+{
+"id": "actuator",
+"term": "actuator",
+"pos": "n.",
+"tr": "eyleyici",
+"def": "A device that causes movement, such as a motor.",
+"ex": "The actuator opens the valve when it receives a signal.",
+"cat": "eng"
+},
+{
+"id": "signal",
+"term": "signal",
+"pos": "n.",
+"tr": "sinyal",
+"def": "Information sent as electrical or radio waves.",
+"ex": "The sensor sends a signal to the controller.",
+"cat": "eng"
+},
+{
+"id": "microcontroller",
+"term": "microcontroller",
+"pos": "n.",
+"tr": "mikrodenetleyici",
+"def": "A small computer on one chip used to control devices.",
+"ex": "An Arduino is a board with a microcontroller.",
+"cat": "eng"
+},
+{
+"id": "embedded-system",
+"term": "embedded system",
+"pos": "n.",
+"tr": "gömülü sistem",
+"def": "A computer built into a device to do a specific job.",
+"ex": "The washing machine runs on an embedded system.",
+"cat": "eng"
+},
+{
+"id": "firmware",
+"term": "firmware",
+"pos": "n.",
+"tr": "donanım yazılımı",
+"def": "Software stored in a device that controls its basic functions.",
+"ex": "We released a firmware update for the router.",
+"cat": "eng"
+},
+{
+"id": "calibrate",
+"term": "calibrate",
+"pos": "v.",
+"tr": "kalibre etmek",
+"def": "To adjust a device so that its measurements are accurate.",
+"ex": "You need to calibrate the sensor before you use it.",
+"cat": "eng"
+},
+{
+"id": "accuracy",
+"term": "accuracy",
+"pos": "n.",
+"tr": "doğruluk",
+"def": "How close a measurement is to the true value.",
+"ex": "The accuracy of the scale is one gram.",
+"cat": "eng"
+},
+{
+"id": "precision",
+"term": "precision",
+"pos": "n.",
+"tr": "hassasiyet",
+"def": "How close repeated measurements are to each other.",
+"ex": "The machine cuts with high precision.",
+"cat": "eng"
+},
+{
+"id": "simulation",
+"term": "simulation",
+"pos": "n.",
+"tr": "simülasyon",
+"def": "A computer model that imitates a real system.",
+"ex": "We tested the bridge design in a simulation.",
+"cat": "eng"
+},
+{
+"id": "specification-sheet",
+"term": "specification sheet",
+"pos": "n.",
+"tr": "teknik veri sayfası",
+"def": "A document that lists the technical details of a product.",
+"ex": "Check the specification sheet for the maximum voltage.",
+"cat": "eng"
+},
+{
+"id": "standard",
+"term": "standard",
+"pos": "n.",
+"tr": "standart",
+"def": "An official rule or agreement about how something should be made.",
+"ex": "The device meets the international safety standard.",
+"cat": "eng"
+},
+{
+"id": "renewable",
+"term": "renewable",
+"pos": "adj.",
+"tr": "yenilenebilir",
+"def": "Coming from a source that is naturally replaced, like solar power.",
+"ex": "Wind is a renewable energy source.",
+"cat": "eng"
+},
+{
+"id": "implement",
+"term": "implement",
+"pos": "v.",
+"tr": "uygulamak, hayata geçirmek",
+"def": "To write the code that makes a feature work.",
+"ex": "We will implement the search feature next sprint.",
+"cat": "verbs"
+},
+{
+"id": "integrate",
+"term": "integrate",
+"pos": "v.",
+"tr": "entegre etmek",
+"def": "To combine different parts so they work together.",
+"ex": "We integrate the payment service into the app.",
+"cat": "verbs"
+},
+{
+"id": "deploy-to-production",
+"term": "deploy to production",
+"pos": "phr.",
+"tr": "canlıya almak",
+"def": "To release software to the live environment.",
+"ex": "We deploy to production only after all tests pass.",
+"cat": "verbs"
+},
+{
+"id": "deprecate",
+"term": "deprecate",
+"pos": "v.",
+"tr": "kullanımdan kaldırmaya başlamak",
+"def": "To mark a feature as old and planned for removal.",
+"ex": "The team will deprecate the old API next year.",
+"cat": "verbs"
+},
+{
+"id": "maintain",
+"term": "maintain",
+"pos": "v.",
+"tr": "sürdürmek, bakımını yapmak",
+"def": "To keep software working and up to date.",
+"ex": "She maintains the open-source library.",
+"cat": "verbs"
+},
+{
+"id": "extend",
+"term": "extend",
+"pos": "v.",
+"tr": "genişletmek",
+"def": "To add new features to something that already exists.",
+"ex": "You can extend the base class with your own methods.",
+"cat": "verbs"
+},
+{
+"id": "override",
+"term": "override",
+"pos": "v.",
+"tr": "geçersiz kılmak",
+"def": "To replace the behavior of a method in a subclass.",
+"ex": "The child class will override the default method.",
+"cat": "verbs"
+},
+{
+"id": "invoke",
+"term": "invoke",
+"pos": "v.",
+"tr": "çağırmak",
+"def": "To call a function or start a process.",
+"ex": "The button will invoke the save function.",
+"cat": "verbs"
+},
+{
+"id": "initialize",
+"term": "initialize",
+"pos": "v.",
+"tr": "ilk değer vermek",
+"def": "To set something to its starting state.",
+"ex": "Initialize the variable before you use it.",
+"cat": "verbs"
+},
+{
+"id": "declare",
+"term": "declare",
+"pos": "v.",
+"tr": "tanımlamak (bildirmek)",
+"def": "To tell the program about a variable or function and its type.",
+"ex": "You must declare the variable before the loop.",
+"cat": "verbs"
+},
+{
+"id": "assign",
+"term": "assign",
+"pos": "v.",
+"tr": "atamak",
+"def": "To give a value to a variable.",
+"ex": "Assign the result to a new variable.",
+"cat": "verbs"
+},
+{
+"id": "append",
+"term": "append",
+"pos": "v.",
+"tr": "sona eklemek",
+"def": "To add something to the end of a list or file.",
+"ex": "Append the new item to the end of the list.",
+"cat": "verbs"
+},
+{
+"id": "concatenate",
+"term": "concatenate",
+"pos": "v.",
+"tr": "birleştirmek (art arda eklemek)",
+"def": "To join two strings together.",
+"ex": "Concatenate the first name and the last name.",
+"cat": "verbs"
+},
+{
+"id": "parse",
+"term": "parse",
+"pos": "v.",
+"tr": "ayrıştırmak",
+"def": "To read text and turn it into structured data.",
+"ex": "The app can parse the JSON from the server.",
+"cat": "verbs"
+},
+{
+"id": "serialize",
+"term": "serialize",
+"pos": "v.",
+"tr": "seri hale getirmek",
+"def": "To convert an object into a format that can be stored or sent.",
+"ex": "We serialize the object to JSON before sending it.",
+"cat": "verbs"
+},
+{
+"id": "fetch",
+"term": "fetch",
+"pos": "v.",
+"tr": "getirmek",
+"def": "To get data from a server or database.",
+"ex": "The page will fetch the latest posts when it opens.",
+"cat": "verbs"
+},
+{
+"id": "trigger",
+"term": "trigger",
+"pos": "v.",
+"tr": "tetiklemek",
+"def": "To cause an action or event to start.",
+"ex": "Clicking the button triggers an email.",
+"cat": "verbs"
+},
+{
+"id": "configure",
+"term": "configure",
+"pos": "v.",
+"tr": "yapılandırmak",
+"def": "To set up software with the right settings.",
+"ex": "You need to configure the database connection first.",
+"cat": "verbs"
+},
+{
+"id": "install",
+"term": "install",
+"pos": "v.",
+"tr": "kurmak",
+"def": "To put software on a computer so it can be used.",
+"ex": "Install the dependencies with one command.",
+"cat": "verbs"
+},
+{
+"id": "upgrade",
+"term": "upgrade",
+"pos": "v.",
+"tr": "yükseltmek",
+"def": "To change to a newer or better version.",
+"ex": "We plan to upgrade the framework next month.",
+"cat": "verbs"
+},
+{
+"id": "roll-back",
+"term": "roll back",
+"pos": "phr. v.",
+"tr": "önceki sürüme dönmek",
+"def": "To return software to an earlier version.",
+"ex": "We had to roll back the release because of a critical bug.",
+"cat": "verbs"
+},
+{
+"id": "scale-up",
+"term": "scale up",
+"pos": "phr. v.",
+"tr": "büyütmek (kapasiteyi)",
+"def": "To increase the capacity of a system.",
+"ex": "We scale up the servers during sales.",
+"cat": "verbs"
+},
+{
+"id": "crash",
+"term": "crash",
+"pos": "v.",
+"tr": "çökmek",
+"def": "To suddenly stop working.",
+"ex": "The app crashes when I open the camera.",
+"cat": "verbs"
+},
+{
+"id": "freeze",
+"term": "freeze",
+"pos": "v.",
+"tr": "donmak",
+"def": "To stop responding.",
+"ex": "The screen freezes for a few seconds after each click.",
+"cat": "verbs"
+},
+{
+"id": "leak",
+"term": "leak",
+"pos": "v.",
+"tr": "sızıntı yapmak",
+"def": "To use more and more memory because it is not released.",
+"ex": "The app leaks memory and becomes slower over time.",
+"cat": "verbs"
+},
+{
+"id": "overwrite",
+"term": "overwrite",
+"pos": "v.",
+"tr": "üzerine yazmak",
+"def": "To replace existing data with new data.",
+"ex": "Be careful not to overwrite the original file.",
+"cat": "verbs"
+}
+]
+}
