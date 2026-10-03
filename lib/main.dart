@@ -36,6 +36,7 @@ class DevEnglishApp extends StatelessWidget {
     return MaterialApp(
       title: 'DevEnglish',
       debugShowCheckedModeBanner: false,
+      scaffoldMessengerKey: Tts.mesajci,
       theme: tema(Brightness.light),
       darkTheme: tema(Brightness.dark),
       home: const Shell(),

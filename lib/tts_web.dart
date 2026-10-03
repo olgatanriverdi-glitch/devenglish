@@ -68,10 +68,12 @@ Future<void> konus(
   u.rate = yavas ? 0.7 : 0.95;
   u.pitch = 1.0;
   final ses = _sec(sesler, konusmaci);
-  if (ses != null) {
-    u.voice = ses;
-    u.lang = ses.lang;
+  if (ses == null) {
+    // İngilizce ses yoksa cihaz Türkçe sesle İngilizceyi heceleyerek okur; bunu hiç yapma.
+    throw StateError('Bu cihazda İngilizce ses yok');
   }
+  u.voice = ses;
+  u.lang = ses.lang;
   final bitti = Completer<void>();
   u.onend = ((web.Event _) {
     if (!bitti.isCompleted) bitti.complete();
@@ -81,4 +83,45 @@ Future<void> konus(
   }).toJS;
   synth.speak(u);
   await bitti.future;
+}
+
+// ---- Önceden kaydedilmiş sesler ----
+// iPhone Safari, sesin ancak dokunma (kullanıcı hareketi) anında başlatılmasına izin verir.
+// Bu yüzden tek bir Audio öğesi kullanılır ve play() çağrısı hiçbir await'ten önce yapılır;
+// öğe bir kez "açıldıktan" sonra arka arkaya çalınan kayıtlar (diyalog) da engellenmez.
+web.HTMLAudioElement? _audio;
+Completer<void>? _calan;
+
+/// [url]: sayfaya göre göreli adres (örn. assets/assets/audio/xxxx.m4a). Bitince döner; çalma reddedilirse hata fırlatır.
+Future<void> klipCal(String url, {required bool yavas, required int sureSn}) {
+  final a = _audio ??= web.HTMLAudioElement();
+  final onceki = _calan;
+  if (onceki != null && !onceki.isCompleted) {
+    onceki.complete();
+  }
+  final bitti = Completer<void>();
+  _calan = bitti;
+  a.onended = ((web.Event _) {
+    if (!bitti.isCompleted) bitti.complete();
+  }).toJS;
+  a.onerror = ((web.Event _) {
+    if (!bitti.isCompleted) {
+      bitti.completeError('ses dosyası yüklenemedi: $url');
+    }
+  }).toJS;
+  a.src = url;
+  a.playbackRate = yavas ? 0.75 : 1.0;
+  final vaat = a.play(); // senkron: kullanıcı hareketi bitmeden çağrılır
+  return () async {
+    await vaat.toDart; // NotAllowedError vb. burada hata olarak görünür
+    await bitti.future.timeout(Duration(seconds: sureSn), onTimeout: () {});
+  }();
+}
+
+void klipDurdur() {
+  final b = _calan;
+  if (b != null && !b.isCompleted) {
+    b.complete();
+  }
+  _audio?.pause();
 }

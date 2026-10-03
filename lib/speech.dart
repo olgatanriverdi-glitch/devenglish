@@ -5,6 +5,8 @@ import 'dart:io' show Platform;
 import 'package:audioplayers/audioplayers.dart';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart'
+    show GlobalKey, ScaffoldMessengerState, SnackBar, Text;
 import 'package:flutter/services.dart' show AssetManifest, rootBundle;
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:speech_to_text/speech_to_text.dart';
@@ -49,6 +51,22 @@ class Klip {
     String yol, {
     required bool yavas,
     required int karakter,
+  }) {
+    if (kIsWeb) {
+      // await'ten önce, doğrudan dokunma anında başlat (iPhone Safari kuralı)
+      return webtts.klipCal(
+        'assets/assets/$yol',
+        yavas: yavas,
+        sureSn: 8 + karakter ~/ 4,
+      );
+    }
+    return _calYerel(yol, yavas: yavas, karakter: karakter);
+  }
+
+  static Future<void> _calYerel(
+    String yol, {
+    required bool yavas,
+    required int karakter,
   }) async {
     final p = _oynatici ??= AudioPlayer();
     await durdur();
@@ -81,6 +99,7 @@ class Klip {
   }
 
   static Future<void> durdur() async {
+    if (kIsWeb) webtts.klipDurdur();
     final b = _bekleyen;
     if (b != null && !b.isCompleted) b.complete();
     _bekleyen = null;
@@ -93,6 +112,18 @@ class Klip {
 /// Metin okuma (dinleme çalışmaları ve model telaffuz). Platform yoksa sessizce hiçbir şey yapmaz.
 class Tts {
   static final Tts i = Tts._();
+  static final GlobalKey<ScaffoldMessengerState> mesajci =
+      GlobalKey<ScaffoldMessengerState>();
+  String? sonHata;
+
+  void _hataBildir(String m) {
+    sonHata = m;
+    debugPrint(m);
+    mesajci.currentState
+      ?..hideCurrentSnackBar()
+      ..showSnackBar(SnackBar(content: Text(m)));
+  }
+
   Tts._();
 
   final FlutterTts _t = FlutterTts();
@@ -182,7 +213,9 @@ class Tts {
         );
         return;
       } catch (e) {
-        debugPrint('Kayıt çalınamadı, cihaz sesine dönülüyor: $e');
+        _hataBildir('Ses çalınamadı: $e');
+        // Web'de cihaz sesine dönmek İngilizceyi Türkçe okutabilir; hata gösterip dur.
+        if (kIsWeb) return;
       } finally {
         if (benim == _belirtec) konusuyor.value = false;
       }
@@ -229,7 +262,7 @@ class Tts {
           .konus(text, konusmaci: konusmaci, yavas: yavas)
           .timeout(Duration(seconds: 6 + text.length ~/ 5), onTimeout: () {});
     } catch (e) {
-      debugPrint('Web TTS hata: $e');
+      _hataBildir('Ses çalınamadı: $e');
     } finally {
       if (benim == _belirtec) konusuyor.value = false;
     }

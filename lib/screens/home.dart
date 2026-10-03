@@ -400,13 +400,16 @@ class _Ayarlar extends StatelessWidget {
                 Row(
                   children: [
                     OutlinedButton.icon(
-                      onPressed: () => Tts.i.speak(
-                        'Hello! This is how I sound. Let us learn some English.',
-                      ),
+                      onPressed: () => Tts.i.speak(Content.i.words.first.ex),
                       icon: const Icon(Icons.volume_up),
                       label: const Text('Sesi dene'),
                     ),
                   ],
+                ),
+                const SizedBox(height: 6),
+                Text(
+                  'Kayıtlı ses dosyası: ${Klip.adet} · Son ses hatası: ${Tts.i.sonHata ?? 'yok'}',
+                  style: t.textTheme.bodySmall,
                 ),
                 const SizedBox(height: 14),
                 TextButton.icon(

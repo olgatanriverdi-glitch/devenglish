@@ -6,3 +6,11 @@ Future<void> konus(
   required int konusmaci,
   required bool yavas,
 }) async {}
+
+Future<void> klipCal(
+  String url, {
+  required bool yavas,
+  required int sureSn,
+}) async {}
+
+void klipDurdur() {}

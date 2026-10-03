@@ -25,6 +25,11 @@ jobs:
           flutter test
       - name: Web derle
         run: flutter build web --release --base-href /devenglish/
+      - name: Önbellek kırıcı (telefon eski sürümü göstermesin)
+        run: |
+          sed -i "s#\"main.dart.js\"#\"main.dart.js?v=${GITHUB_SHA}\"#g" build/web/flutter_bootstrap.js
+          sed -i "s#flutter_bootstrap.js#flutter_bootstrap.js?v=${GITHUB_SHA}#" build/web/index.html
+          grep -c "v=${GITHUB_SHA}" build/web/flutter_bootstrap.js build/web/index.html
       - uses: actions/upload-pages-artifact@v3
         with: { path: build/web }
   yayinla:
